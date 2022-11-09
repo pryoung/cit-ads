@@ -1,0 +1,315 @@
+US           *USA
+US           Applied Physics Laboratory
+US           Johns Hopkins University
+US           Johns Hopkins
+US           University of Puerto Rico
+US           Space Telescope Science Institute
+US           Ohio State University
+US           Massachusetts Institute of Technology
+US           Naval Research Laboratory
+US           Naval Research Lab
+US           Hurlburt Center
+US           Hulburt Center
+US           Maryland
+US           Seattle
+US           Texas
+US           Illinois
+US           *Iowa
+US           North Carolina State University
+US           Oklahoma
+US           Chicago
+US           Rutgers University
+US           Philadelphia
+US           NRL
+US           *CfA
+US           LMSAL
+US           George Mason
+US           Goddard
+US           Marshall
+US           NASA
+US           High Altitude
+US           Smithsonian
+US           Sacramento Peak Observatory
+US           Pittsburgh
+US           Delaware
+US           Harvard
+US           Alabama
+US           Livermore
+US           Predictive Science
+US           Lowell Observatory
+US           Tennessee State University
+US           Georgia State University
+US           Princeton
+US           Artep
+US           University of California
+US           Villanova University
+US           Jet Propulsion Laboratory
+US           Caltech*
+US           Swales
+US           Delaware
+US           Aurora Science
+US           Columbia University
+US           Carnegie Observatories
+US           Columbia Univ.
+US           San Diego
+US           Boston University
+US           Boston College
+US           Charlottesville
+US           Memphis
+US           Los Angeles
+US           Bay Area
+US           ADNET
+US           Stanford
+US           Smith College
+US           Colorado
+US           New Jersey
+US           Lockheed
+US           Lochkeed
+US           Berkeley
+US           Big Bear
+US           Montana
+US           American Geophysical Union
+US           Gaithersburg
+US           Nightsen
+US           Herndon
+US           Milwaukee
+US           Rice University
+US           Boulder
+US           Virginia
+US           Catholic University of America
+US           South Dakota
+US           Nevada
+US           Hawaii
+US           Kentucky
+US           Michigan
+US           Florida
+US           Greenbelt
+US           NorthWest Research Associates
+US           New Mexico State University
+US           Southwest Research Institute
+US           Clark Atlanta
+US           Air Force Research
+US           University of Georgia
+US           National Solar Observatory
+US           LLNL
+US           Dartmouth College
+US           Utah State University
+US           NextEra Energy Resources
+US           International Intellectual Group
+US           Computational Physics, Inc.
+US           Stony Brook
+US           Honolulu
+US           Los Alamos
+US           University of New Hampshire
+US           Haverford College
+US           Columbia Astrophysics Laboratory
+US           Wisconsin
+US           Massachusetts
+US           MIT,
+US           Yale University
+US           Joint Institute for Laboratory Astrophysics
+US           University of Arizona
+US           Northridge
+US           Tucson
+US           Cambridge Research and Instrumentation
+US           Cornell University
+US           Pennsylvania State University
+US           Pennsylvania
+US           California Institute of Technology
+US           University of Alaska
+US           Haystack Observatory
+US           National Radio Astronomy Observatory
+US           Arecibo Observatory
+US           Interferometrics
+US           Minneapolis
+US           Bartol Research Foundation
+US           Clemson
+US           Auburn
+UK           *UK
+UK           Rutherford Appleton
+UK           Birmingham
+UK           RAL Space
+UK           Andrews
+UK           Jodrell Bank
+UK           Durham University
+UK           Northumbria
+UK           Department of Applied Mathematics and Theoretical Physics
+UK           University of Cambridge
+UK           Madingley Road
+UK           Madingley Rd
+UK           Cambridge University
+UK           University of Reading
+UK           University of Oxford
+UK           Oxford University
+UK           Queen Mary College
+UK           Abertay
+UK           Mullard
+UK           MSSL
+UK           Sheffield
+UK           Sheffeld
+UK           Armagh
+UK           Imperial College
+UK           Wilberforce
+UK           Warwick University
+UK           Belfast
+UK           Glasgow
+UK           Edinburgh
+UK           Dundee
+UK           Culham
+UK           University of Hull
+UK           Leicester
+UK           Lancashire
+UK           Aberystwyth
+UK           University College London
+UK           Univ. College London
+UK           DAMTP
+UK           QUB
+UK           University of Exeter
+UK           Jeremiah Horrocks Institute
+UK           Keele University
+UK           Aldermaston
+Ireland      Dublin
+Ireland      University of Ireland
+Ireland      Maynooth University
+Germany      *Germany
+Germany      Max-Plank
+Germany      Max Planck
+Germany      Freiburg
+Germany      Potsdam
+Germany      Göttingen
+Germany      Würzburg
+Germany      Katlenburg
+Greece       Ioannina
+Greece       National Observatory of Athens
+Greece       *Greece
+France       *France
+France       Observatoire de Paris
+France       Toulouse
+France       Orsay
+France       Institut d'Astrophysique Spatiale
+France       Institut d'Astrophyisique Spatiale
+France       Laboratoire d'Astronomie Spatiale
+France       Laboratoire Charles Fabry
+Japan        Tokyo
+Japan        Institute for Laser Science
+Japan        Japan
+Japan        Kyoto
+Japan        Nobeyama
+Japan        Nagano
+Japan        Nagoya
+Japan        Institute of Space and Astronautical Science
+Japan        Institute of Space and Aeronautical Science
+Japan        Mitsubishi
+Spain        *Spain
+Spain        Canarias
+Spain        Andalucía
+Spain        European Space Astronomy Centre
+Spain        Barcelona
+Norway       *Oslo
+Norway       *Norway
+Czech Rep.   Czech
+China        Taiwan
+China        *China
+China        Beijing
+China        Shandong
+China        Nanjing
+China        Hong Kong
+China        Key Laboratory
+China        Yunnan
+China        Shanghai
+China        China
+China        Purple Mountain
+China        Henan University
+Russia       *Russia
+Russia       Moscow
+Russia       Lebedev
+Russia       Russian
+Belgium      Belgium
+Belgium      Belgique
+Belgium      Solar Terrestrial Centre of Excellence
+Switzerland  Windisch
+Switzerland  Davos
+Switzerland  Paul Scherrer
+Switzerland  Switzerland
+Switzerland  Swizerland
+Switzerland  Geneva
+India        Bangalore
+India        *India
+India        Indian*
+India        IUCAA
+India        Aryabhatta Research Institute of Observational Sciences
+India        Udaipur
+Italy        Arcetri
+Italy        Napoli
+Italy        Italy
+Italy        Torino
+Italy        Capodimonte
+Italy        Firenze
+Rep. Korea   Korea
+Rep. Korea   Kyung Hee
+Sweden       Stockholm
+Sweden       Sweden
+Netherlands  Netherlands
+Poland       *Poland
+Poland       Wroclaw
+Poland       Polish Academy of Sciences
+Australia    Australia
+Australia    Monash
+Argentina    Félix Aguilar
+Argentina    CONICET
+Argentina    *Argentina
+Iran         Payame Noor
+Iran         Tabriz
+Colombia     Colombia
+Turkey       Turkey
+Slovak Rep.  Bratislava
+Slovak Rep.  Slovak
+Slovak Rep.  Comenius
+Austria      Austria
+Austria      Graz
+Denmark      Denmark
+Finland      Helsinki
+Finland      Finnish Meteorological Institute
+Bulgaria     Bulgaria
+Mexico       Universidad National Autónoma de México
+Mexico       México
+Mexico       Morelia
+Mexico       Guadalajara
+Mexico       Instituto Nacional de Astrofísica
+Mexico       Puebla
+Mexico       Hidalgo
+Mexico       Chiapas
+Mexico       Mexico City
+Peru         Jicamarca
+Portugal     Portugal
+UAE          United Arab Emirates
+Canada       *Canada
+Lithuania    Lithuania
+Hungary      Hungary
+Brazil       *Brazil
+Brazil       *Brasil
+Brazil       Universidade Estadual de Santa Cruz
+Venezuela    *Venezuela
+Finland      *Finland
+South Africa South Africa
+Slovenia     *Slovenia
+Israel       *Israel
+Serbia       *Serbia
+Chile        *Chile
+Croatia      *Croatia
+Denmark      Copenhagen
+New Zealand  New Zealand
+Tunisia      Tunisia
+Saudi Arabia Saudi Arabia
+Romania      Bucharest
+Nepal        *Nepal
+Russia       USSR
+Thailand     Thailand
+Uzbekistan   Uzbekistan
+Armenia      Armenia
+Libya        Libya
+Tonga        *Tonga
+Belgium      Belgium
+Belgium      Leuven
+Ukraine      Ukraine
+Fiji         Fiji
