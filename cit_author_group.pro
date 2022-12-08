@@ -97,6 +97,8 @@ function cit_author_group, author_list, data_dir=data_dir, extra_data=extra_data
 ;     Ver.9, 08-Nov-2022, Peter Young
 ;       Changed definition of category to give either A or A- or
 ;       empty.
+;     Ver.10, 08-Dec-2022, Peter Young
+;       Fixed bug in the case title is not defined in the input file.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -117,6 +119,7 @@ ENDIF ELSE BEGIN
   str={first: '', last: '', year: '', all: '', orcid: ''}
   names=0
   str1=''
+  title=''
   openr,lin,author_list,/get_lun
   WHILE eof(lin) NE 1 DO BEGIN
     readf,lin,str1

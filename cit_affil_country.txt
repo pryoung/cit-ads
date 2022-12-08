@@ -38,6 +38,7 @@ US           Livermore
 US           Predictive Science
 US           Lowell Observatory
 US           Tennessee State University
+US           Minnesota
 US           Georgia State University
 US           Princeton
 US           Artep
@@ -121,10 +122,16 @@ US           Haystack Observatory
 US           National Radio Astronomy Observatory
 US           Arecibo Observatory
 US           Interferometrics
+US           La Jolla
+US           Hughes STX
 US           Minneapolis
+US           Minnesota
 US           Bartol Research Foundation
+US           California Institute of Technology
 US           Clemson
 US           Auburn
+US           New Hampshire
+UK           University College
 UK           *UK
 UK           Rutherford Appleton
 UK           Birmingham
@@ -140,6 +147,7 @@ UK           Madingley Rd
 UK           Cambridge University
 UK           University of Reading
 UK           University of Oxford
+UK           Westfield College
 UK           Oxford University
 UK           Queen Mary College
 UK           Abertay
@@ -150,7 +158,7 @@ UK           Sheffeld
 UK           Armagh
 UK           Imperial College
 UK           Wilberforce
-UK           Warwick University
+UK           Warwick
 UK           Belfast
 UK           Glasgow
 UK           Edinburgh
@@ -233,6 +241,7 @@ Switzerland  Paul Scherrer
 Switzerland  Switzerland
 Switzerland  Swizerland
 Switzerland  Geneva
+Switzerland  Zürich
 India        Bangalore
 India        *India
 India        Indian*
@@ -242,9 +251,12 @@ India        Udaipur
 Italy        Arcetri
 Italy        Napoli
 Italy        Italy
+Italy        Italia
 Italy        Torino
 Italy        Capodimonte
 Italy        Firenze
+Italy        Catania
+Italy        Osservatorio Astronomico di Roma
 Rep. Korea   Korea
 Rep. Korea   Kyung Hee
 Sweden       Stockholm
@@ -260,10 +272,11 @@ Argentina    CONICET
 Argentina    *Argentina
 Iran         Payame Noor
 Iran         Tabriz
+Iran         Tafresh
 Colombia     Colombia
 Turkey       Turkey
 Slovak Rep.  Bratislava
-Slovak Rep.  Slovak
+Slovak Rep.  *Slovak
 Slovak Rep.  Comenius
 Austria      Austria
 Austria      Graz
@@ -313,3 +326,4 @@ Belgium      Belgium
 Belgium      Leuven
 Ukraine      Ukraine
 Fiji         Fiji
+Costa Rica   Costa Rica

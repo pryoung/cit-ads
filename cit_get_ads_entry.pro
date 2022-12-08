@@ -124,6 +124,9 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;          so I've done a fix for this.
 ;      Ver.16, 06-Mar-2020, Peter Young
 ;          added the tag 'refereed' to output.
+;      Ver.17, 02-Dec-2022, Peter Young
+;          added the tag 'orcid' to the output (contains Orcid IDs for
+;          the authors).
 ;-
 
 
@@ -238,7 +241,7 @@ headers=['Authorization: Bearer '+ads_key, $
 ;
 big_list=0
 FOR i=0,m-1 DO BEGIN
-  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype'
+  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub'
   input_url=url+'?q='+chck_str
   IF strlen(input_url) GT 1000 THEN print,'***WARNING: exceeded max query string length of 1000 characters!'
  ;
@@ -268,7 +271,6 @@ FOR i=0,m-1 DO BEGIN
     ENDELSE
   ENDIF
 ENDFOR
-
 
 
 IF datatype(big_list) NE 'OBJ' THEN BEGIN
@@ -311,6 +313,7 @@ str= { pubdate: '', $
        doctype: '', $
        page: list(), $
        ads_link: '', $
+       orcid: list(), $
        author_string: '', $
        article_string: '', $
        country: list(), $
@@ -337,6 +340,7 @@ FOR i=0,n-1 DO BEGIN
   IF bib_hash.haskey('pub') THEN output[i].pub=bib_hash['pub']
   IF bib_hash.haskey('volume') THEN output[i].volume=bib_hash['volume']
   IF bib_hash.haskey('keyword') THEN output[i].keyword=bib_hash['keyword']
+  IF bib_hash.haskey('orcid_pub') THEN output[i].orcid=bib_hash['orcid_pub']
   IF bib_hash.haskey('author') THEN output[i].author=bib_hash['author']
   IF bib_hash.haskey('doctype') THEN output[i].doctype=bib_hash['doctype']
   IF bib_hash.haskey('citation_count') THEN output[i].citation_count=bib_hash['citation_count']

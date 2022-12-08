@@ -1,7 +1,7 @@
 
 PRO cit_write_group_html, group_struc, html_file=html_file, sort_col=sort_col, $
                           reverse=reverse, year_papers=year_papers, outdir=outdir, $
-                          far_5=far_5
+                          far_5=far_5, min_age=min_age, min_papers=min_papers
 
 ;+
 ; NAME:
@@ -27,7 +27,11 @@ PRO cit_write_group_html, group_struc, html_file=html_file, sort_col=sort_col, $
 ;                 integer corresponding to a column in the output file you
 ;                 can change which column is used.
 ;     Outdir:     A string specifying the output directory for the
-;                 html files. 
+;                 html files.
+;     Min_Papers: Only list an author if they have at least MIN_PAPERS
+;                 first-authored refereed papers.
+;     Min_Age:    Only list an author if their age is greater or equal
+;                 than MIN_AGE.
 ;	
 ; KEYWORD PARAMETERS:
 ;     REVERSE: By default the authors are arranged in ascending order
@@ -57,6 +61,8 @@ PRO cit_write_group_html, group_struc, html_file=html_file, sort_col=sort_col, $
 ;     Ver.3, 14-Oct-2022, Peter Young
 ;       Added column for career origin country; added output table giving
 ;       demographics information.
+;     Ver.4, 08-Dec-2022, Peter Young
+;       Added MIN_AGE= and MIN_PAPERS= optional inputs.
 ;-
 
 
@@ -64,6 +70,9 @@ IF n_params() LT 1 THEN BEGIN
   print,' Use: IDL> cit_write_group_html, data [, sort_col=, outdir=, /reverse, /year_papers, /far_5 ]'
   return 
 ENDIF 
+
+IF n_elements(min_papers) EQ 0 THEN min_papers=1
+IF n_elements(min_papers) EQ 0 THEN min_age=-1
 
 ;
 ; Get today's date
@@ -134,31 +143,32 @@ IF keyword_set(reverse) THEN k=reverse(k)
 d=data[k]
 
 FOR i=0,n-1 DO BEGIN
-  printf,lout,'<tr>'
-  printf,lout,'<td align="center"><a href="'+d[i].htmlfile+'">'+d[i].name+'</a>'
-  printf,lout,'<td align="center">'+d[i].first_affil_country
-  printf,lout,'<td align="center">'+trim(d[i].start_year_far)
-  printf,lout,'<td align="center">'+trim(d[i].years_far)
-  printf,lout,'<td align="center">'+trim(d[i].h_index)
-  printf,lout,'<td align="center">'+trim(d[i].h_far_index)
-  printf,lout,'<td align="center">'+trim(d[i].n_cit)
-  printf,lout,'<td align="center">'+trim(d[i].n_first_ref)
+  IF d[i].years_far GE min_age AND d[i].n_first_ref GE min_papers THEN BEGIN 
+    printf,lout,'<tr>'
+    printf,lout,'<td align="center"><a href="'+d[i].htmlfile+'">'+d[i].name+'</a>'
+    printf,lout,'<td align="center">'+d[i].first_affil_country
+    printf,lout,'<td align="center">'+trim(d[i].start_year_far)
+    printf,lout,'<td align="center">'+trim(d[i].years_far)
+    printf,lout,'<td align="center">'+trim(d[i].h_index)
+    printf,lout,'<td align="center">'+trim(d[i].h_far_index)
+    printf,lout,'<td align="center">'+trim(d[i].n_cit)
+    printf,lout,'<td align="center">'+trim(d[i].n_first_ref)
  ;
-  IF d[i].h_years GT 0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
-  printf,lout,'<td align="center">'+bstr[0]+trim(d[i].h_years)+bstr[1]
+    IF d[i].h_years GT 0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
+    printf,lout,'<td align="center">'+bstr[0]+trim(d[i].h_years)+bstr[1]
  ;
-  IF d[i].h_far_years GT 0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
-  printf,lout,'<td align="center">'+bstr[0]+trim(d[i].h_far_years)+bstr[1]
+    IF d[i].h_far_years GT 0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
+    printf,lout,'<td align="center">'+bstr[0]+trim(d[i].h_far_years)+bstr[1]
  ;
-  first_ratio=d[i].n_first_ref/float(d[i].years_far)
-  IF first_ratio GE 1.0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
-  printf,lout,'<td align="center">'+bstr[0]+trim(string(format='(f4.2)',first_ratio))+bstr[1]
+    first_ratio=d[i].n_first_ref/float(d[i].years_far)
+    IF first_ratio GE 1.0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
+    printf,lout,'<td align="center">'+bstr[0]+trim(string(format='(f4.2)',first_ratio))+bstr[1]
  ;
-  IF d[i].yrs_since_last LE 2 AND d[i].yrs_since_last GE 0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
-  IF d[i].yrs_since_last EQ -1 THEN yrs_since_last='-' ELSE yrs_since_last=trim(d[i].yrs_since_last)+bstr[1]
-  printf,lout,'<td align="center">'+bstr[0]+yrs_since_last
-  printf,lout,'<td align="center">'+d[i].category
-
+    IF d[i].yrs_since_last LE 2 AND d[i].yrs_since_last GE 0 THEN bstr=['<b>','</b>'] ELSE bstr=['','']
+    IF d[i].yrs_since_last EQ -1 THEN yrs_since_last='-' ELSE yrs_since_last=trim(d[i].yrs_since_last)+bstr[1]
+    printf,lout,'<td align="center">'+bstr[0]+yrs_since_last
+    printf,lout,'<td align="center">'+d[i].category
+  ENDIF 
 ENDFOR
 
 printf,lout,'</table></p>'
