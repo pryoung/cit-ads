@@ -14,7 +14,7 @@ PRO cit_affil_country, input, first_author=first_author, affil_file=affil_file
 ;     ADS; affiliations.
 ;
 ; CALLING SEQUENCE:
-;     Result = CIT_AFFIL_COUNTRY( Input )
+;     CIT_AFFIL_COUNTRY, Input
 ;
 ; INPUTS:
 ;     Input:  An IDL structure in the format produced by
@@ -80,7 +80,10 @@ PRO cit_affil_country, input, first_author=first_author, affil_file=affil_file
 ;       represent a space.
 ;     Ver.5, 21-Jan-2020, Peter Young
 ;       now prints bibcode if no. of authors does not match no. of
-;       affiliations. 
+;       affiliations.
+;     Ver.6, 09-Jan-2023, Peter Young
+;       if there are multiple affiliations, then cycle through them
+;       until a match is found.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -91,66 +94,11 @@ ENDIF
 
 n=n_elements(input)
 
-str={country: '', institute: ''}
-affilstr=0
+;
+; Get list of countries and the institutes' strings.
+;
+affilstr=cit_read_country(count=nc)
 
-;
-;The priorities for the affiliation file are:
-;  1. read the specified affil_file
-;  2. read the master file over the internet
-;  3. read the master file in SSW
-;
-IF n_elements(affil_file) NE 0 THEN BEGIN
-  chck=file_search(affil_file,count=count)
-  IF count EQ 0 THEN BEGIN
-    print,'% CIT_AFFIL_COUNTRY: the specified AUTHOR_FILE does not exist. Returning...'
-  ENDIF
-ENDIF ELSE BEGIN
- ;
- ; This is the master file, which should be the most up-to-date version.
- ;
-  chck=have_network()
-  IF chck EQ 1 THEN BEGIN
-    url='http://files.pyoung.org/idl/ads/cit_affil_country.txt'
-    sock_list,url,page
-  ENDIF
- ;
- ; If there's no internet connection, then pick up the file in SSW.
- ;
-  IF chck EQ 0 OR page[0] EQ '' THEN BEGIN
-    affil_file=concat_dir(getenv('SSW'),'gen/idl/clients/ads')
-    affil_file=concat_dir(affil_file,'cit_affil_country.txt')
-  ENDIF
-ENDELSE
-
-;
-; If the internet option hasn't worked, then we need to read
-; affil_file into 'page'.
-;
-IF n_elements(page) EQ 0 THEN BEGIN
-  result=query_ascii(affil_file,info)
-  nl=info.lines
-  page=strarr(nl)
-  openr,lin,affil_file,/get_lun
-  readf,lin,page
-  free_lun,lin
-ENDIF 
-    
-np=n_elements(page)
-FOR i=0,np-1 DO BEGIN
-  s1=''
-  s2=''
-  IF trim(page[i]) NE '' THEN BEGIN 
-    reads,page[i],format='(a13,a60)',s1,s2
-    s2=trim(s2)
-    s2=str_replace(s2,'*',' ')
-    str.country=trim(s1)
-    str.institute=s2
-    IF n_tags(affilstr) EQ 0 THEN affilstr=str ELSE affilstr=[affilstr,str]
-  ENDIF 
-ENDFOR
-
-nc=n_elements(affilstr)
 
 
 FOR i=0,n-1 DO BEGIN
@@ -171,14 +119,21 @@ FOR i=0,n-1 DO BEGIN
         country[j]=''
       ENDIF ELSE BEGIN 
         bits=str_sep(aff,';')
-        aff=bits[0]   ; take only the 1st affil of author
-        FOR k=0,nc-1 DO BEGIN
-          chck=strpos(strlowcase(aff),strlowcase(affilstr[k].institute))
-          IF chck GE 0 AND country[j] EQ '' THEN country[j]=affilstr[k].country
-          IF chck GE 0 AND country[j] NE '' THEN BEGIN
-            IF country[j] NE affilstr[k].country THEN print,'% CIT_AFFIL_COUNTRY: **WARNING: multiple countries found for '+aff,' *** ',country[j],', ',affilstr[k].country 
-          ENDIF 
-        ENDFOR
+        n_aff=n_elements(bits)
+        FOR ia=0,n_aff-1 DO BEGIN
+         ;
+         ; I add a space here which helps in identifying the country.
+         ;
+          aff=bits[ia]+' '
+          FOR k=0,nc-1 DO BEGIN
+            chck=strpos(strlowcase(aff),strlowcase(affilstr[k].institute))
+            IF chck GE 0 AND country[j] EQ '' THEN country[j]=affilstr[k].country
+            IF chck GE 0 AND country[j] NE '' THEN BEGIN
+              IF country[j] NE affilstr[k].country THEN print,'% CIT_AFFIL_COUNTRY: **WARNING: multiple countries found for '+aff,' *** ',country[j],', ',affilstr[k].country 
+            ENDIF 
+          ENDFOR
+          IF country[j] NE '' THEN break
+        ENDFOR 
         IF country[j] EQ '' THEN print,'% CIT_AFFIL_COUNTRY: No entry found for '+aff
       ENDELSE 
       input[i].country.add,country[j]

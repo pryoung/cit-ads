@@ -1,65 +1,54 @@
 
-FUNCTION cit_abs_search, name, start_year=start_year, END_year=end_year
+FUNCTION cit_abs_search, name, start_year=start_year, END_year=end_year, $
+                         count=count
 
 
 
 ;+
 ; NAME:
-;     CIT_AUTHOR_PAPERS
+;     CIT_ABS_SEARCH
 ;
 ; PURPOSE:
-;     Retrieve a list of bibcodes from the ADS for the specified
-;     author. Only the Astronomy database is searched, unless /ALL is
-;     set. 
+;     Retrieve a list of bibcodes of papers that contain a specified
+;     search string in the abstract.
 ;
 ; CATEGORY:
-;     ADS; citations.
+;     ADS; citations; search.
 ;
 ; CALLING SEQUENCE:
-;     Result = CIT_AUTHOR_PAPERS( Name )
+;     Result = CIT_ABS_SEARCH( Name )
 ;
 ; INPUTS:
-;     Name:   The author's name, given in the format "Young,
-;             Peter R.", i.e., "SURNAME, First
-;             Middle-Initials". Can also give "Young, P." or
-;             just "Young". Can be an array of names, in which case
-;             the output will include the bibcodes for each of the
-;             names. 
+;     Name:  A string to be searched for.
 ;
 ; OPTIONAL INPUTS:
 ;     Start_Year:  The start year for the search. If not specified
 ;                  then 1900 is used.
 ;     End_Year:  The end year for the search. If not specified then
 ;                the current year is used.
-;
-; KEYWORD PARAMETERS:
-;     ALL:  If set, then all ADS databases are searched (not just
-;           astronomy).
-;     ORCID:  If set, then NAME is assumed to be an ORCID ID. 
 ;	
 ; OUTPUTS:
 ;     A string array containing a list of ADS bibcodes that satisfy
-;     the search criteria. 
+;     the search criteria.
+;
+; OPTIONAL OUTPUTS:
+;     Count: Integer specifying number of bibcodes that have been found.
 ;
 ; EXAMPLE:
-;     IDL> bcodes=cit_author_papers('Young, Peter R.',start=1994)
-;     IDL> cit_author_html,bcodes,html_file='young.html',name='Dr. Peter R. Young'
-;
-;     IDL> bcodes=cit_author_papers('0000-0001-9034-2925',/orcid)
+;     IDL> bcodes=cit_abs_search('coronal heating')
 ;
 ; MODIFICATION HISTORY:
-;     Ver.1, 2-Oct-2019, Peter Young
-;     Ver.2, 8-Nov-2019, Peter Young
-;       NAME is allowed to be an array now; added /ALL keyword.
-;     Ver.3, 30-Mar-2021, Peter Young
-;       Added /orcid keyword.
+;     Ver.1, 20-Mar-2021, Peter Young
 ;-
 
 
 IF n_params() LT 1 THEN BEGIN
-  print,'Use:  IDL> bcodes=cit_author_papers( "Surname, First M.I." [, start_year=, end_year=, /all, /orcid ])'
+  print,'Use:  IDL> bcodes=cit_abs_search( Search_String [, start_year=, end_year=, count= ])'
   return,''
 ENDIF 
+
+
+count=0
 
 IF n_elements(start_year) EQ 0 THEN start_year=1900
 IF n_elements(end_year) EQ 0 THEN BEGIN
@@ -149,7 +138,7 @@ ENDELSE
 ; later. 
 ;
 k=where(doctype EQ 'article' OR doctype EQ 'inproceedings',nk)
-IF nk eq 0 THEN return,-1
+IF nk eq 0 THEN return,''
 bibcode=bibcode[k]
 
 ;
@@ -159,6 +148,7 @@ s=strmid(bibcode,4,9)
 k=where(s NE 'shin.conf',nk)
 bibcode=bibcode[k]
 
+count=n_elements(bibcode)
 
 return,bibcode
 

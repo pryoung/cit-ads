@@ -1,4 +1,7 @@
-US           *USA
+US           *USA*
+US           *U.S.A.*
+US           *USA.
+US           United States of America
 US           Applied Physics Laboratory
 US           Johns Hopkins University
 US           Johns Hopkins
@@ -27,6 +30,7 @@ US           George Mason
 US           Goddard
 US           Marshall
 US           NASA
+US           Princeton Center for Plasma Physics
 US           High Altitude
 US           Smithsonian
 US           Sacramento Peak Observatory
@@ -39,8 +43,9 @@ US           Predictive Science
 US           Lowell Observatory
 US           Tennessee State University
 US           Minnesota
+US           Baltimore
 US           Georgia State University
-US           Princeton
+US           Princeton*
 US           Artep
 US           University of California
 US           Villanova University
@@ -68,7 +73,7 @@ US           Lockheed
 US           Lochkeed
 US           Berkeley
 US           Big Bear
-US           Montana
+US           Montana State University
 US           American Geophysical Union
 US           Gaithersburg
 US           Nightsen
@@ -100,6 +105,7 @@ US           International Intellectual Group
 US           Computational Physics, Inc.
 US           Stony Brook
 US           Honolulu
+US           Carnegie Institution
 US           Los Alamos
 US           University of New Hampshire
 US           Haverford College
@@ -126,25 +132,32 @@ US           La Jolla
 US           Hughes STX
 US           Minneapolis
 US           Minnesota
+US           University of Kansas
 US           Bartol Research Foundation
 US           California Institute of Technology
 US           Clemson
 US           Auburn
+US           Praxis
 US           New Hampshire
-UK           University College
-UK           *UK
+UK           *UK*
+UK           United Kingdom
 UK           Rutherford Appleton
 UK           Birmingham
-UK           RAL Space
-UK           Andrews
+UK           *RAL Space
+UK           St. Andrews
+UK           St Andrews
 UK           Jodrell Bank
 UK           Durham University
+UK           University of Durham
+UK           University of Sussex
+UK           Southampton
 UK           Northumbria
 UK           Department of Applied Mathematics and Theoretical Physics
 UK           University of Cambridge
 UK           Madingley Road
 UK           Madingley Rd
 UK           Cambridge University
+UK           British Antarctic Survey
 UK           University of Reading
 UK           University of Oxford
 UK           Westfield College
@@ -155,13 +168,17 @@ UK           Mullard
 UK           MSSL
 UK           Sheffield
 UK           Sheffeld
+UK           Shefeld
 UK           Armagh
+UK           Dorking
+UK           The Open University
 UK           Imperial College
 UK           Wilberforce
 UK           Warwick
 UK           Belfast
 UK           Glasgow
 UK           Edinburgh
+UK           Cavendish Laboratory
 UK           Dundee
 UK           Culham
 UK           University of Hull
@@ -176,10 +193,21 @@ UK           University of Exeter
 UK           Jeremiah Horrocks Institute
 UK           Keele University
 UK           Aldermaston
+UK           Queen Mary University
+UK           Oxfordshire
+UK           Hull University
+UK           University of Manchester
+UK           Bradford
+UK           University of Lancaster
+UK           *uclan*
 Ireland      Dublin
+Ireland      Kildare
 Ireland      University of Ireland
 Ireland      Maynooth University
-Germany      *Germany
+Ireland      University College Cork
+Germany      *Germany*
+Germany      (Germany)
+Germany      Max-Planck
 Germany      Max-Plank
 Germany      Max Planck
 Germany      Freiburg
@@ -187,10 +215,15 @@ Germany      Potsdam
 Germany      Göttingen
 Germany      Würzburg
 Germany      Katlenburg
+Germany      Garching
 Greece       Ioannina
 Greece       National Observatory of Athens
-Greece       *Greece
-France       *France
+Greece       Academy of Athens
+Greece       *Greece*
+Greece       *Greece.
+France       *France*
+France       (France)
+France       (IAS)
 France       Observatoire de Paris
 France       Toulouse
 France       Orsay
@@ -198,6 +231,7 @@ France       Institut d'Astrophysique Spatiale
 France       Institut d'Astrophyisique Spatiale
 France       Laboratoire d'Astronomie Spatiale
 France       Laboratoire Charles Fabry
+France       Grenoble
 Japan        Tokyo
 Japan        Institute for Laser Science
 Japan        Japan
@@ -208,7 +242,10 @@ Japan        Nagoya
 Japan        Institute of Space and Astronautical Science
 Japan        Institute of Space and Aeronautical Science
 Japan        Mitsubishi
-Spain        *Spain
+Japan        Kanagawa
+Japan        Tohoku University
+Spain        *Spain*
+Spain        (Spain)
 Spain        Canarias
 Spain        Andalucía
 Spain        European Space Astronomy Centre
@@ -216,22 +253,24 @@ Spain        Barcelona
 Norway       *Oslo
 Norway       *Norway
 Czech Rep.   Czech
+Czech Rep.   Ondrejov
 China        Taiwan
-China        *China
+China        *China*
 China        Beijing
 China        Shandong
 China        Nanjing
 China        Hong Kong
 China        Key Laboratory
 China        Yunnan
+China        Peking
 China        Shanghai
 China        China
 China        Purple Mountain
 China        Henan University
-Russia       *Russia
-Russia       Moscow
+China        *Macau*
+Russia       *Russia*
 Russia       Lebedev
-Russia       Russian
+Russia       *Russian*
 Belgium      Belgium
 Belgium      Belgique
 Belgium      Solar Terrestrial Centre of Excellence
@@ -240,27 +279,64 @@ Switzerland  Davos
 Switzerland  Paul Scherrer
 Switzerland  Switzerland
 Switzerland  Swizerland
+Switzerland  Suisse
 Switzerland  Geneva
 Switzerland  Zürich
+Switzerland  University of Bern
 India        Bangalore
-India        *India
+India        *India*
+India        (India)
 India        Indian*
+India        *Tata*
 India        IUCAA
+India        *Pune
+India        Nainital
 India        Aryabhatta Research Institute of Observational Sciences
+India        Vikram Sarabhai Space Centre
 India        Udaipur
+India        Raja Ramanna Centre
+India        Thenjippalam
+India        Ganeshkind
+India        Ganeshkhind
+India        Maharashtra
+India        Varanasi
+India        Tata Institute
+India        Ahmedabad
+India        Madurai
+India        Kariapatti
+India        Mumbai
+India        Rajkot
+India        Trivandrum
+India        Bengaluru
+India        Kerala
+India        Tezpur
+India        Bhopal
+India        Chennai
+India        Bombay
+India        *Ooty
+India        Hyderabad
+Italy        *Italy*
+Italy        *Italia*
+Italy        (Italy)
+Italy        Perugia
 Italy        Arcetri
-Italy        Napoli
-Italy        Italy
-Italy        Italia
+Italy        *Napoli
+Italy        Trieste
 Italy        Torino
+Italy        Bologna
 Italy        Capodimonte
 Italy        Firenze
 Italy        Catania
+Italy        Istituto di Fisica dello Spazio Interplanetario
+Italy        Palermo
 Italy        Osservatorio Astronomico di Roma
+Italy        Tor Vergata
+Italy        Centro Ricerche Casaccia
 Rep. Korea   Korea
 Rep. Korea   Kyung Hee
 Sweden       Stockholm
 Sweden       Sweden
+Sweden       Swedish
 Netherlands  Netherlands
 Poland       *Poland
 Poland       Wroclaw
@@ -273,48 +349,65 @@ Argentina    *Argentina
 Iran         Payame Noor
 Iran         Tabriz
 Iran         Tafresh
+Iran         Qazvin
+Iran         Zanjan
+Iran         Isfahan
+Iran         Hamedan
+Iran         Maragha
+Iran         Tehran
+Iran         Kermanshah
+Iran         Sanandaj
 Colombia     Colombia
 Turkey       Turkey
 Slovak Rep.  Bratislava
 Slovak Rep.  *Slovak
 Slovak Rep.  Comenius
 Austria      Austria
-Austria      Graz
+Austria      Graz*
+Denmark      Copenhagen
 Denmark      Denmark
+Finland      *Finland*
 Finland      Helsinki
+Finland      Aalto
 Finland      Finnish Meteorological Institute
+Finland      *Turku
+Finland      Oulu
 Bulgaria     Bulgaria
 Mexico       Universidad National Autónoma de México
 Mexico       México
 Mexico       Morelia
-Mexico       Guadalajara
 Mexico       Instituto Nacional de Astrofísica
 Mexico       Puebla
 Mexico       Hidalgo
 Mexico       Chiapas
+Mexico       Pachuca
+Mexico       Ciudad de Mexico
+Mexico       Tecnologico de Monterrey
 Mexico       Mexico City
 Peru         Jicamarca
 Portugal     Portugal
 UAE          United Arab Emirates
-Canada       *Canada
+UAE          Abu Dhabi
+UAE          *UAE*
+Canada       *Canada*
+Canada       Western Ontario
 Lithuania    Lithuania
 Hungary      Hungary
 Brazil       *Brazil
 Brazil       *Brasil
 Brazil       Universidade Estadual de Santa Cruz
 Venezuela    *Venezuela
-Finland      *Finland
 South Africa South Africa
 Slovenia     *Slovenia
 Israel       *Israel
 Serbia       *Serbia
 Chile        *Chile
 Croatia      *Croatia
-Denmark      Copenhagen
 New Zealand  New Zealand
 Tunisia      Tunisia
 Saudi Arabia Saudi Arabia
 Romania      Bucharest
+Romania      *Romania*
 Nepal        *Nepal
 Russia       USSR
 Thailand     Thailand
@@ -325,5 +418,43 @@ Tonga        *Tonga
 Belgium      Belgium
 Belgium      Leuven
 Ukraine      Ukraine
+Ukraine      Crimea
+Ukraine      Kharkiv
 Fiji         Fiji
 Costa Rica   Costa Rica
+Egypt        Cairo
+Egypt        Mansoura
+Egypt        *Egypt*
+Georgia      Tbilisi
+Georgia      Abastumani
+Ecuador      Ecuador
+Ethiopia     Ethiopia
+Sudan        Khartoum
+Singapore    Singapore
+Indonesia    Indonesia
+UAE          Abu Dhabi
+Pakistan     Pakistan
+Namibia      Namibia
+Peru         *Peru*
+Morocco      Morocco
+Qatar        Qatar
+Belarus      Belarus
+Algeria      Algeria
+Latvia       Latvia
+Bangladesh   Bangladesh
+Malaysia     Malaysia
+Kazakhstan   Kazakhstan
+Vietnam      Vietnam
+Senegal      *Sénégal*
+Senegal      *Senegal*
+Albania      *Albania*
+Malta        *Malta*
+Estonia      *Estonia*
+Iceland      *Iceland*
+Israel       *Israel*
+Lebanon      *Lebanon*
+Kuwait       *Kuwait
+Azerbaijan   Azerbaijan
+Mongolia     Mongolia
+Uruguay      Uruguay
+Jordan       Al-Balqa Applied University

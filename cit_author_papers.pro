@@ -76,6 +76,8 @@ FUNCTION cit_author_papers, name, start_year=start_year, END_year=end_year, all=
 ;       affiliation contains two words (e.g., "big bear").
 ;     Ver.6, 12-Aug-2022, Peter Young
 ;       Added count= optional output; added /first_author keyword.
+;     Ver.7, 03-Jan-2023, Peter Young
+;       The output bibcode list is now in reverse-date order.
 ;-
 
 
@@ -153,7 +155,10 @@ headers=['Authorization: Bearer '+ads_key, $
 ; I'm restricting to 1000 results and also just the astronomy
 ; database (unless /all given).
 ;
-chck_str=query_string+'&rows='+trim(1000)+'&fl=bibcode,doctype'
+; The sort command puts the papers in reverse date order.
+;
+;chck_str=query_string+'&rows='+trim(1000)+'&sort=date%20desc%2C%20bibcode%20desc&fl=bibcode,doctype'
+chck_str=query_string+'&rows='+trim(1000)+'&sort=date%20desc&fl=bibcode,doctype'
 IF NOT keyword_set(all) THEN chck_str=chck_str+'&fq=database:astronomy'
 input_url=url+'?q='+chck_str
 

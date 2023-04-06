@@ -5,7 +5,7 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
                      link_author=link_author, surname=surname, $
                      self_cite_name=self_cite_name, $
                      out_data=out_data, quiet=quiet, nauthor_cutoff=nauthor_cutoff, $
-                     add_file=add_file
+                     add_file=add_file, orcid=orcid, time_update=time_update
 
 ;+
 ; NAME:
@@ -66,6 +66,12 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
 ;                paper in the author's publication list cites a
 ;                first-author paper of the author. WARNING: this slows
 ;                the routine down a lot!
+;     Orcid:     The Orcid ID for the author. If specified, then a link
+;                to the author's Orcid page is added to the html file.
+;     Time_Update: If the author's data file already exists, then setting
+;                this input to an integer makes the routine check to see
+;                if the data file is more than TIME_UPDATE days old. If it
+;                is not, then the author's data are not updated.
 ;
 ; KEYWORD PARAMETERS:
 ;     QUIET:     If set, then no information is printed to IDL
@@ -177,6 +183,19 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
 ;        Fixed bug in add_file implementation.
 ;      Ver.23, 01-Nov-2022, Peter Young
 ;        Fixed bug with yr_last_paper if surname not specified.
+;      Ver.24, 08-Dec-2022, Peter Young
+;        Added ORCID= optional input; added last_affil_country tag to
+;        output for the country affiliation of the most recent paper.
+;      Ver.25, 12-Dec-2022, Peter Young
+;        Added time_stamp tag to output structure.
+;      Ver.26, 15-Dec-2022, Peter Young
+;        Added yr_last_paper_all to output tag.
+;      Ver.27, 03-Jan-2023, Peter Young
+;        Made tot_cit a long integer; added curr_affil to output structure,
+;        and modified last_affil_country to be for the most recent paper
+;        (first-author or co-author); added orcid tag to output.
+;      Ver.28, 13-Jan-2023, Peter Young
+;        Added far_cit (citations for FAR papers) to out_data.
 ;-
 
 
@@ -271,6 +290,31 @@ html_dir=file_dirname(html_file)
 ;
 jd=systime(/julian,/utc)
 caldat,jd,m,d,curr_year
+date_string=trim(curr_year)+'-'+trim(m)+'-'+trim(d)
+
+
+
+;
+; Create name of file containing list ordered by citations.
+;
+basename=file_basename(html_file,'.html')
+out_file=basename+'_cit.html'
+chck=file_search(out_file,count=count)
+IF count NE 0 THEN file_delete,out_file
+
+;
+; File for saving the author's data.
+;
+save_file=basename+'.save'
+save_file=concat_dir(html_dir,save_file)
+chck=file_info(save_file)
+IF n_elements(time_update) NE 0 AND chck.exists EQ 1 THEN BEGIN
+  restore,save_file
+  t_tai=anytim2tai(out_data.time_stamp)
+  curr_tai=anytim2tai(date_string)
+  diff_days=(curr_tai-t_tai)/86400.
+  IF diff_days LE time_update THEN return
+ENDIF 
 
 
 ;
@@ -280,14 +324,6 @@ caldat,jd,m,d,curr_year
 ;
 chck=file_search(html_file,count=count)
 IF count NE 0 THEN file_delete,html_file
-
-;
-; Create name of file containing list ordered by citations.
-;
-basename=file_basename(html_file,'.html')
-out_file=basename+'_cit.html'
-chck=file_search(out_file,count=count)
-IF count NE 0 THEN file_delete,out_file
 
 
 ;
@@ -313,31 +349,9 @@ IF n_tags(ads_data) EQ 0 THEN BEGIN
   return
 ENDIF 
 cit_fill_strings,ads_data
+cit_affil_country,ads_data
+ads_data=cit_filter_ads_entries(ads_data)
 
-
-;
-; Do some custom filtering of non-standard entries
-;
-chck=strpos(ads_data.bibcode,'EGUGA')
-k=where(chck LT 0,nk)
-IF nk NE 0 THEN ads_data=ads_data[k]
-;
-chck=strpos(ads_data.bibcode,'TESS')
-k=where(chck LT 0,nk)
-IF nk NE 0 THEN ads_data=ads_data[k]
-;
-chck=strpos(ads_data.bibcode,'cosp')
-k=where(chck LT 0,nk)
-IF nk NE 0 THEN ads_data=ads_data[k]
-;
-k=where(ads_data.doctype NE 'catalog',nk)
-IF nk NE 0 THEN ads_data=ads_data[k]
-;
-k=where(ads_data.doctype NE 'software',nk)
-IF nk NE 0 THEN ads_data=ads_data[k]
-;
-k=where(ads_data.doctype NE 'proposal',nk)
-IF nk NE 0 THEN ads_data=ads_data[k]
 
 
 ;
@@ -383,7 +397,14 @@ npapers=n_elements(ads_data)
 ;
 ; Get total citations
 ;
-tot_cit=fix(total(ads_data.citation_count))
+tot_cit=fix(total(long(ads_data.citation_count)))
+
+;
+; Get year of last paper
+;
+yr_all=fix(ads_data.year)
+i=reverse(sort(yr_all))
+yr_last_paper_all=yr_all[i[0]]
 
 ;
 ; Compute "h-index"
@@ -453,13 +474,32 @@ iref=where(refereed EQ 1,nref)
 ; Update: I now check for an exact match of the surnames (to fix the
 ; Young-Younger issue mentioned above)
 ;
+; Update: if orcid has been specified, then use the Orcid number to
+; identify first author papers.
+;
 yr_last_paper=1900
-IF n_elements(surname) NE 0 THEN BEGIN
-   n_first=0
-   n_first_ref=0
-   far_index=-1
-   ns=n_elements(surname)
-   FOR i=0,npapers-1 DO BEGIN
+
+n_first=0
+n_first_ref=0
+far_cit=0
+far_index=-1
+IF n_elements(orcid) NE 0 THEN BEGIN
+  FOR i=0,npapers-1 DO BEGIN
+    orc=ads_data[i].orcid.toarray()
+    IF trim(orc[0]) EQ orcid THEN BEGIN
+      n_first=n_first+1
+      IF refereed[i] EQ 1 THEN BEGIN
+        far_cit=far_cit+ads_data[i].citation_count
+        n_first_ref=n_first_ref+1
+        far_index=[far_index,i]
+        IF fix(ads_data[i].year) GT yr_last_paper THEN yr_last_paper=fix(ads_data[i].year)
+      ENDIF
+    ENDIF
+  ENDFOR 
+ENDIF ELSE BEGIN
+  IF n_elements(surname) NE 0 THEN BEGIN
+    ns=n_elements(surname)
+    FOR i=0,npapers-1 DO BEGIN
       swtch=0b
       FOR j=0,ns-1 DO BEGIN
         sname1=cit_clean_names(strlowcase(ads_data[i].author[0]))
@@ -470,6 +510,7 @@ IF n_elements(surname) NE 0 THEN BEGIN
           n_first=n_first+1
           IF refereed[i] EQ 1 THEN BEGIN
             n_first_ref=n_first_ref+1
+            far_cit=far_cit+ads_data[i].citation_count
             far_index=[far_index,i]
             IF fix(ads_data[i].year) GT yr_last_paper THEN yr_last_paper=fix(ads_data[i].year)
           ENDIF
@@ -477,45 +518,51 @@ IF n_elements(surname) NE 0 THEN BEGIN
         ENDIF
       ENDFOR 
     ENDFOR
-  ;
-   far_5_ncit=intarr(5)-1
-   far_5_bcode=strarr(5)
-   IF n_first_ref GT 0 THEN BEGIN 
-     far_index=far_index[1:*]
-     ads_data_far=ads_data[far_index]
+  ENDIF
+ENDELSE 
+
+;
+; If we have first-author refereed papers, then populate the far_5 arrays.
+;
+far_5_ncit=intarr(5)-1
+far_5_bcode=strarr(5)
+far_5_title=strarr(5)
+IF n_first_ref GT 0 THEN BEGIN 
+  far_index=far_index[1:*]
+  ads_data_far=ads_data[far_index]
      ;
-     yr=fix(ads_data[far_index].year)
-     start_year_far=min(yr)
+  yr=fix(ads_data[far_index].year)
+  start_year_far=min(yr)
      ;
-     cit_list=ads_data[far_index].citation_count
-     j=reverse(sort(cit_list))
-     cit_list=cit_list[j]
-     nj=n_elements(j)
-     h_far_index=-1
-     i=0
-     WHILE h_far_index LT 0 AND i LE nj-1 DO BEGIN
-       IF i+1 GT cit_list[i] THEN h_far_index=i
-       i=i+1
-     ENDWHILE
-     IF h_far_index EQ -1 THEN h_far_index=fix(nj)   ; in case min(citations) > nj
+  cit_list=ads_data[far_index].citation_count
+  j=reverse(sort(cit_list))
+  cit_list=cit_list[j]
+  nj=n_elements(j)
+  h_far_index=-1
+  i=0
+  WHILE h_far_index LT 0 AND i LE nj-1 DO BEGIN
+    IF i+1 GT cit_list[i] THEN h_far_index=i
+    i=i+1
+  ENDWHILE
+  IF h_far_index EQ -1 THEN h_far_index=fix(nj)   ; in case min(citations) > nj
     ;
     ; The following records the five FAR papers with the highest
     ; citations in the last 5 years.
     ;
-     k=where(ads_data_far.year GE curr_year-4,nk)
-     IF nk GE 1 THEN BEGIN
-       ncit=ads_data_far[k].citation_count
-       icit=reverse(sort(ncit))
-       n=min([nk,5])
-       FOR i=0,n-1 DO BEGIN
-         far_5_ncit[i]=ncit[icit[i]]
-         far_5_bcode[i]=ads_data_far[k[icit[i]]].bibcode
-       ENDFOR 
-     ENDIF 
-   ENDIF ELSE BEGIN
-      junk=temporary(far_index)
-   ENDELSE 
-ENDIF 
+  k=where(ads_data_far.year GE curr_year-4,nk)
+  IF nk GE 1 THEN BEGIN
+    ncit=ads_data_far[k].citation_count
+    icit=reverse(sort(ncit))
+    n=min([nk,5])
+    FOR i=0,n-1 DO BEGIN
+      far_5_ncit[i]=ncit[icit[i]]
+      far_5_bcode[i]=ads_data_far[k[icit[i]]].bibcode
+      far_5_title[i]=ads_data_far[k[icit[i]]].title[0]
+    ENDFOR 
+  ENDIF 
+ENDIF ELSE BEGIN
+  junk=temporary(far_index)
+ENDELSE 
 
 
 ;
@@ -543,6 +590,10 @@ printf,lout,'<h1>Publications of '+name+'</h1>'
 printf,lout,'<p>A list of publications authored or co-authored by '+name+', derived from the ADS Abstracts Service. The number in brackets after each title indicates the number of citations that the paper has received.</p>'
 IF n_elements(ads_library) NE 0 THEN BEGIN
   printf,lout,'<p>This publication list is also maintained as an <a href="'+ads_library+'">ADS library</a>.</p>'
+ENDIF
+IF n_elements(orcid) NE 0 THEN BEGIN
+  orcid_link='https://orcid.org/'+trim(orcid)
+  printf,lout,'<p>Orcid ID: <a href="'+orcid_link+'">'+trim(orcid)+'</a>.</p>'
 ENDIF 
 printf,lout,'<p><a href="'+out_file+'">List of publications ordered by citations</a><br>'
 printf,lout,'Number of papers: '+trim(npapers)+' (refereed: '+trim(nref)+')<br>'
@@ -715,7 +766,6 @@ IF n_elements(far_index) NE 0 THEN BEGIN
 ; Get affiliation for the author's first FAR paper.
 ;
 first_affil_country=''
-cit_affil_country,ads_data_far
 IF n_tags(ads_data_far) NE 0 THEN BEGIN
   j=sort(ads_data_far.year)
   nfar=n_elements(ads_data_far)
@@ -726,6 +776,66 @@ IF n_tags(ads_data_far) NE 0 THEN BEGIN
     ENDIF
   ENDFOR 
 ENDIF 
+;
+; Get affiliation for the author's most-recent FAR paper. The routine
+; cit_author_papers automatically sorts the papers in reverse-time order,
+; so I just have to take the most recent paper
+;
+last_affil_country=''
+curr_affil=''
+IF n_tags(ads_data) NE 0 THEN BEGIN
+  IF n_elements(orcid) NE 0 THEN BEGIN
+    n=n_elements(ads_data)
+    FOR i=0,n-1 DO BEGIN
+      orc=ads_data[i].orcid.toarray()
+      k=where(trim(orc) EQ trim(orcid),nk)
+      IF nk NE 0 THEN BEGIN
+        aff_str=ads_data[i].aff.toarray()
+        curr_affil=aff_str[k[0]]
+        last_affil_country=ads_data[i].country[k[0]]
+        IF curr_affil NE '-' THEN break
+      ENDIF
+    ENDFOR 
+  ENDIF 
+ENDIF 
+
+
+;
+; For the keywords assigned to the author's papers, determine what fraction
+; include 'sun' or 'solar'. This is taken as an indication of whether the
+; author is a solar physicist. I require there to be at least 20 keywords
+; to do the check.
+;
+keywords=''
+n=n_elements(ads_data)
+FOR i=0,n-1 DO BEGIN
+  IF ads_data[i].keyword.count() NE 0 THEN BEGIN 
+    keyw=ads_data[i].keyword.toarray()
+    keywords=[keywords,keyw]
+  ENDIF 
+ENDFOR
+IF n_elements(keywords) GT 20 THEN BEGIN
+  keywords=keywords[1:*]
+;
+  chck1=strpos(strlowcase(keywords),'sun')
+  chck2=strpos(strlowcase(keywords),'solar')
+  swtch=(chck1 GE 0) OR (chck2 GE 0)
+  k=where(swtch EQ 1b,nk)
+;
+  sun_keyword_frac=float(nk)/float(n_elements(keywords))
+ENDIF ELSE BEGIN
+  sun_keyword_frac=-1.
+ENDELSE 
+
+;
+; Get a time stamp for the data.
+;
+jd=systime(/julian,/utc)
+mjd=jd-2400000.5d
+mjd_str={ mjd: floor(mjd), time: (mjd-floor(mjd))*8.64d7 }
+time_stamp=anytim2utc(/ccsds,mjd_str,/trunc)
+;
+IF n_elements(orcid) EQ 0 THEN orc='' ELSE orc=orcid
 ;
 IF n_elements(start_year_far) EQ 0 THEN start_year_far=-1
 k=where(refereed EQ 1,nk)
@@ -741,10 +851,19 @@ out_data={ h_index: fix(h_index), $
            start_year_far: start_year_far, $
            far_year: far_year, $
            far_num: far_num, $
+           far_cit: far_cit, $
            yr_last_paper: yr_last_paper, $
+           yr_last_paper_all: yr_last_paper_all, $
            first_affil_country: first_affil_country, $
-           far_5_ncit: far_5_ncit, $
-           far_5_bcode: far_5_bcode}
-           
+           last_affil_country: last_affil_country, $
+           curr_affil: curr_affil, $
+           far_5_ncit: far_5_ncit, $ 
+           far_5_bcode: far_5_bcode, $
+           far_5_title: far_5_title, $
+           orcid: orc, $
+           sun_keyword_frac: sun_keyword_frac, $
+           time_stamp: time_stamp}
+
+save,file=save_file,out_data
 
 END

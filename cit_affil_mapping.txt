@@ -1,0 +1,168 @@
+UK           Northumbria University
+UK           Northumbria University         Northumbria
+UK           University of Reading
+UK           University of Reading          Department of Meteorology   
+UK           Imperial College
+UK           MSSL                           Mullard Space Science
+UK           Aberystwyth University
+UK           University of Birmingham       Birmingham
+UK           Queen's University Belfast     Astrophysics Research Centre
+UK           University of Glasgow          Glasgow
+UK           University of Sheffield        Sheffield
+UK           University of Warwick
+UK           University of Warwick          Warwick University
+UK           Univ. of Central Lancashire    University of Central Lancashire
+UK           University of Cambridge
+UK           University of Manchester
+UK           University of Dundee
+UK           University of Exeter           Exeter
+UK           Queen Mary University
+UK           Durham University
+UK           University of St Andrews       Andrews
+UK           University of Leicester
+UK           University College London      University College
+US           NASA Ames
+US           NASA Goddard                   Goddard
+US           NASA Marshall                  Marshall
+US           Catholic University            Catholic
+US           Harvard-Smithsonian CfA        Center for Astrophysics
+US           Harvard-Smithsonian CfA        Smithsonian Astrophysical Observatory
+US           Boston University
+US           Florida Institute of Technology
+US           George Mason University
+US           High Altitude Observatory
+US           Los Alamos National Laboratory
+US           University of Arizona
+US           Lockheed Martin
+US           LASP, CU-Boulder               Laboratory for Atmospheric and Space Physics
+US           LASP, CU-Boulder               LASP
+US           NJIT                           New Jersey Institute of Technology
+US           SSL, Berkeley                  Space Sciences Laboratory
+US           Naval Research Laboratory
+US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
+US           Southwest Research Institute
+US           University of Minnesota        Minnesota
+US           Predictive Science Inc. (PSI)  Predictive Science
+US           University of Hawaii           University of Hawai
+US           Princeton University           Princeton
+US           Columbia University
+US           University of Michigan
+US           Stanford University
+US           National Solar Observatory
+US           Applied Physics Laboratory
+US           U. Alabama - Huntsville        Huntsville
+US           University of New Hampshire    Hampshire
+US           BAERI                          Bay Area Environmental Research Institute
+US           Air Force Research Laboratory
+US           Yale University
+US           University of Colorado
+US           University of Maryland
+US           American University
+US           Rice University
+US           University of Delaware
+US           University of Iowa
+US           West Virginia University
+US           New Mexico State University
+US           Montana State University
+US           NorthWest Research Associates
+US           UCLA                           University of California, Los Angeles
+US           UCLA                           University of California Los Angeles
+Germany      University of Potsdam          Potsdam
+Germany      Leibniz-Institut               Leibniz
+Germany      MPS - Gottingen                Sonnensystemforschung
+Germany      MPS - Gottingen                Justus-von-Liebig
+Germany      MPS - Gottingen                Institute for Solar System Research
+Germany      Ruhr-Universitat Bochum        Ruhr-Univer
+Germany      Georg-August-Universitat       Georg-August-Univ
+Italy        Università della Calabria      Calabria
+Italy        INAF - Catania                 Catania
+Italy        INAF - Rome                    Astrofisica e Planetologia Spaziali
+Italy        INAF - Rome                    Space Astrophysics and Planet
+Italy        INAF - Palermo                 Astronomico di Palermo
+Italy        INAF - Napoli                  Observatory of Capodimonte
+Italy        INAF - Torino                  Osservatorio Astrofisico di Torino
+Italy        INAF - Torino                  Astrophysical Observatory of Torino
+Italy        INAF - Torino                  Astrophysical Observatory of Turin
+Italy        University of Palermo
+Italy        University of Florence         Universita degli Studi di Firenze
+Italy        University of Florence         University of Firenze
+Italy        University of Florence
+Belgium      Royal Observatory of Belgium   Royal Observatory
+Belgium      KU Leuven                      Leuven
+Japan        Kyoto University
+Japan        Nagoya University
+Japan        NAOJ                           National Astronomical Observatory
+Japan        Chiba University
+Japan        ISAS                           Institute of Space and Astronautical Science
+Japan        ISAS                           Institute of Space and Astro-nautical Science
+Spain        IAC - Tenerife                 Canarias
+Spain        ESAC                           European Space Astronomy Centre
+Spain        UIB - Palma de Mallorca        Universitat de les Illes Balears
+Spain        IAA - Granada                  Astrofisica de Andalucia
+Spain        University of Extremadura      Extremadura
+China        Peking University
+China        Purple Mountain Observatory
+China        Shandong University
+China        Yunnan University
+China        Yunnan Observatories
+China        Yunnan Observatories           Yunnan Observatory
+China        Yunnan Observatories           Yunnan Astronomical Observatory
+China        NAOC                           National Astronomical Observatories
+China        Sun Yat-sen University
+China        Beihang University
+China        Nanjing University
+China        National Space Science Center
+China        Luoyang Normal University
+China        Harbin Institute of Technology
+China        M.U.S.T. (Macau)               Macau University of Science and Technology
+China        USTC (Hefei)                   University of Science and Technology of China
+France       IAS - Orsay                    Institut d'Astrophysique Spatiale
+France       Ecole Polytechnique
+France       Toulouse University            Universite de Toulouse
+France       Toulouse University            Universite Toulouse
+France       University of Orleans
+France       Universite Paris-Saclay        Paris-Saclay
+France       Observatoire de Paris
+Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
+Rep. Korea   Kyung Hee University
+Rep. Korea   Seoul National University
+India        IIA - Bengaluru                Bengaluru
+India        IIA - Bengaluru                Bangalore
+India        IUCAA - Pune                   Inter-University Centre for Astronomy and Astrophysics
+India        Udaipur Solar Observatory
+India        IIT (BHU) - Varanasi           Banaras Hindu University
+India        IIT (BHU) - Varanasi           (BHU)
+India        IIG - Mumbai                   Indian Institute of Geomagnetism
+India        PRL - Ahmedabad                Physical Research Laboratory
+India        ARIES (Nainital)               Aryabhatta Research Institute
+India        University of Mumbai
+Sweden       Stockholm University
+Sweden       Uppsala University
+Finland      University of Helsinki
+Finland      University of Turku
+Finland      University of Oulu
+Finland      Aalto University
+Czech Rep.   Astronomical Institute OndrejovAstronomical Institute
+Czech Rep.   Charles University
+Czech Rep.   University of South Bohemia
+Switzerland  University of Geneva
+Switzerland  University of Bern
+Switzerland  ETH-Zurich
+Switzerland  ETH-Zurich                     ETH Zurich
+Switzerland  PMOD/WRC - Davos               PMOD/WRC
+Switzerland  PMOD/WRC - Davos               Physikalisch-Meteorologisches
+Switzerland  FHNW - Windisch                Windisch
+Switzerland  ISSI - Bern                    International Space Science Institute
+Norway       University of Oslo
+Ireland      Trinity College Dublin
+Ireland      DIAS - Dublin                  Dublin Institute for Advanced Studies
+Greece       University of Ioannina
+Greece       National Observatory of Athens
+Greece       Academy of Athens
+Iran         Razi University
+Russia       Space Research Institute
+Russia       Lebedev Physical Institute
+Russia       Inst of Solar-Terrestrial Phys.
+Poland       Space Research Centre (Warsaw) Space Research Centre 
+Australia    Monash University
+Australia    University of Newcastle

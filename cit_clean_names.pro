@@ -38,6 +38,10 @@ FUNCTION cit_clean_names, input
 ;       Fixed typo (repalce).
 ;     Ver.5, 12-Apr-2022, Peter Young
 ;       Added new entry.
+;     Ver.6, 09-Dec-2022, Peter Young
+;       Added some new entries.
+;     Ver.7, 22-Mar-2023, Peter Young
+;       Added some new entries.
 ;-
 
 
@@ -49,24 +53,63 @@ IF chck NE 'STR' THEN BEGIN
 ENDIF
 
 
-a=input.replace('ö','o')
-a=a.replace('í','i')
+a=input.replace('à','a')
 a=a.replace('á','a')
 a=a.replace('ä','a')
+a=a.replace('ã','a')
+a=a.replace('a̧','a')
+a=a.replace('â','a')
+a=a.replace('Â','A')
+a=a.replace('Á','A')
 a=a.replace('č','c')
 a=a.replace('ć','c')
-a=a.replace('ý','y')
-a=a.replace('Š','S')
-a=a.replace('š','s')
-a=a.replace('õ','o')
-a=a.replace('ó','o')
+a=a.replace('ç','c')
+a=a.replace('Č','C')
+a=a.replace('Ç','C')
+a=a.replace('Ç','C')
+a=a.replace('Ď','D')
+a=a.replace('ę','e')
 a=a.replace('é','e')
 a=a.replace('è','e')
+a=a.replace('ê','e')
 a=a.replace('è','e')
+a=a.replace('ě','e')
+a=a.replace('ě','e')
+a=a.replace('ë','e')
+a=a.replace('ė','e')
+a=a.replace('ȩ','e')
 a=a.replace('É','E')
+a=a.replace('í','i')
+a=a.replace('ı','i')
+a=a.replace('İ','I')
+a=a.replace('õ','o')
+a=a.replace('ó','o')
+a=a.replace('ò','o')
+a=a.replace('ö','o')
+a=a.replace('ø','o')
+a=a.replace('Ö','O')
+a=a.replace('Ó','O')
+a=a.replace('Ø','O')
+a=a.replace('ł','l')
 a=a.replace('ñ','n')
+a=a.replace('ń','n')
+a=a.replace('ň','n')
+a=a.replace('ř','r')
+a=a.replace('Š','S')
+a=a.replace('Ş','S')
+a=a.replace('Ś','S')
+a=a.replace('š','s')
+a=a.replace('ś','s')
+a=a.replace('ş','s')
+a=a.replace('ß','ss')
 a=a.replace('ü','u')
 a=a.replace('ú','u')
+a=a.replace('ū','u')
+a=a.replace('ŷ','y')
+a=a.replace('ý','y')
+a=a.replace('ž','z')
+a=a.replace('ź','z')
+a=a.replace('ż','z')
 
 return,a
 
