@@ -31,8 +31,12 @@ ENDIF
 ; the first-author papers (including non-refereed) which can't be
 ; obtained from ads_data_far.
 ;
-ads_data_first_author=cit_filter_ads_data(ads_data,orcid=orcid)
-author_data.far.n_papers=n_elements(ads_data_first_author)
+IF n_tags(ads_data_far) NE 0 THEN BEGIN 
+  ads_data_first_author=cit_filter_ads_data(ads_data,orcid=orcid)
+  author_data.far.n_papers=n_elements(ads_data_first_author)
+ENDIF ELSE BEGIN
+  author_data.far.n_papers=0
+ENDELSE
 
 ;
 ; Get filenames for the four output html files.
@@ -65,7 +69,9 @@ printf,lout,'<p><a href="'+outfile_cit+'">List of publications ordered by citati
 printf,lout,'Number of papers: '+trim(author_data.all.n_papers)+' (refereed: '+trim(author_data.all.n_papers_ref)+')<br>'
 printf,lout,'No. of citations: '+trim(author_data.all.n_cit)+'<br>'
 printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.all.h_index)+'<br>'
-printf,lout,'First author papers: '+trim(author_data.far.n_papers)+' (<a href="'+outfile_far+'">refereed</a>: '+trim(author_data.far.n_papers_ref)+')<br>'
+printf,lout,'First author papers: '+trim(author_data.far.n_papers)
+IF author_data.far.n_papers_ref NE 0 THEN printf,lout,' (<a href="'+outfile_far+'">refereed</a>: '+ $
+   trim(author_data.far.n_papers_ref)+')<br>'
 ;
 ; Now go through each year and print out the entries for that year.
 ;
@@ -104,6 +110,8 @@ FOR i=0,nstr-1 DO printf,lout,ostr[i]
 cit_write_footer_html,lout
 free_lun,lout
 
+
+IF author_data.far.n_papers_ref EQ 0 THEN return 
 
 ;
 ; PAGE 3
