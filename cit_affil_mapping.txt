@@ -98,8 +98,13 @@ Japan        ISAS                           Institute of Space and Astro-nautica
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        UIB - Palma de Mallorca        Universitat de les Illes Balears
+Spain        UIB - Palma de Mallorca        Universitat Illes Balears
 Spain        IAA - Granada                  Astrofisica de Andalucia
 Spain        University of Extremadura      Extremadura
+Spain        University of Alcala
+Spain        University of Alcala           Universidad de Alcala
+Spain        University of Barcelona
+Spain        University of Barcelona        Universitat de Barcelona
 China        Peking University
 China        Purple Mountain Observatory
 China        Shandong University
@@ -138,6 +143,9 @@ India        ARIES (Nainital)               Aryabhatta Research Institute
 India        University of Mumbai
 Sweden       Stockholm University
 Sweden       Uppsala University
+Sweden       Lund University
+Sweden       Swedish Inst. of Space Physics Swedish Institute of Space Physics
+Sweden       KTH Royal Inst. of Technology  KTH Royal Institute of Technology
 Finland      University of Helsinki
 Finland      University of Turku
 Finland      University of Oulu
@@ -159,6 +167,8 @@ Ireland      DIAS - Dublin                  Dublin Institute for Advanced Studie
 Greece       University of Ioannina
 Greece       National Observatory of Athens
 Greece       Academy of Athens
+Greece       University of Athens           National and Kapodistrian University of Athens
+Greece       Aristotle University
 Iran         Razi University
 Russia       Space Research Institute
 Russia       Lebedev Physical Institute
@@ -166,3 +176,19 @@ Russia       Inst of Solar-Terrestrial Phys.
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Australia    Monash University
 Australia    University of Newcastle
+Australia    University of Sydney
+Australia    University of Adelaide
+Australia    Deakin University
+Australia    CSIRO
+Argentina    Universidad de Buenos Aires
+Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
+Argentina    Universidad de Mendoza
+Argentina    UTN-FRM (Mendoza)              Facultad Regional Mendoza
+Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
+Mexico       UNAM (Mexico City)             04510
+Mexico       UNAM (Mexico City)             Ciudad de Mexico
+Netherlands  ESTEC (Noordwijk)              ESTEC
+Netherlands  Leiden University
+Netherlands  ASTRON (Dwingeloo)             Dwingeloo
+Netherlands  CWI (Amsterdam)                Centrum Wiskunde and Informatica
+Netherlands  Radboud University
