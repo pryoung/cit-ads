@@ -23,6 +23,7 @@ UK           University of Leicester
 UK           University College London      University College
 US           NASA Ames
 US           NASA Goddard                   Goddard
+US           NASA Goddard                   GSFC
 US           NASA Marshall                  Marshall
 US           Catholic University            Catholic
 US           Harvard-Smithsonian CfA        Center for Astrophysics
@@ -30,9 +31,18 @@ US           Harvard-Smithsonian CfA        Smithsonian Astrophysical Observator
 US           Boston University
 US           Florida Institute of Technology
 US           George Mason University
+US           Georgia State University
 US           High Altitude Observatory
+US           High Altitude Observatory      HAO,
+US           Dartmouth College
+US           Western Kentucky University
 US           Los Alamos National Laboratory
 US           University of Arizona
+US           University of Texas at Austin
+US           University of Texas at Dallas
+US           University of Wisconsin-Madison
+US           Univ. of Massachusetts Lowell  University of Massachusetts Lowell
+US           U. Illinois at Urbana-ChampaignIllinois at Urbana-Champaign
 US           Lockheed Martin
 US           LASP, CU-Boulder               Laboratory for Atmospheric and Space Physics
 US           LASP, CU-Boulder               LASP
@@ -41,6 +51,7 @@ US           SSL, Berkeley                  Space Sciences Laboratory
 US           Naval Research Laboratory
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
+US           CU-Boulder                     Department of Astrophysical and Planetary Sciences
 US           University of Minnesota        Minnesota
 US           Predictive Science Inc. (PSI)  Predictive Science
 US           University of Hawaii           University of Hawai
@@ -63,17 +74,35 @@ US           University of Delaware
 US           University of Iowa
 US           West Virginia University
 US           New Mexico State University
+US           New Mexico State University    New Mexico State Univ
 US           Montana State University
 US           NorthWest Research Associates
+US           NRAO (Charlottesville)         National Radio Astronomy Observatory
 US           UCLA                           University of California, Los Angeles
 US           UCLA                           University of California Los Angeles
+US           UCLA                           University of California-Los Angeles
+US           UCLA
+US           UCLA                           90095
+US           MIT                            Massachusetts Institute of Technology,
+US           Caltech (Pasadena)             California Institute of Technology
+US           NCAR (Boulder)                 National Center for Atmospheric Research
 Germany      University of Potsdam          Potsdam
-Germany      Leibniz-Institut               Leibniz
+Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      MPS - Gottingen                Sonnensystemforschung
 Germany      MPS - Gottingen                Justus-von-Liebig
 Germany      MPS - Gottingen                Institute for Solar System Research
 Germany      Ruhr-Universitat Bochum        Ruhr-Univer
-Germany      Georg-August-Universitat       Georg-August-Univ
+Germany      University of Gottingen        
+Germany      University of Gottingen        Georg-August-Univ
+Germany      University of Wurzburg
+Germany      Technical University of Berlin
+Germany      Technical University of Berlin Technische Universitat Berlin
+Germany      Kiel University
+Germany      Kiel University                Christian-Albrechts
+Germany      TU Braunschweig                Technische Universitat Braunschweig
+Germany      TU Dresden                     Technische Universitat Dresden
+Germany      MPI - Garching                 Max-Planck-Institut fur extraterrestrische Physik
+Germany      MPI-M (Hamburg)                Max Planck Institute for Meteorology
 Italy        Università della Calabria      Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome                    Astrofisica e Planetologia Spaziali

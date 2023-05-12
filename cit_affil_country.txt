@@ -57,7 +57,6 @@ US           Aurora Science
 US           Columbia University
 US           Carnegie Observatories
 US           Columbia Univ.
-US           San Diego
 US           Boston University
 US           Boston College
 US           Charlottesville
