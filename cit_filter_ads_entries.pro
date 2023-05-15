@@ -73,7 +73,7 @@ IF nk NE 0 THEN out_data=out_data[k]
 n=n_elements(out_data)
 title=strarr(n)
 FOR i=0,n-1 DO BEGIN
-  tcount=out_data[i].count()
+  tcount=out_data[i].title.count()
   IF tcount NE 0 THEN title[i]=out_data[i].title[0]
 ENDFOR 
 ;
