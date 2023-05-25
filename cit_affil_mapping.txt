@@ -5,14 +5,19 @@ UK           University of Reading          Department of Meteorology
 UK           Imperial College
 UK           MSSL                           Mullard Space Science
 UK           Aberystwyth University
+UK           Armagh Observatory
 UK           University of Birmingham       Birmingham
 UK           Queen's University Belfast     Astrophysics Research Centre
+UK           Queen's University Belfast
+UK           Rutherford Appleton Laboratory
 UK           University of Glasgow          Glasgow
 UK           University of Sheffield        Sheffield
 UK           University of Warwick
 UK           University of Warwick          Warwick University
 UK           Univ. of Central Lancashire    University of Central Lancashire
+UK           Univ. of Central Lancashire    Jeremiah Horrocks
 UK           University of Cambridge
+UK           University of Oxford
 UK           University of Manchester
 UK           University of Dundee
 UK           University of Exeter           Exeter
@@ -21,6 +26,8 @@ UK           Durham University
 UK           University of St Andrews       Andrews
 UK           University of Leicester
 UK           University College London      University College
+UK           Abertay University
+UK           Lancaster University
 US           NASA Ames
 US           NASA Goddard                   Goddard
 US           NASA Goddard                   GSFC
@@ -86,6 +93,11 @@ US           UCLA                           90095
 US           MIT                            Massachusetts Institute of Technology,
 US           Caltech (Pasadena)             California Institute of Technology
 US           NCAR (Boulder)                 National Center for Atmospheric Research
+US           BWX Technologies
+US           Univ. California Santa Cruz    California Santa Cruz
+US           Cal. State Univ. Northridge    Northridge
+US           George Washington University
+US           MIT                            MIT,
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      MPS - Gottingen                Sonnensystemforschung
