@@ -1,6 +1,6 @@
 
 
-FUNCTION cit_most_COMMON_keywords, ads_data, count=count
+FUNCTION cit_most_COMMON_keywords, input, count=count
 
 
 ;+
@@ -17,7 +17,8 @@ FUNCTION cit_most_COMMON_keywords, ads_data, count=count
 ;     Result = CIT_MOST_COMMON_KEYWORDS( Ads_Data )
 ;
 ; INPUTS:
-;     Ads_Data:  IDL structure in the format returned by CIT_GET_ADS_ENTRY.
+;     Input:  A string array containing a set of keywords. This is
+;             usually obtained with cit_get_keywords.pro.
 ;
 ; OUTPUTS:
 ;     A structure array with the tags:
@@ -28,7 +29,8 @@ FUNCTION cit_most_COMMON_keywords, ads_data, count=count
 ;     Count:  No. of elements in the output.
 ;
 ; EXAMPLE:
-;     IDL> kw=cit_most_common_keywords(ads_data)
+;     IDL> keywords=cit_get_keywords(ads_data)
+;     IDL> kw=cit_most_common_keywords(keywords)
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 14-Apr-2023, Peter Young
@@ -37,29 +39,20 @@ FUNCTION cit_most_COMMON_keywords, ads_data, count=count
 
 count=0
 
-n=n_elements(ads_data)
-
-all_keywords=''
-FOR i=0,n-1 DO BEGIN
-  keyw=ads_data[i].keyword.toarray()
-  all_keywords=[all_keywords,keyw]
-ENDFOR
-;
-IF n_elements(all_keywords) EQ 1 THEN BEGIN
-  message,/info,/cont,'No keywords found! Returning...'
+IF n_params() LT 1 THEN BEGIN
+  print,'Use:  IDL> output=cit_most_common_keywords(keywords [, count=])'
   return,-1
-ENDIF
-;
-all_keywords=all_keywords[1:*]
+ENDIF 
+
+IF input[0] EQ '' THEN return,-1
+
+all_keywords=input
+
 
 i_uniq_lo=uniq(strlowcase(all_keywords),sort(strlowcase(all_keywords)))
 uniq_keywords=all_keywords[i_uniq_lo]
 uniq_keywords_lo=strlowcase(all_keywords[i_uniq_lo])
 
-chck=strpos(uniq_keywords_lo,'solar and stellar astrophysics')
-k=where(chck LT 0)
-uniq_keywords=uniq_keywords[k]
-uniq_keywords_lo=uniq_keywords_lo[k]
 
 nuk=n_elements(uniq_keywords)
 swtch=bytarr(nuk)+1b
