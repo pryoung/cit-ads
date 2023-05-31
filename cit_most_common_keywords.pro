@@ -34,6 +34,8 @@ FUNCTION cit_most_COMMON_keywords, input, count=count
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 14-Apr-2023, Peter Young
+;     Ver.2, 15-May-2023, Peter Young
+;       Swapped strnumber for valid_num, as the former often hangs.
 ;-
 
 
@@ -57,7 +59,7 @@ uniq_keywords_lo=strlowcase(all_keywords[i_uniq_lo])
 nuk=n_elements(uniq_keywords)
 swtch=bytarr(nuk)+1b
 FOR i=0,nuk-1 DO BEGIN
-  IF strnumber(uniq_keywords_lo[i]) THEN swtch[i]=0b
+  IF valid_num(uniq_keywords_lo[i]) THEN swtch[i]=0b
 ENDFOR
 k=where(swtch EQ 1)
 uniq_keywords=uniq_keywords[k]
