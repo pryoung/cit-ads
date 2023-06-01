@@ -34,6 +34,8 @@ FUNCTION cit_filter_ads_entries, ads_data
 ;     Ver.2, 15-May-2023, Peter Young
 ;       Caught the case where the article has no title; modified the
 ;       preface check to only check the first word.
+;     Ver.3, 01-Jun-2023, Peter Young
+;       Fixed bug with last version.
 ;-
 
 
@@ -78,7 +80,7 @@ FOR i=0,n-1 DO BEGIN
 ENDFOR 
 ;
 chck=strpos(trim(strlowcase(title)),'preface')
-k=where(chck EQ 0,nk)
+k=where(chck NE 0,nk)
 out_data=out_data[k]
 
 
