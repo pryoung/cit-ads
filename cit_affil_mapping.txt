@@ -9,6 +9,7 @@ UK           Armagh Observatory
 UK           University of Birmingham       Birmingham
 UK           Queen's University Belfast     Astrophysics Research Centre
 UK           Queen's University Belfast
+UK           Queen's University Belfast     BT7 1NN
 UK           Rutherford Appleton Laboratory
 UK           University of Glasgow          Glasgow
 UK           University of Sheffield        Sheffield
@@ -68,6 +69,7 @@ US           University of Michigan
 US           Stanford University
 US           National Solar Observatory
 US           Applied Physics Laboratory
+US           Applied Physics Laboratory     Johns Hopkins University Laurel
 US           U. Alabama - Huntsville        Huntsville
 US           University of New Hampshire    Hampshire
 US           BAERI                          Bay Area Environmental Research Institute
@@ -110,6 +112,7 @@ Germany      University of Wurzburg
 Germany      Technical University of Berlin
 Germany      Technical University of Berlin Technische Universitat Berlin
 Germany      Kiel University
+Germany      Kiel University                University of Kiel
 Germany      Kiel University                Christian-Albrechts
 Germany      TU Braunschweig                Technische Universitat Braunschweig
 Germany      TU Dresden                     Technische Universitat Dresden
@@ -117,17 +120,27 @@ Germany      MPI - Garching                 Max-Planck-Institut fur extraterrest
 Germany      MPI-M (Hamburg)                Max Planck Institute for Meteorology
 Italy        Università della Calabria      Calabria
 Italy        INAF - Catania                 Catania
-Italy        INAF - Rome                    Astrofisica e Planetologia Spaziali
-Italy        INAF - Rome                    Space Astrophysics and Planet
+Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
+Italy        INAF - Rome (IAPS)             Space Astrophysics and Planet
+Italy        INAF - Rome (Observatory)      Osservatorio Astronomico di Roma
 Italy        INAF - Palermo                 Astronomico di Palermo
-Italy        INAF - Napoli                  Observatory of Capodimonte
+Italy        INAF - Naples                  Observatory of Capodimonte
+Italy        INAF - Naples                  Osservatorio Astronomico di Capodimonte
 Italy        INAF - Torino                  Osservatorio Astrofisico di Torino
 Italy        INAF - Torino                  Astrophysical Observatory of Torino
 Italy        INAF - Torino                  Astrophysical Observatory of Turin
+Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
+Italy        INAF - Florence                Astrophysical Observatory of Arcetri
 Italy        University of Palermo
 Italy        University of Florence         Universita degli Studi di Firenze
 Italy        University of Florence         University of Firenze
 Italy        University of Florence
+Italy        University of Pisa
+Italy        University of Pisa             Universita di Pisa
+Italy        University of Rome Tor Vergata Tor Vergata
+Italy        University of Genoa            
+Italy        University of Genoa            Universita di Genova
+Italy        Italian Space Agency
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Japan        Kyoto University
@@ -194,6 +207,8 @@ India        IIT (BHU) - Varanasi           (BHU)
 India        IIG - Mumbai                   Indian Institute of Geomagnetism
 India        PRL - Ahmedabad                Physical Research Laboratory
 India        ARIES (Nainital)               Aryabhatta Research Institute
+India        ARIES (Nainital)               Arybhatta Research Institute
+India        VIT Bhopal University
 India        University of Mumbai
 Sweden       Stockholm University
 Sweden       Uppsala University
@@ -255,6 +270,7 @@ Argentina    UTN-FRM (Mendoza)              Facultad Regional Mendoza
 Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
 Mexico       UNAM (Mexico City)             04510
 Mexico       UNAM (Mexico City)             Ciudad de Mexico
+Mexico       UNAM (Mexico City)             Autonoma de Mexico, Mexico City
 Netherlands  ESTEC (Noordwijk)              ESTEC
 Netherlands  Leiden University
 Netherlands  ASTRON (Dwingeloo)             Dwingeloo
