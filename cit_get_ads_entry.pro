@@ -127,6 +127,9 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;      Ver.17, 02-Dec-2022, Peter Young
 ;          added the tag 'orcid' to the output (contains Orcid IDs for
 ;          the authors).
+;      Ver.18, 07-Jan-2022, Peter Young
+;          now uses orcid_user and orcid_other to supplement the
+;          orcid_pub values.
 ;-
 
 
@@ -241,7 +244,7 @@ headers=['Authorization: Bearer '+ads_key, $
 ;
 big_list=0
 FOR i=0,m-1 DO BEGIN
-  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub'
+  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub,orcid_user,orcid_other'
   input_url=url+'?q='+chck_str
   IF strlen(input_url) GT 1000 THEN print,'***WARNING: exceeded max query string length of 1000 characters!'
  ;
@@ -341,6 +344,31 @@ FOR i=0,n-1 DO BEGIN
   IF bib_hash.haskey('volume') THEN output[i].volume=bib_hash['volume']
   IF bib_hash.haskey('keyword') THEN output[i].keyword=bib_hash['keyword']
   IF bib_hash.haskey('orcid_pub') THEN output[i].orcid=bib_hash['orcid_pub']
+ ;
+ ; The following uses orcid_user to fill in any blanks in the orcid array.
+ ;
+  IF bib_hash.haskey('orcid_user') THEN BEGIN
+    orc1=output[i].orcid.toarray()
+    orcid_user=bib_hash['orcid_user']
+    orc2=orcid_user.toarray()
+    k=where(orc1 EQ '-',nk)
+    IF nk NE 0 THEN orc1[k]=orc2[k]
+    n_orc1=n_elements(orc1)
+    FOR j=0,n_orc1-1 DO output[i].orcid[j]=orc1[j]
+  ENDIF
+ ;
+ ; Also use orcid_other to fill any other blanks.
+ ;
+  IF bib_hash.haskey('orcid_other') THEN BEGIN
+    orc1=output[i].orcid.toarray()
+    orcid_other=bib_hash['orcid_other']
+    orc2=orcid_other.toarray()
+    k=where(orc1 EQ '-',nk)
+    IF nk NE 0 THEN orc1[k]=orc2[k]
+    n_orc1=n_elements(orc1)
+    FOR j=0,n_orc1-1 DO output[i].orcid[j]=orc1[j]
+  ENDIF
+ ;
   IF bib_hash.haskey('author') THEN output[i].author=bib_hash['author']
   IF bib_hash.haskey('doctype') THEN output[i].doctype=bib_hash['doctype']
   IF bib_hash.haskey('citation_count') THEN output[i].citation_count=bib_hash['citation_count']
@@ -412,6 +440,15 @@ IF keyword_set(remove_abstracts) THEN BEGIN
   IF nk NE 0 THEN output=output[k] ELSE output=-1
 ENDIF 
 
+;
+; Here I do a reverse sort on the bibcodes to put the most recent papers first.
+; Even if the input bibcodes are sorted, I find that they get jumbled up in the
+; output for some reason.
+;
+IF n_tags(output) NE 0 THEN BEGIN
+  k=reverse(sort(output.bibcode))
+  output=output[k]
+ENDIF 
 
 return,output
 
