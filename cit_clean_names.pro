@@ -110,6 +110,7 @@ a=a.replace('ý','y')
 a=a.replace('ž','z')
 a=a.replace('ź','z')
 a=a.replace('ż','z')
+a=a.replace('Ž','Z')
 
 return,a
 
