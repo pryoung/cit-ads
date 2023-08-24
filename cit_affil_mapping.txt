@@ -49,6 +49,7 @@ US           University of Arizona
 US           University of Texas at Austin
 US           University of Texas at Dallas
 US           University of Wisconsin-Madison
+US           University of Wisconsin-MadisonMadison
 US           Univ. of Massachusetts Lowell  University of Massachusetts Lowell
 US           U. Illinois at Urbana-ChampaignIllinois at Urbana-Champaign
 US           Lockheed Martin
@@ -97,9 +98,13 @@ US           Caltech (Pasadena)             California Institute of Technology
 US           NCAR (Boulder)                 National Center for Atmospheric Research
 US           BWX Technologies
 US           Univ. California Santa Cruz    California Santa Cruz
+US           Univ. California Santa Cruz    Santa Cruz
 US           Cal. State Univ. Northridge    Northridge
 US           George Washington University
 US           MIT                            MIT,
+US           University of Alaska Fairbanks
+US           Univ. California Berkeley      University of California, Berkeley
+US           Space Science Institute
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      MPS - Gottingen                Sonnensystemforschung
@@ -187,13 +192,22 @@ China        Guangzhou University
 China        Beijing Normal University
 China        Wuhan University
 China        SDIAT (Shandong)               SDIAT
+China        Sichuan Normal University
+China        KL Space Weather               Key Laboratory of Space Weather
+China        KL Dark Matter & Space Astr.   Key Laboratory of Dark Matter and Space Astronomy
+China        KL Earth and Planetary Physics Key Laboratory of Earth and Planetary Physics
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
+France       Sorbonne University            
+France       Sorbonne University            Sorbonne Universite
+France       IRAP                           IRAP,
+France       IRAP                           Institut de Recherche en Astrophysique et Planetologie
 France       Toulouse University            Universite de Toulouse
 France       Toulouse University            Universite Toulouse
 France       University of Orleans
 France       Universite Paris-Saclay        Paris-Saclay
 France       Observatoire de Paris
+France       Lyon University                Universite de Lyon
 Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
 Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
