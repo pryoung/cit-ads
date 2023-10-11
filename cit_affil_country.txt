@@ -427,7 +427,6 @@ Egypt        Mansoura
 Egypt        *Egypt*
 Georgia      Tbilisi
 Georgia      Abastumani
-Ecuador      Ecuador
 Ethiopia     Ethiopia
 Sudan        Khartoum
 Singapore    Singapore

@@ -129,6 +129,9 @@ function cit_author_group, author_list, data_dir=data_dir, extra_data=extra_data
 ;       added orcid= option to the cit_author_html call.
 ;     Ver.11, 03-Jan-2023, Peter Young
 ;       Added limit= optional input.
+;     Ver.12, 28-Sep-2023, Peter Young
+;       The far_cit tag was not being transferred from extra_data,
+;       so this has been fixed.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -431,6 +434,7 @@ IF n_tags(extra_data) NE 0 THEN BEGIN
     str.first_affil_country=extra_data[i].first_affil_country
     str.curr_affil=extra_data[i].curr_affil
     str.sun_keyword_frac=extra_data[i].sun_keyword_frac
+    str.far_cit=extra_data[i].far_cit 
    ;
     IF n_tags(data) EQ 0 THEN data=str ELSE data=[data,str]
 
