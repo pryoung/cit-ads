@@ -130,6 +130,9 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;      Ver.18, 07-Jan-2022, Peter Young
 ;          now uses orcid_user and orcid_other to supplement the
 ;          orcid_pub values.
+;      Ver.19, 12-Oct-2023, Peter Young
+;          fixed a problem whereby json_parse does not work on string
+;          arrays on some computers.
 ;-
 
 
@@ -259,6 +262,14 @@ FOR i=0,m-1 DO BEGIN
       print,'%CIT_GET_ADS_ENTRY: the call to the API failed. Please try again or check your inputs. Returning...'
       return,-1
     ENDIF 
+  ENDIF
+ ;
+ ; Concatenates the string array to a single string.
+ ;
+  nj=n_elements(json)
+  IF nj GT 1 THEN BEGIN
+    FOR i=1,nj-1 DO json[0]=json[0]+json[i]
+    json=json[0]
   ENDIF
  ;
   s=json_parse(json)  ; this is an orderedhash
