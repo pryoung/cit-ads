@@ -268,14 +268,14 @@ FOR i=0,m-1 DO BEGIN
  ;
   nj=n_elements(json)
   IF nj GT 1 THEN BEGIN
-    FOR i=1,nj-1 DO json[0]=json[0]+json[i]
+    FOR k=1,nj-1 DO json[0]=json[0]+json[k]
     json=json[0]
   ENDIF
  ;
   s=json_parse(json)  ; this is an orderedhash
   response=s['response']
   docs=response['docs']  ; this is a list of orderedhashes
-
+ ;
   IF docs.count() NE 0 THEN BEGIN 
     IF datatype(big_list) NE 'OBJ' THEN BEGIN
       big_list=docs
