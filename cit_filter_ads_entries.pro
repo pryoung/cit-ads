@@ -36,6 +36,8 @@ FUNCTION cit_filter_ads_entries, ads_data
 ;       preface check to only check the first word.
 ;     Ver.3, 01-Jun-2023, Peter Young
 ;       Fixed bug with last version.
+;     Ver.4, 31-Oct-2023, Peter Young
+;       Now removes SHINE abstracts.
 ;-
 
 
@@ -55,6 +57,11 @@ IF nk NE 0 THEN out_data=out_data[k]
 chck=strpos(out_data.bibcode,'cosp')
 k=where(chck LT 0,nk)
 IF nk NE 0 THEN out_data=out_data[k]
+;
+chck=strpos(out_data.bibcode,'shin.conf')
+k=where(chck LT 0,nk)
+IF nk NE 0 THEN out_data=out_data[k]
+
 
 ;
 ; Now do filtering of doctype

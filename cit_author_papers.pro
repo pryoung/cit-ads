@@ -78,6 +78,8 @@ FUNCTION cit_author_papers, name, start_year=start_year, END_year=end_year, all=
 ;       Added count= optional output; added /first_author keyword.
 ;     Ver.7, 03-Jan-2023, Peter Young
 ;       The output bibcode list is now in reverse-date order.
+;     Ver.8, 31-Oct-2023, Peter Young
+;       The routine no longer filters the bibcodes
 ;-
 
 
@@ -194,16 +196,10 @@ ENDELSE
 ; get flagged as 'inproceedings' so these need to be manually removed
 ; later. 
 ;
-k=where(doctype EQ 'article' OR doctype EQ 'inproceedings',nk)
-IF nk eq 0 THEN return,''
-bibcode=bibcode[k]
+;; k=where(doctype EQ 'article' OR doctype EQ 'inproceedings',nk)
+;; IF nk eq 0 THEN return,''
+;; bibcode=bibcode[k]
 
-;
-; SHINE abstracts seem to be classed as articles, so I remove them here.
-;
-s=strmid(bibcode,4,9)
-k=where(s NE 'shin.conf',nk)
-bibcode=bibcode[k]
 
 count=nk
 
