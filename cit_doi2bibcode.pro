@@ -27,6 +27,8 @@ FUNCTION cit_doi2bibcode, doi
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 30-Oct-2023, Peter Young
+;     Ver.2, 31-Oct-2023, Peter Young
+;       Caught the case where more than one bibcode is returned.
 ;-
 
 
@@ -93,6 +95,15 @@ ENDIF ELSE BEGIN
   ENDFOR 
 ENDELSE 
 
+;
+; I found one example (10.1038/s41586-018-0429-z) where two bibcodes were
+; returned, although both pointed to the same paper.
+;
+n=n_elements(bibcode)
+IF n GT 1 THEN BEGIN
+  message,/info,/cont,'The DOI '+doi+' returned '+trim(n)+' bibcodes. Only the first one will be returned.'
+  bibcode=bibcode[0]
+ENDIF 
 
 return,bibcode
 
