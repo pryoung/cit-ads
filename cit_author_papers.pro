@@ -201,7 +201,7 @@ ENDELSE
 ;; bibcode=bibcode[k]
 
 
-count=nk
+count=n_elements(bibcode)
 
 return,bibcode
 
