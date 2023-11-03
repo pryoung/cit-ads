@@ -133,6 +133,8 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;      Ver.19, 12-Oct-2023, Peter Young
 ;          fixed a problem whereby json_parse does not work on string
 ;          arrays on some computers.
+;      Ver.20, 03-Nov-2023, Peter Young
+;          added the tag 'first_author_norm' to the output structure.
 ;-
 
 
@@ -247,7 +249,7 @@ headers=['Authorization: Bearer '+ads_key, $
 ;
 big_list=0
 FOR i=0,m-1 DO BEGIN
-  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub,orcid_user,orcid_other'
+  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub,orcid_user,orcid_other,first_author_norm'
   input_url=url+'?q='+chck_str
   IF strlen(input_url) GT 1000 THEN print,'***WARNING: exceeded max query string length of 1000 characters!'
  ;
@@ -328,6 +330,7 @@ str= { pubdate: '', $
        page: list(), $
        ads_link: '', $
        orcid: list(), $
+       first_author_norm: '', $
        author_string: '', $
        article_string: '', $
        country: list(), $
@@ -381,6 +384,7 @@ FOR i=0,n-1 DO BEGIN
   ENDIF
  ;
   IF bib_hash.haskey('author') THEN output[i].author=bib_hash['author']
+  IF bib_hash.haskey('first_author_norm') THEN output[i].first_author_norm=bib_hash['first_author_norm']
   IF bib_hash.haskey('doctype') THEN output[i].doctype=bib_hash['doctype']
   IF bib_hash.haskey('citation_count') THEN output[i].citation_count=bib_hash['citation_count']
   IF bib_hash.haskey('property') THEN BEGIN

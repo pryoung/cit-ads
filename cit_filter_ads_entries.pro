@@ -74,6 +74,15 @@ IF nk NE 0 THEN out_data=out_data[k]
 ;
 k=where(out_data.doctype NE 'proposal',nk)
 IF nk NE 0 THEN out_data=out_data[k]
+;
+k=where(out_data.doctype NE 'abstract',nk)
+IF nk NE 0 THEN out_data=out_data[k]
+;
+k=where(out_data.doctype NE 'erratum',nk)
+IF nk NE 0 THEN out_data=out_data[k]
+;
+k=where(out_data.doctype NE 'circular',nk)
+IF nk NE 0 THEN out_data=out_data[k]
 
 ;
 ; Sometimes authors write prefaces to special issues and these come up
