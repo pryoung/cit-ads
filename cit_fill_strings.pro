@@ -39,6 +39,8 @@ PRO cit_fill_strings, ads_data
 ;     Ver.2, 11-Mar-2022, Peter Young
 ;       Now performs multiple calls to cit_get_ads_bibtex in case
 ;       first call fails.
+;     Ver.3, 06-Nov-2023, Peter Young
+;       Fixed bug for abstracts; updated warning message if doctype not found.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -102,7 +104,7 @@ FOR ii=0,n-1 DO BEGIN
     END
        ;
     'abstract': BEGIN
-      swtch=1   ; this means these will get ignored.
+      article_string=''
     END
        ;
     'inbook': BEGIN
@@ -126,7 +128,7 @@ FOR ii=0,n-1 DO BEGIN
     END
        ;
     ELSE: BEGIN
-      print,'%CIT_AUTHOR_HTML: ***WARNING I have not encountered this doctype before***'
+      message,/info,/cont,'There is not an option for this doctype. The routine cit_fill_strings should be updated.'
       print,'   '+ads_data[ii].bibcode+'   doctype: ',ads_data[ii].doctype
       article_string=''
     END
