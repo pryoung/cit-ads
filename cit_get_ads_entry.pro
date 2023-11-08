@@ -138,7 +138,7 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;      Ver.21, 08-Nov-2023, Peter Young
 ;          now handles the rare case where an article has a bibcode but
 ;          no author information (2013JGlac..59.1117.), which is ignored
-;          now.
+;          now; added author_norm tag to output.
 ;-
 
 
@@ -253,7 +253,7 @@ headers=['Authorization: Bearer '+ads_key, $
 ;
 big_list=0
 FOR i=0,m-1 DO BEGIN
-  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub,orcid_user,orcid_other,first_author_norm'
+  chck_str=query[i]+'&rows='+trim(nn)+'&fl=bibcode,title,author,pub,abstract,citation_count,property,aff,volume,page,pubdate,year,issue,keyword,doctype,orcid_pub,orcid_user,orcid_other,first_author_norm,author_norm'
   input_url=url+'?q='+chck_str
   IF strlen(input_url) GT 1000 THEN print,'***WARNING: exceeded max query string length of 1000 characters!'
  ;
@@ -335,6 +335,7 @@ str= { pubdate: '', $
        ads_link: '', $
        orcid: list(), $
        first_author_norm: '', $
+       author_norm: list(), $
        author_string: '', $
        article_string: '', $
        country: list(), $
@@ -390,9 +391,10 @@ FOR i=0,n-1 DO BEGIN
  ;
   IF bib_hash.haskey('author') THEN BEGIN
     output[i].author=bib_hash['author']
-    nauthor[i]=output[i].author
+    nauthor[i]=output[i].author.count()
   ENDIF 
   IF bib_hash.haskey('first_author_norm') THEN output[i].first_author_norm=bib_hash['first_author_norm']
+  IF bib_hash.haskey('author_norm') THEN output[i].author_norm=bib_hash['author_norm']
   IF bib_hash.haskey('doctype') THEN output[i].doctype=bib_hash['doctype']
   IF bib_hash.haskey('citation_count') THEN output[i].citation_count=bib_hash['citation_count']
   IF bib_hash.haskey('property') THEN BEGIN
