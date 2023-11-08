@@ -135,6 +135,10 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;          arrays on some computers.
 ;      Ver.20, 03-Nov-2023, Peter Young
 ;          added the tag 'first_author_norm' to the output structure.
+;      Ver.21, 08-Nov-2023, Peter Young
+;          now handles the rare case where an article has a bibcode but
+;          no author information (2013JGlac..59.1117.), which is ignored
+;          now.
 ;-
 
 
@@ -341,6 +345,7 @@ output=replicate(str,n)
 ; PRY, 4-Dec-2019
 ; The code below now assumes big_list is a list array of orderedhashes.
 ;
+nauthor=intarr(n)
 FOR i=0,n-1 DO BEGIN
   bib_hash=big_list[i]
  ;
@@ -383,7 +388,10 @@ FOR i=0,n-1 DO BEGIN
     FOR j=0,n_orc1-1 DO output[i].orcid[j]=orc1[j]
   ENDIF
  ;
-  IF bib_hash.haskey('author') THEN output[i].author=bib_hash['author']
+  IF bib_hash.haskey('author') THEN BEGIN
+    output[i].author=bib_hash['author']
+    nauthor[i]=output[i].author
+  ENDIF 
   IF bib_hash.haskey('first_author_norm') THEN output[i].first_author_norm=bib_hash['first_author_norm']
   IF bib_hash.haskey('doctype') THEN output[i].doctype=bib_hash['doctype']
   IF bib_hash.haskey('citation_count') THEN output[i].citation_count=bib_hash['citation_count']
@@ -404,7 +412,14 @@ FOR i=0,n-1 DO BEGIN
   junk=temporary(bib_hash)
 ENDFOR
 
-  
+k=where(nauthor NE 0,nk)
+IF nk NE 0 THEN BEGIN
+  output=output[k]
+ENDIF ELSE BEGIN
+  message,/info,/cont,'The article(s) associated with the bibcode(s) has no authors. Returning...'
+  return,-1
+ENDELSE 
+
 ;
 ; PRY, 4-Dec-2019
 ;  This was the code for when I was dealing with big_list being a
