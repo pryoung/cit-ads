@@ -196,6 +196,8 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
 ;        (first-author or co-author); added orcid tag to output.
 ;      Ver.28, 13-Jan-2023, Peter Young
 ;        Added far_cit (citations for FAR papers) to out_data.
+;      Ver.29, 09-Nov-2023, Peter Young
+;        Changed from cit_filter_ads_entries to cit_filter_ads_data.
 ;-
 
 
@@ -347,10 +349,11 @@ ENDFOR
 IF n_tags(ads_data) EQ 0 THEN BEGIN
   message,'No entries found for this author. Returning...',/CONTINUE,/info
   return
-ENDIF 
+ENDIF
 cit_fill_strings,ads_data
 cit_affil_country,ads_data
-ads_data=cit_filter_ads_entries(ads_data)
+ads_data=cit_filter_ads_data(ads_data)
+;ads_data=cit_filter_ads_entries(ads_data)
 
 
 

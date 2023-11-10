@@ -1,0 +1,120 @@
+
+
+FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
+                              year=year, refereed=refereed
+
+;+
+; NAME:
+;     CIT_FILTER_ADS_DATA_DOCTYPE
+;
+; PURPOSE:
+;     Performs some standard filtering of the ADS data structure, based
+;     on doctype, year and whether articles are refereed.
+;
+; CATEGORY:
+;     ADS; filter.
+;
+; CALLING SEQUENCE:
+;     Result = CIT_FILTER_ADS_DATA( Ads_Data )
+;
+; INPUTS:
+;     Ads_Data:  An IDL structure containing ADS data in the format
+;                returned by cit_get_ads_entry.pro.
+;
+; OPTIONAL INPUTS:
+;     Year:   An integer specifying a year. Only papers published in this
+;             year will be returned.
+;	
+; KEYWORD PARAMETERS:
+;     REFEREED:  If set, then only refereed papers will be returned, as
+;                identified by the refereed tag in ADS_DATA.
+;     THESIS:  If set, then any doctypes including the word "thesis" are
+;              kept.
+;
+; OUTPUTS:
+;     A structure in the same format as ADS_DATA but with a reduced number
+;     of entries based on the doctype tag. If the filtering
+;     results in no entries then a value of -1 will be returned and COUNT
+;     will be set to zero.
+;
+; OPTIONAL OUTPUTS:
+;     Count:  The number of entries in the output structure.
+;
+; EXAMPLE:
+;     IDL> new_data=cit_filter_ads_data(ads_data)
+;     IDL> new_data=cit_filter_ads_data(ads_data,/refereed)
+;     IDL> new_data=cit_filter_ads_data(ads_data,year=2022)
+;
+; MODIFICATION HISTORY:
+;     Ver.1, 09-Nov-2023, Peter Young
+;-
+
+count=0
+
+ads_data_out=ads_data
+
+
+;
+; Filter on the year.
+;
+IF n_elements(year) NE 0 THEN BEGIN
+  k=where(fix(ads_data_out.year) EQ year,nk)
+  IF nk EQ 0 THEN BEGIN
+    count=0
+    return,-1
+  ENDIF ELSE BEGIN
+    ads_data_out=ads_data_out[k]
+  ENDELSE 
+ENDIF 
+
+
+
+
+;
+; Select only refereed articles.
+;
+IF keyword_set(refereed) THEN BEGIN
+  k=where(ads_data_out.refereed EQ 1,nk)
+  IF nk NE 0 THEN BEGIN
+    ads_data_out=ads_data_out[k]
+  ENDIF ELSE BEGIN
+    count=0
+    return,-1
+  ENDELSE
+ENDIF 
+
+
+;
+; If /thesis has not been set, then remove doctypes containing "thesis".
+;
+IF NOT keyword_set(thesis) THEN BEGIN
+  chck=strpos(ads_data_out.doctype,'thesis')
+  k=where(chck LT 0,nk)
+  ads_data_out=ads_data_out[k]
+ENDIF 
+
+;
+; The line below defines what types of article end up in the author's publication
+; list.
+; Note that 'erratum' is identified in doctype and so these are filtered out
+; by the command below.
+;
+k=where(ads_data_out.doctype EQ 'article' OR $
+        ads_data_out.doctype EQ 'inproceedings' OR $
+        ads_data_out.doctype EQ 'inbook' OR $
+        ads_data_out.doctype EQ 'eprint' OR $
+        ads_data_out.doctype EQ 'book')
+
+
+IF nk NE 0 THEN BEGIN
+  ads_data_out=ads_data_out[k]
+ENDIF ELSE BEGIN
+  return,-1
+ENDELSE 
+
+count=n_elements(ads_data_out)
+
+return,ads_data_out
+
+
+END

@@ -23,7 +23,7 @@ ENDELSE
 orcid=author_data.author.orcid
 
 IF n_tags(ads_data_far) EQ 0 THEN BEGIN
-  ads_data_far=cit_filter_ads_data(ads_data,orcid=orcid,/ref)
+  ads_data_far=cit_filter_ads_data_orcid(ads_data,orcid,/ref)
 ENDIF 
 
 ;
@@ -32,7 +32,7 @@ ENDIF
 ; obtained from ads_data_far.
 ;
 IF n_tags(ads_data_far) NE 0 THEN BEGIN 
-  ads_data_first_author=cit_filter_ads_data(ads_data,orcid=orcid)
+  ads_data_first_author=cit_filter_ads_data_orcid(ads_data,orcid)
   author_data.far.n_papers=n_elements(ads_data_first_author)
 ENDIF ELSE BEGIN
   author_data.far.n_papers=0
