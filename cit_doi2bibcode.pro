@@ -1,5 +1,5 @@
 
-FUNCTION cit_doi2bibcode, doi
+FUNCTION cit_doi2bibcode, doi, lookup_table=lookup_table, verbose=verbose
 
 
 ;+
@@ -18,9 +18,21 @@ FUNCTION cit_doi2bibcode, doi
 ; INPUTS:
 ;     Doi:  A string containing a DOI.
 ;
+; OPTIONAL INPUTS:
+;     LOOKUP_TABLE: The name of a text lookup table that matches DOIs to
+;                   bibcodes. If the file does not exist, then it is
+;                   created and the DOI-bibcode will be written to the
+;                   file. This file is needed because many calls to ADS
+;                   to retrieve the bibcodes quickly uses up the "quota"
+;                   of ADS queries each day.
+;
+; KEYWORD PARAMETERS:
+;     VERBOSE:  If set, then information messages are printed to the IDL
+;               window.
+;
 ; OUTPUTS:
 ;     A bibcode corresponding to the DOI. If no match is found, then an
-;     empty string is returned.
+;     empty string is returned. 
 ;
 ; EXAMPLE:
 ;     IDL> bibcode=cit_doi2bibcode('10.1071/PH850825')
@@ -29,15 +41,48 @@ FUNCTION cit_doi2bibcode, doi
 ;     Ver.1, 30-Oct-2023, Peter Young
 ;     Ver.2, 31-Oct-2023, Peter Young
 ;       Caught the case where more than one bibcode is returned.
+;     Ver.3, 13-Nov-2023, Peter Young
+;       Added lookup_table= and /verbose.
 ;-
+
+
+IF n_elements(lookup_table) NE 0 THEN BEGIN
+  chck=file_info(lookup_table)
+  IF chck.exists THEN BEGIN
+    swtch=0b
+    nlines=file_lines(lookup_table)
+    data=strarr(2,nlines)
+    openr,lin,lookup_table,/get_lun
+    readf,lin,format='(a40,a20)',data
+    free_lun,lin
+    doi_list=trim(data[0,*])
+    bcode_list=trim(data[1,*])
+   ;
+    k=where(trim(doi) EQ doi_list,nk)
+    IF nk NE 0 THEN BEGIN
+      IF keyword_set(verbose) THEN message,/info,/cont,'DOI '+doi+' found in lookup table.'
+      return,bcode_list[k[0]]
+    ENDIF 
+  ENDIF ELSE BEGIN
+    swtch=1b
+  ENDELSE 
+ENDIF
 
 
 
 
 url='https://api.adsabs.harvard.edu/v1/search/query'
 
+IF n_elements(doi) GT 1 THEN BEGIN
+  ndoi=n_elements(doi)
+  query_string='doi:("'+doi[0]+'"'
+  FOR i=1,ndoi-1 DO query_string=query_string+' or "'+doi[i]+'"'
+  query_string=query_string+')'
+ENDIF ELSE BEGIN
+  query_string='doi:"'+doi+'"'
+ENDELSE 
 
-query_string='doi:"'+doi+'"'
+
 
 
 ;
@@ -69,7 +114,6 @@ headers=['Authorization: Bearer '+ads_key, $
 ;
 chck_str=query_string+'&fl=bibcode'
 input_url=url+'?q='+chck_str
-
 
 
 sock_list,input_url,json,headers=headers
@@ -104,6 +148,25 @@ IF n GT 1 THEN BEGIN
   message,/info,/cont,'The DOI '+doi+' returned '+trim(n)+' bibcodes. Only the first one will be returned.'
   bibcode=bibcode[0]
 ENDIF 
+
+IF swtch EQ 1 THEN BEGIN
+  openw,lout,lookup_table,/get_lun
+  doi_pad=strpad(doi,40,fill=' ',/after)
+  bcode_pad=strpad(bibcode,20,fill=' ',/after)
+  printf,lout,doi_pad+bcode_pad
+  free_lun,lout
+  IF keyword_set(verbose) THEN message,/info,/cont,'Lookup table did not exist. It has been created.'
+ENDIF
+
+IF swtch EQ 0 THEN BEGIN
+  openw,lout,lookup_table,/get_lun,/append
+  doi_pad=strpad(doi,40,fill=' ',/after)
+  bcode_pad=strpad(bibcode,20,fill=' ',/after)
+  printf,lout,doi_pad+bcode_pad
+  free_lun,lout
+  IF keyword_set(verbose) THEN message,/info,/cont,'DOI '+doi+' has been added to the lookup table.'
+ENDIF 
+  
 
 return,bibcode
 

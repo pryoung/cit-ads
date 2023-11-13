@@ -198,6 +198,9 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
 ;        Added far_cit (citations for FAR papers) to out_data.
 ;      Ver.29, 09-Nov-2023, Peter Young
 ;        Changed from cit_filter_ads_entries to cit_filter_ads_data.
+;      Ver.30, 13-Nov-2023, Peter Young
+;         Now using cit_filter_ads_data_orcid and
+;         cit_filter_ads_data_surname to identify first-author papers.
 ;-
 
 
@@ -350,9 +353,9 @@ IF n_tags(ads_data) EQ 0 THEN BEGIN
   message,'No entries found for this author. Returning...',/CONTINUE,/info
   return
 ENDIF
+ads_data=cit_filter_ads_data(ads_data)
 cit_fill_strings,ads_data
 cit_affil_country,ads_data
-ads_data=cit_filter_ads_data(ads_data)
 ;ads_data=cit_filter_ads_entries(ads_data)
 
 
@@ -439,23 +442,25 @@ IF h_index EQ -1 THEN h_index=nj   ; in case min(citations) > nj
 ; Check number of refereed articles.
 ;
 refereed=bytarr(npapers)
-FOR i=0,npapers-1 DO BEGIN
-  np=ads_data[i].property.count()
-  swtch=0
-  j=0
-  IF np NE 0 THEN BEGIN 
-    WHILE swtch EQ 0 DO BEGIN
-      IF trim(ads_data[i].property[j]) EQ 'REFEREED' THEN BEGIN
-        refereed[i]=1b
-        swtch=1
-      ENDIF 
-      j=j+1
-      IF j EQ np THEN swtch=1
-    ENDWHILE
-  ENDIF 
-ENDFOR 
-iref=where(refereed EQ 1,nref)
-
+k=where(ads_data.refereed EQ 1,nref)
+refereed[k]=1b
+;; FOR i=0,npapers-1 DO BEGIN
+;;   np=ads_data[i].property.count()
+;;   swtch=0
+;;   j=0
+;;   IF np NE 0 THEN BEGIN 
+;;     WHILE swtch EQ 0 DO BEGIN
+;;       IF trim(ads_data[i].property[j]) EQ 'REFEREED' THEN BEGIN
+;;         refereed[i]=1b
+;;         swtch=1
+;;       ENDIF 
+;;       j=j+1
+;;       IF j EQ np THEN swtch=1
+;;     ENDWHILE
+;;   ENDIF 
+;; ENDFOR 
+;; iref=where(refereed EQ 1,nref)
+;
 ;
 ;
 ; Now get stats for first author papers. This requires the routine to
@@ -486,43 +491,61 @@ n_first=0
 n_first_ref=0
 far_cit=0
 far_index=-1
+
 IF n_elements(orcid) NE 0 THEN BEGIN
-  FOR i=0,npapers-1 DO BEGIN
-    orc=ads_data[i].orcid.toarray()
-    IF trim(orc[0]) EQ orcid THEN BEGIN
-      n_first=n_first+1
-      IF refereed[i] EQ 1 THEN BEGIN
-        far_cit=far_cit+ads_data[i].citation_count
-        n_first_ref=n_first_ref+1
-        far_index=[far_index,i]
-        IF fix(ads_data[i].year) GT yr_last_paper THEN yr_last_paper=fix(ads_data[i].year)
-      ENDIF
-    ENDIF
-  ENDFOR 
+  ads_data_far=cit_filter_ads_data_orcid(ads_data,orcid,count=n_first)
+  ads_data_far=cit_filter_ads_data_orcid(ads_data,orcid,/ref,count=n_first_ref)
+  IF n_first_ref GT 0 THEN BEGIN 
+    yr_last_paper=max(ads_data_far.year)
+    far_cit=total(ads_data_far.citation_count)
+  ENDIF 
 ENDIF ELSE BEGIN
-  IF n_elements(surname) NE 0 THEN BEGIN
-    ns=n_elements(surname)
-    FOR i=0,npapers-1 DO BEGIN
-      swtch=0b
-      FOR j=0,ns-1 DO BEGIN
-        sname1=cit_clean_names(strlowcase(ads_data[i].author[0]))
-        bits=str_sep(sname1,',')
-        sname1=bits[0]
-        sname2=strlowcase(surname[j])
-        IF sname1 EQ sname2 AND swtch EQ 0 THEN BEGIN
-          n_first=n_first+1
-          IF refereed[i] EQ 1 THEN BEGIN
-            n_first_ref=n_first_ref+1
-            far_cit=far_cit+ads_data[i].citation_count
-            far_index=[far_index,i]
-            IF fix(ads_data[i].year) GT yr_last_paper THEN yr_last_paper=fix(ads_data[i].year)
-          ENDIF
-          swtch=1b
-        ENDIF
-      ENDFOR 
-    ENDFOR
-  ENDIF
-ENDELSE 
+  ads_data_far=cit_filter_ads_data_surname(ads_data,surname,count=n_first)
+  ads_data_far=cit_filter_ads_data_surname(ads_data,surname,/ref,count=n_first_ref)
+  IF n_first_ref GT 0 THEN BEGIN 
+    yr_last_paper=max(ads_data_far.year)
+    far_cit=total(ads_data_far.citation_count)
+  ENDIF 
+ENDELSE
+
+  
+;; IF n_elements(orcid) NE 0 THEN BEGIN
+;;   FOR i=0,npapers-1 DO BEGIN
+;;     orc=ads_data[i].orcid.toarray()
+;;     IF trim(orc[0]) EQ orcid THEN BEGIN
+;;       n_first=n_first+1
+;;       IF refereed[i] EQ 1 THEN BEGIN
+;;         far_cit=far_cit+ads_data[i].citation_count
+;;         n_first_ref=n_first_ref+1
+;;         far_index=[far_index,i]
+;;         IF fix(ads_data[i].year) GT yr_last_paper THEN yr_last_paper=fix(ads_data[i].year)
+;;       ENDIF
+;;     ENDIF
+;;   ENDFOR 
+;; ENDIF ELSE BEGIN
+;;   IF n_elements(surname) NE 0 THEN BEGIN
+;;     ns=n_elements(surname)
+;;     FOR i=0,npapers-1 DO BEGIN
+;;       swtch=0b
+;;       FOR j=0,ns-1 DO BEGIN
+;;         sname1=cit_clean_names(strlowcase(ads_data[i].author[0]))
+;;         bits=str_sep(sname1,',')
+;;         sname1=bits[0]
+;;         sname2=strlowcase(surname[j])
+;;         IF sname1 EQ sname2 AND swtch EQ 0 THEN BEGIN
+;;           n_first=n_first+1
+;;           IF refereed[i] EQ 1 THEN BEGIN
+;;             n_first_ref=n_first_ref+1
+;;             far_cit=far_cit+ads_data[i].citation_count
+;;             far_index=[far_index,i]
+;;             IF fix(ads_data[i].year) GT yr_last_paper THEN yr_last_paper=fix(ads_data[i].year)
+;;           ENDIF
+;;           swtch=1b
+;;         ENDIF
+;;       ENDFOR 
+;;     ENDFOR
+;;   ENDIF
+;; ENDELSE 
 
 ;
 ; If we have first-author refereed papers, then populate the far_5 arrays.
@@ -531,13 +554,12 @@ far_5_ncit=intarr(5)-1
 far_5_bcode=strarr(5)
 far_5_title=strarr(5)
 IF n_first_ref GT 0 THEN BEGIN 
-  far_index=far_index[1:*]
-  ads_data_far=ads_data[far_index]
+  ads_data_far=ads_data_far
      ;
-  yr=fix(ads_data[far_index].year)
+  yr=fix(ads_data_far.year)
   start_year_far=min(yr)
      ;
-  cit_list=ads_data[far_index].citation_count
+  cit_list=ads_data_far.citation_count
   j=reverse(sort(cit_list))
   cit_list=cit_list[j]
   nj=n_elements(j)
@@ -564,7 +586,6 @@ IF n_first_ref GT 0 THEN BEGIN
     ENDFOR 
   ENDIF 
 ENDIF ELSE BEGIN
-  junk=temporary(far_index)
 ENDELSE 
 
 
@@ -758,8 +779,8 @@ jd=systime(/julian,/utc)
 caldat,jd,m,d,y
 far_year=indgen(5)+y-4
 far_num=intarr(5)
-IF n_elements(far_index) NE 0 THEN BEGIN
-   ad=ads_data[far_index]
+IF n_first_ref GT 0 THEN BEGIN
+   ad=ads_data_far
    FOR i=0,4 DO BEGIN
       k=where(fix(ad.year) EQ far_year[i],nk)
       far_num[i]=nk
