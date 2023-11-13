@@ -139,6 +139,9 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;          now handles the rare case where an article has a bibcode but
 ;          no author information (2013JGlac..59.1117.), which is ignored
 ;          now; added author_norm tag to output.
+;      Ver.22, 13-Nov-2023, Peter Young
+;          I now allow the routine to perform the ADS query 5 times
+;          before giving up; adjusted some of the info messages.
 ;-
 
 
@@ -257,18 +260,19 @@ FOR i=0,m-1 DO BEGIN
   input_url=url+'?q='+chck_str
   IF strlen(input_url) GT 1000 THEN print,'***WARNING: exceeded max query string length of 1000 characters!'
  ;
-  headers_input=headers
-  sock_list,input_url,json,headers=headers_input
+ ; In case of internet problems, I run the query at most five times until I get an output that is not empty.
  ;
- ; Sometimes the call fails, so I try again and if this fails exit the routine.
-  IF json[0] EQ '' THEN BEGIN
+  FOR j=0,4 DO BEGIN 
     headers_input=headers
     sock_list,input_url,json,headers=headers_input
-    IF json[0] EQ '' THEN BEGIN
-      print,'%CIT_GET_ADS_ENTRY: the call to the API failed. Please try again or check your inputs. Returning...'
-      return,-1
-    ENDIF 
-  ENDIF
+    IF json[0] NE '' THEN BREAK
+    wait,0.5
+  ENDFOR
+ ;
+  IF json[0] EQ '' THEN BEGIN
+    message,/info,/cont,'The call to the API failed. Please try again or check your inputs. Returning...'
+    return,-1
+  ENDIF 
  ;
  ; Concatenates the string array to a single string.
  ;
@@ -294,7 +298,7 @@ ENDFOR
 
 
 IF datatype(big_list) NE 'OBJ' THEN BEGIN
-  print,'% CIT_GET_ADS_ENTRY: no entries found. Returning...'
+  message,/info,/cont,'No entries found. Returning...'
   return,-1
 ENDIF 
 
@@ -457,7 +461,7 @@ ENDELSE
 junk=temporary(bad_bibcodes)   ; in case it exists from a previous call
 IF n NE n_elements(bibcode) THEN BEGIN
   n2=n_elements(bibcode)
-  IF NOT keyword_set(quiet) THEN print,'% CIT_GET_ADS_ENTRY:  '+trim(n2-n)+' of '+trim(n2)+' bibcodes did not have ADS entries.'
+  IF NOT keyword_set(quiet) THEN message,/info,/cont,trim(n2-n)+' of '+trim(n2)+' bibcodes did not have ADS entries.'
   bad_bibcodes=''
   FOR i=0,n2-1 DO BEGIN
     k=where(trim(bibcode[i]) EQ output.bibcode,nk)
