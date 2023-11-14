@@ -38,6 +38,7 @@ US           Pittsburgh
 US           Delaware
 US           Harvard
 US           Alabama
+US           Purdue University
 US           Livermore
 US           Predictive Science
 US           Lowell Observatory
@@ -51,6 +52,7 @@ US           University of California
 US           Villanova University
 US           Jet Propulsion Laboratory
 US           Caltech*
+US           Caltech,
 US           Swales
 US           Delaware
 US           Aurora Science
@@ -320,6 +322,7 @@ Italy        (Italy)
 Italy        Perugia
 Italy        Arcetri
 Italy        *Napoli
+Italy        Calabria
 Italy        Trieste
 Italy        Torino
 Italy        Bologna
@@ -406,6 +409,7 @@ Croatia      *Croatia
 New Zealand  New Zealand
 Tunisia      Tunisia
 Saudi Arabia Saudi Arabia
+Saudi Arabia King Abdulaziz
 Romania      Bucharest
 Romania      *Romania*
 Nepal        *Nepal
