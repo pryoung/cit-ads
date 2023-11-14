@@ -43,13 +43,25 @@ FUNCTION cit_doi2bibcode, doi, lookup_table=lookup_table, verbose=verbose
 ;       Caught the case where more than one bibcode is returned.
 ;     Ver.3, 13-Nov-2023, Peter Young
 ;       Added lookup_table= and /verbose.
+;     Ver.4, 14-Nov-2023, Peter Young
+;       Now tries calling ADS API five times before giving up; if doi is
+;       empty then exit straight away ; add parameter check at beginning
+;       of routine.
 ;-
 
+IF n_params() LT 1 THEN BEGIN
+  print,'Use:  IDL> bcode=cit_doi2bibcode(doi [,lookup_table=,/verbose])'
+  return,''
+ENDIF 
 
+
+IF trim(doi) EQ '' THEN return,''
+
+swtch=0b
 IF n_elements(lookup_table) NE 0 THEN BEGIN
   chck=file_info(lookup_table)
   IF chck.exists THEN BEGIN
-    swtch=0b
+    swtch=1b
     nlines=file_lines(lookup_table)
     data=strarr(2,nlines)
     openr,lin,lookup_table,/get_lun
@@ -64,7 +76,7 @@ IF n_elements(lookup_table) NE 0 THEN BEGIN
       return,bcode_list[k[0]]
     ENDIF 
   ENDIF ELSE BEGIN
-    swtch=1b
+    swtch=2b
   ENDELSE 
 ENDIF
 
@@ -115,18 +127,21 @@ headers=['Authorization: Bearer '+ads_key, $
 chck_str=query_string+'&fl=bibcode'
 input_url=url+'?q='+chck_str
 
-
-sock_list,input_url,json,headers=headers
 ;
-; Sometimes the call fails, so I try again and if this fails exit the routine.
-IF json[0] EQ '' THEN BEGIN
+; In case of internet problems, I run the query at most five times until I get an output that is not empty.
+;
+FOR j=0,4 DO BEGIN 
+  headers_input=headers
   sock_list,input_url,json,headers=headers
-  IF json[0] EQ '' THEN BEGIN
-      print,'%CIT_DOI2BIBCODE: the call to the API failed for DOI '+doi+'. Returning...'
-      return,''
-    ENDIF 
-ENDIF
+  IF json[0] NE '' THEN BREAK
+  wait,0.5
+ENDFOR
 ;
+IF json[0] EQ '' THEN BEGIN
+  message,/info,/cont,'The call to the API failed for DOI '+doi+'. Returning...'
+  return,''
+ENDIF 
+
 s=json_parse(json,/tostruct)
 s_list=s.response.docs
 ns=s_list.count()
@@ -149,7 +164,22 @@ IF n GT 1 THEN BEGIN
   bibcode=bibcode[0]
 ENDIF 
 
+;
+; [swtch=1] append the doi to the existing lookup table file.
+;
 IF swtch EQ 1 THEN BEGIN
+  openw,lout,lookup_table,/get_lun,/append
+  doi_pad=strpad(doi,40,fill=' ',/after)
+  bcode_pad=strpad(bibcode,20,fill=' ',/after)
+  printf,lout,doi_pad+bcode_pad
+  free_lun,lout
+  IF keyword_set(verbose) THEN message,/info,/cont,'DOI '+doi+' has been added to the lookup table.'
+ENDIF 
+
+;
+; [swtch=2] need to create the lookup table file.
+;
+IF swtch EQ 2 THEN BEGIN
   openw,lout,lookup_table,/get_lun
   doi_pad=strpad(doi,40,fill=' ',/after)
   bcode_pad=strpad(bibcode,20,fill=' ',/after)
@@ -158,14 +188,6 @@ IF swtch EQ 1 THEN BEGIN
   IF keyword_set(verbose) THEN message,/info,/cont,'Lookup table did not exist. It has been created.'
 ENDIF
 
-IF swtch EQ 0 THEN BEGIN
-  openw,lout,lookup_table,/get_lun,/append
-  doi_pad=strpad(doi,40,fill=' ',/after)
-  bcode_pad=strpad(bibcode,20,fill=' ',/after)
-  printf,lout,doi_pad+bcode_pad
-  free_lun,lout
-  IF keyword_set(verbose) THEN message,/info,/cont,'DOI '+doi+' has been added to the lookup table.'
-ENDIF 
   
 
 return,bibcode
