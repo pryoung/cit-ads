@@ -31,6 +31,9 @@ FUNCTION cit_write_year_list, ads_data, count=count
 ; MODIFICATION HISTORY:
 ;     Ver.1, 23-Jan-2022, Peter Young
 ;       Code extracted from cit_author_html.
+;     Ver.2, 14-Nov-2023, Peter Young
+;       Now catches case when an article has no authors. The
+;       article is still retained.
 ;-
 
 
@@ -57,7 +60,10 @@ FOR i=maxyr,minyr,-1 DO BEGIN
     ostr=[ostr,'<p><b>'+trim(i)+'</b></p>','<ol>']
    ;    
     auth=strarr(nk)
-    FOR ia=0,nk-1 DO auth[ia]=ads_data[k[ia]].author[0]
+    FOR ia=0,nk-1 DO BEGIN
+      nauth=ads_data[k[ia]].author.count()
+      IF nauth GE 1 THEN auth[ia]=ads_data[k[ia]].author[0] ELSE auth[ia]='NO AUTHOR'
+    ENDFOR 
     isort=sort(auth)
     FOR j=0,nk-1 DO BEGIN
       ii=k[isort[j]]

@@ -41,6 +41,9 @@ PRO cit_fill_strings, ads_data
 ;       first call fails.
 ;     Ver.3, 06-Nov-2023, Peter Young
 ;       Fixed bug for abstracts; updated warning message if doctype not found.
+;     Ver.4, 14-Nov-2023, Peter Young
+;       author_string is reset to an empty string for each item of the for
+;       loop.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -134,6 +137,7 @@ FOR ii=0,n-1 DO BEGIN
     END
   ENDCASE
 
+  author_string=''
   IF ads_data[ii].author.count() NE 0 THEN BEGIN 
     author_string=ads_data[ii].author[0]
     nauth=n_elements(ads_data[ii].author)
