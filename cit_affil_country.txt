@@ -129,6 +129,7 @@ US           Haystack Observatory
 US           National Radio Astronomy Observatory
 US           Arecibo Observatory
 US           Interferometrics
+US           Louisiana State University
 US           La Jolla
 US           Hughes STX
 US           Minneapolis
@@ -137,6 +138,7 @@ US           University of Kansas
 US           Bartol Research Foundation
 US           California Institute of Technology
 US           Clemson
+US           Vanderbilt University
 US           Auburn
 US           Praxis
 US           New Hampshire
@@ -184,6 +186,7 @@ UK           Dundee
 UK           Culham
 UK           University of Hull
 UK           Leicester
+UK           University of Leeds
 UK           Lancashire
 UK           Aberystwyth
 UK           University College London
@@ -265,7 +268,6 @@ China        Key Laboratory
 China        Yunnan
 China        Peking
 China        Shanghai
-China        China
 China        Purple Mountain
 China        Henan University
 China        *Macau*
@@ -377,6 +379,7 @@ Finland      *Turku
 Finland      Oulu
 Bulgaria     Bulgaria
 Mexico       Universidad National Autónoma de México
+Mexico       Universidad Nacional Autónoma de México
 Mexico       México
 Mexico       Morelia
 Mexico       Instituto Nacional de Astrofísica

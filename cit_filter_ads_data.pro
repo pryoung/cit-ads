@@ -1,7 +1,8 @@
 
 
 FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
-                              year=year, refereed=refereed
+                              year=year, refereed=refereed, $
+                              min_year=min_year, max_year=max_year
 
 ;+
 ; NAME:
@@ -24,6 +25,10 @@ FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
 ; OPTIONAL INPUTS:
 ;     Year:   An integer specifying a year. Only papers published in this
 ;             year will be returned.
+;     Min_Year:  An integer specifying a year. Only papers published from
+;                this year onwards will be returned.
+;     Max_Year:  An integer specifying a year. Only papers published from
+;                this year and earlier will be returned.
 ;	
 ; KEYWORD PARAMETERS:
 ;     REFEREED:  If set, then only refereed papers will be returned, as
@@ -47,11 +52,18 @@ FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 09-Nov-2023, Peter Young
+;     Ver.2, 27-Nov-2023, Peter Young
+;       Added min_year= and max_year= optional inputs.
 ;-
 
 count=0
 
 ads_data_out=ads_data
+
+IF n_elements(year) NE 0 AND (n_elements(min_year) NE 0 OR n_elements(max_year) NE 0) THEN BEGIN
+  message,/info,/cont,'You must specify either YEAR= or MIN_YEAR= [MAX_YEAR=], but not both. Returning...'
+  return,-1
+ENDIF 
 
 
 ;
@@ -67,7 +79,26 @@ IF n_elements(year) NE 0 THEN BEGIN
   ENDELSE 
 ENDIF 
 
+IF n_elements(min_year) NE 0 THEN BEGIN
+  k=where(fix(ads_data_out.year) GE min_year,nk)
+  IF nk EQ 0 THEN BEGIN
+    count=0
+    return,-1
+  ENDIF ELSE BEGIN
+    ads_data_out=ads_data_out[k]
+  ENDELSE 
+ENDIF 
 
+
+IF n_elements(max_year) NE 0 THEN BEGIN
+  k=where(fix(ads_data_out.year) LE max_year,nk)
+  IF nk EQ 0 THEN BEGIN
+    count=0
+    return,-1
+  ENDIF ELSE BEGIN
+    ads_data_out=ads_data_out[k]
+  ENDELSE 
+ENDIF 
 
 
 ;

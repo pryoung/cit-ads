@@ -26,6 +26,7 @@ UK           Queen Mary University
 UK           Durham University
 UK           University of St Andrews       Andrews
 UK           University of Leicester
+UK           University of Leeds
 UK           University College London      University College
 UK           Abertay University
 UK           Lancaster University
