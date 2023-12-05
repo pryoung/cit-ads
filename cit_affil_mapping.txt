@@ -190,7 +190,9 @@ China        Harbin Institute of Technology
 China        MUST (Macau)                   Macau University of Science and Technology
 China        USTC (Hefei)                   University of Science and Technology of China
 China        Guangzhou University
+China        Kunming Univ. of Sci. and Tech.Kunming University of Science and Technology
 China        Beijing Normal University
+China        Deep Space Exploration Lab.    Deep Space Exploration Laboratory
 China        Wuhan University
 China        SDIAT (Shandong)               SDIAT
 China        Sichuan Normal University
@@ -256,9 +258,12 @@ Greece       Academy of Athens
 Greece       University of Athens           National and Kapodistrian University of Athens
 Greece       Aristotle University
 Iran         Razi University
-Russia       Space Research Institute
+Iran         University of Zanjan
+Russia       Space Research Inst. (Moscow)  Space Research Institute
 Russia       Lebedev Physical Institute
 Russia       Inst of Solar-Terrestrial Phys.
+Russia       Skolkovo Institute (Moscow)    Skolkovo Institute
+Russia       IEPT (Moscow)                  Institute of Earthquake Prediction Theory
 Russia       Ioffe Institute
 Russia       Ioffe Institute                Ioffe Physical-Technical Institute
 Russia       Crimean Astrophys. Observatory Crimean Astrophysical Observatory
@@ -266,6 +271,7 @@ Russia       IZMIRAN (Moscow)               IZMIRAN
 Russia       IZMIRAN (Moscow)               Pushkov Institute
 Russia       St. Petersburg State UniversityPetersburg State University
 Russia       ISTP SB RAS (Irkursk)          Institute of Solar-Terrestrial Physics
+Russia       Moscow State University
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Jagiellonian University
 Poland       Siedlce University
@@ -282,6 +288,7 @@ Argentina    Universidad de Buenos Aires
 Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
 Argentina    Universidad de Mendoza
 Argentina    UTN-FRM (Mendoza)              Facultad Regional Mendoza
+Argentina    Ciudad Universitaria
 Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
 Mexico       UNAM (Mexico City)             04510
 Mexico       UNAM (Mexico City)             Ciudad de Mexico
@@ -301,3 +308,8 @@ Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espa
 Brazil       INPE (Sao Paolo)               National Institute for Space Research
 Croatia      Hvar Observatory               Hvar Observatory
 South Africa North-West University
+Saudia ArabiaMajmaah University
+Saudia ArabiaKing Faisal University
+Portugal     University of Coimbra          Univ. Coimbra
+Georgia      GENAO                          Abastumani Astrophysical Observatory
+Georgia      GENAO                          National Astrophysical Observatory

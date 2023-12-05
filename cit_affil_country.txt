@@ -30,6 +30,7 @@ US           George Mason
 US           Goddard
 US           Marshall
 US           NASA
+US           Nebraska
 US           Princeton Center for Plasma Physics
 US           High Altitude
 US           Smithsonian
@@ -44,6 +45,7 @@ US           Predictive Science
 US           Lowell Observatory
 US           Tennessee State University
 US           Minnesota
+US           Missouri
 US           Baltimore
 US           Georgia State University
 US           Princeton*
@@ -99,6 +101,7 @@ US           Air Force Research
 US           University of Georgia
 US           National Solar Observatory
 US           LLNL
+US           Tufts University
 US           Dartmouth College
 US           Utah State University
 US           NextEra Energy Resources
@@ -270,10 +273,12 @@ China        Peking
 China        Shanghai
 China        Purple Mountain
 China        Henan University
+China        Chinese Academy of Sciences
 China        *Macau*
 Russia       *Russia*
 Russia       Lebedev
 Russia       *Russian*
+Russia       Moscow State University
 Belgium      Belgium
 Belgium      Belgique
 Belgium      Solar Terrestrial Centre of Excellence
@@ -369,6 +374,7 @@ Slovak Rep.  *Slovak
 Slovak Rep.  Comenius
 Austria      Austria
 Austria      Graz*
+Austra       Osterreich
 Denmark      Copenhagen
 Denmark      Denmark
 Finland      *Finland*
@@ -380,16 +386,20 @@ Finland      Oulu
 Bulgaria     Bulgaria
 Mexico       Universidad National Autónoma de México
 Mexico       Universidad Nacional Autónoma de México
+Mexico       Universidad Nacional Autonoma de Mexico
 Mexico       México
 Mexico       Morelia
 Mexico       Instituto Nacional de Astrofísica
 Mexico       Puebla
 Mexico       Hidalgo
+Mexico       Michoacan
 Mexico       Chiapas
 Mexico       Pachuca
 Mexico       Ciudad de Mexico
 Mexico       Tecnologico de Monterrey
 Mexico       Mexico City
+Mexico       Coyoacan
+Mexico       Queretaro
 Peru         Jicamarca
 Portugal     Portugal
 UAE          United Arab Emirates
@@ -397,6 +407,7 @@ UAE          Abu Dhabi
 UAE          *UAE*
 Canada       *Canada*
 Canada       Western Ontario
+Canada       Dominion Astrophysical Observatory
 Lithuania    Lithuania
 Hungary      Hungary
 Brazil       *Brazil
@@ -417,6 +428,7 @@ Romania      Bucharest
 Romania      *Romania*
 Nepal        *Nepal
 Russia       USSR
+Russia       National Research Nuclear University
 Thailand     Thailand
 Uzbekistan   Uzbekistan
 Armenia      Armenia
