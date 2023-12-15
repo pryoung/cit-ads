@@ -132,6 +132,9 @@ function cit_author_group, author_list, data_dir=data_dir, extra_data=extra_data
 ;     Ver.12, 28-Sep-2023, Peter Young
 ;       The far_cit tag was not being transferred from extra_data,
 ;       so this has been fixed.
+;     Ver.13, 12-Dec-2023, Peter Young
+;       Fixed bug whereby last_affil_country tag was not being
+;       transferred from extra_data to the output structure.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -432,6 +435,7 @@ IF n_tags(extra_data) NE 0 THEN BEGIN
     str.n_first_ref=extra_data[i].n_first_ref
     str.yrs_since_last=cyr-extra_data[i].yr_last_paper
     str.first_affil_country=extra_data[i].first_affil_country
+    str.last_affil_country=extra_data[i].last_affil_country
     str.curr_affil=extra_data[i].curr_affil
     str.sun_keyword_frac=extra_data[i].sun_keyword_frac
     str.far_cit=extra_data[i].far_cit 

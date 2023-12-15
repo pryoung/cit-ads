@@ -68,6 +68,8 @@ PRO cit_write_group_html, group_struc, html_file=html_file, sort_col=sort_col, $
 ;       Added MIN_AGE= and MIN_PAPERS= optional inputs.
 ;     Ver.5, 07-Jan-2023, Peter Young
 ;       Made some updates to html formatting; added /solar_only.
+;     Ver.6, 12-Dec-2023, Peter Young
+;       Added an extra column to display current affiliation.
 ;-
 
 
@@ -203,12 +205,13 @@ printf,lout,'<p><table border=1 cellpadding=3>'
 IF n_elements(title) NE 0 THEN BEGIN 
   printf,lout,'<tr><td colspan='+trim(ncols)+'><b>'+title+'</br></tr>'
 ENDIF
-header0='<tr><td colspan=5>' +$
+header0='<tr><td colspan=6>' +$
         '<td colspan=4 align="center"><b>All papers' + $
         '<td colspan=6 align="center"><b>First-author refereed papers only'
 header='<tr><td align="center" style="background-color:'+cols[1]+'";><b>Name'+ $
        '<td align="center" style="background-color:'+cols[1]+'";><b>Career origin</b>' + $
        '<td align="center" style="background-color:'+cols[2]+'";><b>Country</b>' + $
+       '<td align="center"><b>Affiliation</b>' + $
        '<td align="center" style="background-color:'+cols[3]+'";><b>Career start'+ $
        '<td align="center" style="background-color:'+cols[4]+'";><b>Years' + $
        '<td align="center" style="background-color:'+cols[5]+'";><b>No. papers' + $
@@ -270,6 +273,8 @@ FOR i=0,n-1 DO BEGIN
   printf,lout,'<td align="center" style="background-color:'+cols[0]+'";><a href="'+d[i].htmlfile+'">'+d[i].name+'</a>'
   printf,lout,'<td align="center" style="background-color:'+cols[1]+'";>'+d[i].first_affil_country
   printf,lout,'<td align="center" style="background-color:'+cols[2]+'";>'+d[i].last_affil_country
+  curr_affil=strmid(d[i].curr_affil,0,40)
+  printf,lout,'<td align="center">'+curr_affil
   printf,lout,'<td align="center" style="background-color:'+cols[3]+'";>'+trim(d[i].start_year_far)
   printf,lout,'<td align="center" style="background-color:'+cols[4]+'";>'+trim(d[i].years_far)
   printf,lout,'<td align="center" style="background-color:'+cols[5]+'";>'+trim(d[i].num)

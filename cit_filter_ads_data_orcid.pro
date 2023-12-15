@@ -1,6 +1,7 @@
 
 FUNCTION cit_filter_ads_data_orcid, ads_data, orcid, refereed=refereed, year=year, $
-                                    count=count, thesis=thesis, verbose=verbose
+                                    count=count, thesis=thesis, verbose=verbose, $
+                                    author_norm=author_norm
 
 ;+
 ; NAME:
@@ -49,6 +50,8 @@ FUNCTION cit_filter_ads_data_orcid, ads_data, orcid, refereed=refereed, year=yea
 ;
 ; OPTIONAL OUTPUTS:
 ;     Count:  The number of entries in the output structure.
+;     Author_Norm:  The author_norm value for the author identified by the
+;                   ORCID ID.
 ;
 ; EXAMPLE:
 ;     IDL> new_data=cit_filter_ads_data_orcid(ads_data,'0000-0001-9034-2925')
@@ -66,6 +69,8 @@ FUNCTION cit_filter_ads_data_orcid, ads_data, orcid, refereed=refereed, year=yea
 ;     Ver.4, 15-Nov-2023, Peter Young
 ;       Modified author_norm identification to pick the most common value
 ;       if there are more than one; updated header.
+;     Ver.5, 15-Dec-2023, Peter Young
+;       Added author_norm= optional output.
 ;-
 
 
@@ -135,7 +140,10 @@ ENDIF ELSE BEGIN
 ENDELSE 
 
 
-
+;
+; Author_norm is an optional output.
+;
+IF n_elements(first_author_norm) NE 0 THEN author_norm=trim(first_author_norm) ELSE author_norm=''
 
 ;
 ; Apply orcid to identify first authors

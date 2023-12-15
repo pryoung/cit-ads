@@ -54,6 +54,8 @@ FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
 ;     Ver.1, 09-Nov-2023, Peter Young
 ;     Ver.2, 27-Nov-2023, Peter Young
 ;       Added min_year= and max_year= optional inputs.
+;     Ver.3, 12-Dec-2023, Peter Young
+;       Now filters out SHINE abstracts.
 ;-
 
 count=0
@@ -113,6 +115,15 @@ IF keyword_set(refereed) THEN BEGIN
     return,-1
   ENDELSE
 ENDIF 
+
+
+;
+; SHINE conference abstracts get listed as "inproceedings" in ADS
+; for some reason, so I remove them here.
+;
+chck=strmid(ads_data_out.bibcode,4,9)
+k=where(chck NE 'shin.conf',nk)
+ads_data_out=ads_data_out[k]
 
 
 ;

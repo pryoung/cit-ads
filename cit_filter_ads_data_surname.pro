@@ -2,7 +2,8 @@
 
 FUNCTION cit_filter_ads_data_surname, ads_data, surname, verbose=verbose, $
                                       count=count, refereed=refereed, $
-                                      year=year, thesis=thesis
+                                      year=year, thesis=thesis, $
+                                      author_norm=author_norm
 
 
 ;+
@@ -46,6 +47,9 @@ FUNCTION cit_filter_ads_data_surname, ads_data, surname, verbose=verbose, $
 ;
 ; OPTIONAL OUTPUTS:
 ;     Count:  The number of entries in the output structure.
+;     Author_Norm: Returns the normalized author name of the author that the
+;                routine has identfied. It requires that author_norm be a
+;                tag in the ADS_DATA structure.
 ;
 ; CALLS:
 ;     CIT_FILTER_ADS_DATA
@@ -58,12 +62,14 @@ FUNCTION cit_filter_ads_data_surname, ads_data, surname, verbose=verbose, $
 ;     Ver.1, 09-Nov-2023, Peter Young
 ;     Ver.2, 13-Nov-2023, Peter Young
 ;       Fixed bug whereby strlowcase was not being applied to surname.
+;     Ver.3, 15-Dec-2023, Peter Young
+;       Added author_norm= optional output.
 ;-
 
 
 IF n_params() LT 2 THEN BEGIN
   print,'Use: IDL> new_data=cit_filter_ads_data_surname(ads_data,surname [,/refereed,year=,'
-  print,'                         /thesis,count=,/verbose)'
+  print,'                         /thesis,count=,/verbose,author_norm=)'
   return,-1
 ENDIF 
 
@@ -109,6 +115,7 @@ IF swtch THEN BEGIN
  ;
   k=where(ads_data_out.first_author_norm EQ auth_norm,count)
   IF keyword_set(verbose) THEN message,/info,/cont,'There are '+trim(count)+' first author papers by '+auth_norm+'.'
+  author_norm=auth_norm
   return,ads_data_out[k]
 ENDIF ELSE BEGIN
   IF keyword_set(verbose) THEN message,/info,/cont,'The author_norm tag does not exist, first authors will be matched only against surname.'

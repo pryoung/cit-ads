@@ -71,6 +71,7 @@ US           University of Michigan
 US           Stanford University
 US           National Solar Observatory
 US           Applied Physics Laboratory
+US           Applied Physics Laboratory     Applied Physics Lab
 US           Applied Physics Laboratory     Johns Hopkins University Laurel
 US           U. Alabama - Huntsville        Huntsville
 US           University of New Hampshire    Hampshire
