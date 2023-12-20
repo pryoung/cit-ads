@@ -71,15 +71,21 @@ FUNCTION cit_filter_ads_data_orcid, ads_data, orcid, refereed=refereed, year=yea
 ;       if there are more than one; updated header.
 ;     Ver.5, 15-Dec-2023, Peter Young
 ;       Added author_norm= optional output.
+;     Ver.6, 20-Dec-2023, Peter Young
+;       Define author_norm at beginning to ensure it always has a value when the
+;       routine exits.
 ;-
 
 
+
+author_norm=''
 
 IF n_params() LT 2 THEN BEGIN
   print,'Use: IDL> new_data=cit_filter_ads_data_orcid(ads_data,orcid [,/refereed,year=,'
   print,'                         /thesis,count=,/verbose)'
   return,-1
 ENDIF 
+
 
 n1=n_elements(ads_data)
 ads_data_out=cit_filter_ads_data(ads_data,refereed=refereed,year=year,count=count, $
