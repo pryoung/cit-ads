@@ -64,6 +64,10 @@ FUNCTION cit_filter_ads_data_surname, ads_data, surname, verbose=verbose, $
 ;       Fixed bug whereby strlowcase was not being applied to surname.
 ;     Ver.3, 15-Dec-2023, Peter Young
 ;       Added author_norm= optional output.
+;     Ver.4, 19-Dec-2023, Peter Young
+;       Now requires exact match between the author_norm surname and surname.
+;       This deals with the case where the surname 'Garcia' is incorrectly
+;       matching 'Garcia-Sage', for example.
 ;-
 
 
@@ -100,8 +104,28 @@ IF swtch THEN BEGIN
   all_auth=''
   FOR i=0,n-1 DO all_auth=[all_auth,ads_data_out[i].author_norm.toarray()]
   all_auth=all_auth[1:*]
-  chck=strpos(strlowcase(all_auth),strlowcase(surname))
-  k=where(chck GE 0,nk)
+ ;
+ ; Now extract the surname from all_auth.
+ ;
+  naa=n_elements(all_auth)
+  auth_norm_surname=strarr(naa)
+  FOR i=0,naa-1 DO BEGIN
+    bits=all_auth[i].split(',')
+    auth_norm_surname[i]=bits[0]
+  ENDFOR 
+ ;
+ ; Check for exact matches of the surname.
+ ;
+  k=where(strlowcase(auth_norm_surname) EQ strlowcase(surname),nk)
+  IF nk EQ 0 THEN BEGIN
+    count=0
+    message,/info,/cont,'No auth_norm matches found for surname '+surname+'.'
+    return,-1
+  ENDIF
+ ;
+ ; Search for the most common all_auth entry from the matches. This is defined
+ ; as auth_norm.
+ ;
   all_auth=all_auth[k]
   uauth=all_auth[uniq(all_auth,sort(all_auth))]
   nu=n_elements(uauth)

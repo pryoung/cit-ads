@@ -135,6 +135,9 @@ function cit_author_group, author_list, data_dir=data_dir, extra_data=extra_data
 ;     Ver.13, 12-Dec-2023, Peter Young
 ;       Fixed bug whereby last_affil_country tag was not being
 ;       transferred from extra_data to the output structure.
+;     Ver.14, 19-Dec-2023, Peter Young
+;       Now uses cit_orcid_papers when the ORCID ID is given;
+;       str.num was not being correctly filled for extra_data authors.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -324,8 +327,9 @@ FOR i=0,n-1 DO BEGIN
     
     IF orcid_id EQ '' THEN BEGIN
       a=cit_author_papers(search_name,start=fix(names[i].year),all=all)
-    ENDIF ELSE BEGIN 
-      a=cit_author_papers(orcid_id,/orcid,/all)
+    ENDIF ELSE BEGIN
+      a=cit_orcid_papers(orcid_id)
+;      a=cit_author_papers(orcid_id,/orcid,/all)
     ENDELSE
  ;
     IF a[0] EQ '' THEN continue
@@ -424,6 +428,7 @@ IF n_tags(extra_data) NE 0 THEN BEGIN
     str.h_index=extra_data[i].h_index
     str.h_far_index=extra_data[i].h_far_index
     str.n_cit=extra_data[i].n_cit
+    str.num=extra_data[i].n_papers
     str.start_year=extra_data[i].start_year
     str.start_year_far=extra_data[i].start_year_far
     str.h_years=extra_data[i].h_index-(cyr-extra_data[i].start_year+1)

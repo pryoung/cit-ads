@@ -204,6 +204,8 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
 ;      Ver.31, 12-Dec-2023, Peter Young
 ;         If ORCID not specified, then uses author_norm to identify
 ;         most recent affiliation.
+;      Ver.32, 19-Dec-2023, Peter Young
+;         The author_norm method now allows for multiple surnames.
 ;-
 
 
@@ -499,16 +501,33 @@ IF n_elements(orcid) NE 0 THEN BEGIN
   ads_data_far=cit_filter_ads_data_orcid(ads_data,orcid,count=n_first)
   ads_data_far=cit_filter_ads_data_orcid(ads_data,orcid,/ref,count=n_first_ref)
   IF n_first_ref GT 0 THEN BEGIN 
-    yr_last_paper=max(ads_data_far.year)
+    yr_last_paper=max(fix(ads_data_far.year))
     far_cit=total(ads_data_far.citation_count)
   ENDIF 
 ENDIF ELSE BEGIN
-  ads_data_far=cit_filter_ads_data_surname(ads_data,surname,count=n_first)
-  ads_data_far=cit_filter_ads_data_surname(ads_data,surname,/ref,count=n_first_ref)
-  IF n_first_ref GT 0 THEN BEGIN 
-    yr_last_paper=max(ads_data_far.year)
-    far_cit=total(ads_data_far.citation_count)
-  ENDIF 
+  ns=n_elements(surname)
+  n_first=0
+  n_first_ref=0
+  yr_last_paper=1900
+  far_cit=0
+  FOR i=0,ns-1 DO BEGIN
+    ad_far=cit_filter_ads_data_surname(ads_data,surname[i],count=n_f)
+    n_first=n_first+n_f
+   ;
+    ad_far=cit_filter_ads_data_surname(ads_data,surname[i],/ref,count=n_fr)
+    n_first_ref=n_first_ref+n_fr
+    IF n_fr GT 0 THEN BEGIN
+      IF n_tags(ads_data_far) EQ 0 THEN ads_data_far=ad_far ELSE ads_data_far=[ads_data_far,ad_far]
+      yr_last_paper=max([yr_last_paper,max(fix(ads_data_far.year))])
+      far_cit=far_cit+total(ads_data_far.citation_count)
+    ENDIF 
+  ENDFOR 
+  ;; ads_data_far=cit_filter_ads_data_surname(ads_data,surname,count=n_first)
+  ;; ads_data_far=cit_filter_ads_data_surname(ads_data,surname,/ref,count=n_first_ref)
+  ;; IF n_first_ref GT 0 THEN BEGIN 
+  ;;   yr_last_paper=max(ads_data_far.year)
+  ;;   far_cit=total(ads_data_far.citation_count)
+  ;; ENDIF 
 ENDELSE
 
   
@@ -557,8 +576,6 @@ far_5_ncit=intarr(5)-1
 far_5_bcode=strarr(5)
 far_5_title=strarr(5)
 IF n_first_ref GT 0 THEN BEGIN 
-  ads_data_far=ads_data_far
-     ;
   yr=fix(ads_data_far.year)
   start_year_far=min(yr)
      ;
@@ -577,7 +594,7 @@ IF n_first_ref GT 0 THEN BEGIN
     ; The following records the five FAR papers with the highest
     ; citations in the last 5 years.
     ;
-  k=where(ads_data_far.year GE curr_year-4,nk)
+  k=where(fix(ads_data_far.year) GE curr_year-4,nk)
   IF nk GE 1 THEN BEGIN
     ncit=ads_data_far[k].citation_count
     icit=reverse(sort(ncit))
@@ -794,7 +811,7 @@ IF n_first_ref GT 0 THEN BEGIN
 ;
 first_affil_country=''
 IF n_tags(ads_data_far) NE 0 THEN BEGIN
-  j=sort(ads_data_far.year)
+  j=sort(fix(ads_data_far.year))
   nfar=n_elements(ads_data_far)
   FOR i=0,nfar-1 DO BEGIN
     IF trim(ads_data_far[j[i]].country[0]) NE '' THEN BEGIN
@@ -825,21 +842,48 @@ IF n_tags(ads_data) NE 0 THEN BEGIN
       ENDIF
     ENDFOR 
   ENDIF ELSE BEGIN
-    ad=cit_filter_ads_data_surname(ads_data,surname,author_norm=auth_norm)
-    IF n_elements(auth_norm) NE 0 THEN BEGIN
-      message,/info,/cont,'The surname '+surname+' has been matched to author_norm '+auth_norm+'.'
-      n=n_elements(ads_data)
-      FOR i=0,n-1 DO BEGIN
-        a_norm=ads_data[i].author_norm.toarray()
-        k=where(trim(auth_norm) EQ trim(a_norm),nk)
-        IF nk NE 0 THEN BEGIN
-          last_affil_country=ads_data[i].country[k[0]]
-          aff_str=ads_data[i].aff.toarray()
-          curr_affil=cit_affil_mapping(aff_str[k[0]],last_affil_country)
-          IF curr_affil NE '-' THEN break
-        ENDIF
-      ENDFOR 
-    ENDIF 
+    ns=n_elements(surname)
+    pubdate=strarr(ns)
+    curr_affil=strarr(ns)
+    FOR j=0,ns-1 DO BEGIN 
+      ad=cit_filter_ads_data_surname(ads_data,surname[j],author_norm=auth_norm)
+      IF n_elements(auth_norm) NE 0 THEN BEGIN
+        message,/info,/cont,'The surname '+surname[j]+' has been matched to author_norm '+auth_norm+'.'
+        n=n_elements(ads_data)
+        FOR i=0,n-1 DO BEGIN
+          a_norm=ads_data[i].author_norm.toarray()
+          k=where(trim(auth_norm) EQ trim(a_norm),nk)
+          IF nk NE 0 THEN BEGIN
+            last_affil_country=ads_data[i].country[k[0]]
+            aff_str=ads_data[i].aff.toarray()
+            curr_affil[j]=cit_affil_mapping(aff_str[k[0]],last_affil_country)
+            IF curr_affil[j] NE '-' THEN BEGIN
+              pubdate[j]=ads_data[i].pubdate
+              BREAK
+            ENDIF 
+          ENDIF
+        ENDFOR 
+      ENDIF 
+    ENDFOR
+    is=reverse(sort(pubdate))
+    curr_affil=curr_affil[is[0]]
+
+    
+    ;; ad=cit_filter_ads_data_surname(ads_data,surname,author_norm=auth_norm)
+    ;; IF n_elements(auth_norm) NE 0 THEN BEGIN
+    ;;   message,/info,/cont,'The surname '+surname+' has been matched to author_norm '+auth_norm+'.'
+    ;;   n=n_elements(ads_data)
+    ;;   FOR i=0,n-1 DO BEGIN
+    ;;     a_norm=ads_data[i].author_norm.toarray()
+    ;;     k=where(trim(auth_norm) EQ trim(a_norm),nk)
+    ;;     IF nk NE 0 THEN BEGIN
+    ;;       last_affil_country=ads_data[i].country[k[0]]
+    ;;       aff_str=ads_data[i].aff.toarray()
+    ;;       curr_affil=cit_affil_mapping(aff_str[k[0]],last_affil_country)
+    ;;       IF curr_affil NE '-' THEN break
+    ;;     ENDIF
+    ;;   ENDFOR 
+    ;; ENDIF 
   ENDELSE 
 ENDIF 
 
