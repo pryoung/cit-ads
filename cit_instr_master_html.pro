@@ -64,7 +64,10 @@ PRO cit_instr_master_html, data_str, author=author, affil_file=affil_file, all_p
 ;        sometimes flagging the wrong bibcodes.
 ;     Ver.5, 08-Apr-2022, Peter Young
 ;        Added table giving the 10 authors with the most first-author
-;        papers. 
+;        papers.
+;     Ver.6, 04-Jan-2024, Peter Young
+;        The surname table now uses the "author_norm" form of the
+;        author's name.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -318,15 +321,14 @@ ENDIF
 ;
 ; Add a table for most common surnames.
 ;
-s=cit_instr_first_author_stats(all_pubs)
-ns=n_elements(s.surnames)
+s=cit_instr_first_author_stats(all_pubs,count=ns)
 n=min([ns,10])
 printf,lout,'<h2>Authors with the most first-author papers</h2>'
-printf,lout,'<p>The following is a list of the '+trim(n)+' authors with the most  first-authored refereed EIS papers. Note that the method only checks surnames, so there is no distinction between authors with the same surname.</p>'
+printf,lout,'<p>The following is a list of the '+trim(n)+' authors with the most first-authored refereed EIS papers. If authors have the same surname and same first initial then they will not be differentiated.</p>'
 printf,lout,'<p align=center><table border=1 cellpadding=3>'
-printf,lout,'<tr><td><b>Surname</b><td><b>No. of papers</b></tr>'
+printf,lout,'<tr><td><b>Name</b><td><b>No. of papers</b></tr>'
 FOR i=0,n-1 DO BEGIN
-  printf,lout,'<tr><td>'+s.surnames[i]+'<td align=center>'+trim(s.count[i])
+  printf,lout,'<tr><td>'+s.author_norm[i]+'<td align=center>'+trim(s.count[i])
 ENDFOR
 printf,lout,'</table>'
 
