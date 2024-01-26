@@ -228,6 +228,10 @@ India        ARIES (Nainital)               Aryabhatta Research Institute
 India        ARIES (Nainital)               Arybhatta Research Institute
 India        VIT Bhopal University
 India        University of Mumbai
+India        Kumaun University (Nainital)   Kumaun University
+India        MMM University of Technology
+India        IISER Kolkata                  Indian Institute of Science Education and Research 
+India        IIT - Kanpur                   Kanpur
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -314,3 +318,4 @@ Saudia ArabiaKing Faisal University
 Portugal     University of Coimbra          Univ. Coimbra
 Georgia      GENAO                          Abastumani Astrophysical Observatory
 Georgia      GENAO                          National Astrophysical Observatory
+Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
