@@ -50,6 +50,8 @@ FUNCTION cit_bbl2str, file, extra=extra, bib_strarr=bib_strarr
 ;        Made j and i long integers in case of a very large input.
 ;     Ver.5, 02-Jul-2021, Peter Young
 ;        Fixed problem when title doesn't have quotes.
+;     Ver.6, 31-Mar-2024, Peter Young
+;        Fixed problem when the bibtex entry does not have a title.
 ;-
 
 
@@ -179,10 +181,14 @@ REPEAT BEGIN
     WHILE tst1 EQ 0 DO BEGIN
 ;      readf,lun,str1
       j=j+1
-      str1=bib_strarr[j]
-      str1=strtrim(str1,1)
-      bits=str_sep(str1,'title = ')
-      IF n_elements(bits) LT 2 THEN astr=astr+bits[0] ELSE tst1=1
+      IF j LT n THEN BEGIN
+        str1=bib_strarr[j]
+        str1=strtrim(str1,1)
+        bits=str_sep(str1,'title = ')
+        IF n_elements(bits) LT 2 THEN astr=astr+bits[0] ELSE tst1=1
+      ENDIF ELSE BEGIN
+        tst1=1
+      ENDELSE 
     ENDWHILE
     titstr=bits[1]
     lbl1: astr=strtrim(astr,0)
