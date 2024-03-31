@@ -181,14 +181,12 @@ REPEAT BEGIN
     WHILE tst1 EQ 0 DO BEGIN
 ;      readf,lun,str1
       j=j+1
-      IF j LT n THEN BEGIN
-        str1=bib_strarr[j]
-        str1=strtrim(str1,1)
-        bits=str_sep(str1,'title = ')
-        IF n_elements(bits) LT 2 THEN astr=astr+bits[0] ELSE tst1=1
-      ENDIF ELSE BEGIN
-        tst1=1
-      ENDELSE 
+      str1=bib_strarr[j]
+      str1=strtrim(str1,1)
+      bits=str_sep(str1,'title = ')
+      bits_jour=str_sep(str1,'journal = ')
+      IF n_elements(bits) LT 2 AND n_elements(bits_jour) LT 2 THEN astr=astr+bits[0] ELSE tst1=1
+
     ENDWHILE
     titstr=bits[1]
     lbl1: astr=strtrim(astr,0)
