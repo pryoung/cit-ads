@@ -177,6 +177,9 @@ REPEAT BEGIN
    ; this process is 
    ; stopped.
    ;
+   ; 31-Mar-2024: I had to add the check on journal as I found an example
+   ; (2003JMatS..38.4777L) where title was not defined.
+   ;
     tst1=0
     WHILE tst1 EQ 0 DO BEGIN
 ;      readf,lun,str1
