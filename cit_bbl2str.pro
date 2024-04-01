@@ -188,7 +188,7 @@ REPEAT BEGIN
       IF n_elements(bits) LT 2 AND n_elements(bits_jour) LT 2 THEN astr=astr+bits[0] ELSE tst1=1
 
     ENDWHILE
-    titstr=bits[1]
+    IF n_elements(bits) GT 1 THEN titstr=bits[1] ELSE titstr=''
     lbl1: astr=strtrim(astr,0)
 ;    n=strlen(astr)
 ;    astr=strmid(astr,0,n-2)
@@ -197,20 +197,24 @@ REPEAT BEGIN
    ;
    ; add title to list
    ;
-    bits=str_sep(titstr,'"')
-    CASE 1 OF
-       n_elements(bits) EQ 3: title=bits[1]
-       n_elements(bits) EQ 1: title='Fake title due to format problem'
-       ELSE: BEGIN 
+    IF titstr NE '' THEN BEGIN 
+      bits=str_sep(titstr,'"')
+      CASE 1 OF
+        n_elements(bits) EQ 3: title=bits[1]
+        n_elements(bits) EQ 1: title='Fake title due to format problem'
+        ELSE: BEGIN 
           title=bits[1]
           FOR k=2,n_elements(bits)-2 DO BEGIN
-             title=title+'"'+bits[k]
+            title=title+'"'+bits[k]
           ENDFOR
-       END
-    ENDCASE 
-    title=repstr(title,'{','')
-    title=repstr(title,'}','')
-    list[i].title=cit_convert_latex(title)
+        END
+      ENDCASE 
+      title=repstr(title,'{','')
+      title=repstr(title,'}','')
+      list[i].title=cit_convert_latex(title)
+    ENDIF ELSE BEGIN
+      list[i].title='[ No title ]'
+    ENDELSE 
   ENDIF
 
  ;
