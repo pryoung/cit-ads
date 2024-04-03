@@ -6,7 +6,7 @@ FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
 
 ;+
 ; NAME:
-;     CIT_FILTER_ADS_DATA_DOCTYPE
+;     CIT_FILTER_ADS_DATA
 ;
 ; PURPOSE:
 ;     Performs some standard filtering of the ADS data structure, based
@@ -56,6 +56,10 @@ FUNCTION cit_filter_ads_data, ads_data, thesis=thesis, count=count, $
 ;       Added min_year= and max_year= optional inputs.
 ;     Ver.3, 12-Dec-2023, Peter Young
 ;       Now filters out SHINE abstracts.
+;     Ver.4, 01-Apr-2024, Peter Young
+;       Now removes preface articles.
+;     Ver.5, 03-Apr-2024, Peter Young
+;       Fixed a bug introduced in v.4.
 ;-
 
 count=0
@@ -133,7 +137,21 @@ IF NOT keyword_set(thesis) THEN BEGIN
   chck=strpos(ads_data_out.doctype,'thesis')
   k=where(chck LT 0,nk)
   ads_data_out=ads_data_out[k]
-ENDIF 
+ENDIF
+
+
+;
+; Remove any preface articles, which are identified by having "preface"
+; as the first word of the title.
+;
+n=n_elements(ads_data_out)
+all_titles=strarr(n)
+FOR i=0,n-1 DO BEGIN
+  IF ads_data_out[i].title.count() GT 0 THEN all_titles[i]=ads_data_out[i].title[0]
+ENDFOR 
+chck=strpos(strlowcase(all_titles),'preface')
+k=where(chck NE 0)
+ads_data_out=ads_data_out[k]
 
 ;
 ; The line below defines what types of article end up in the author's publication
