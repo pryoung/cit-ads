@@ -18,6 +18,8 @@ UK           University of Warwick          Warwick University
 UK           Univ. of Central Lancashire    University of Central Lancashire
 UK           Univ. of Central Lancashire    Jeremiah Horrocks
 UK           University of Cambridge
+UK           University of Cambridge        CB3 9EW
+UK           University of Cambridge        Department of Applied Mathematics and Theoretical Physics
 UK           University of Oxford
 UK           University of Manchester
 UK           University of Dundee
@@ -70,6 +72,7 @@ US           Princeton University           Princeton
 US           Columbia University
 US           University of Michigan
 US           Stanford University
+US           Stanford University            Hansen Experimental Physics
 US           National Solar Observatory
 US           Applied Physics Laboratory
 US           Applied Physics Laboratory     Applied Physics Lab
@@ -90,6 +93,9 @@ US           New Mexico State University
 US           New Mexico State University    New Mexico State Univ
 US           Montana State University
 US           NorthWest Research Associates
+US           NorthWest Research Associates  North West Research Associates
+US           NorthWest Research Associates  NWRA,
+US           NorthWest Research Associates  NWRA,
 US           NRAO (Charlottesville)         National Radio Astronomy Observatory
 US           UCLA                           University of California, Los Angeles
 US           UCLA                           University of California Los Angeles
@@ -108,6 +114,7 @@ US           MIT                            MIT,
 US           University of Alaska Fairbanks
 US           Univ. California Berkeley      University of California, Berkeley
 US           Space Science Institute
+US           Penn State University          Pennsylvania State University
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      MPS - Gottingen                Sonnensystemforschung
@@ -153,6 +160,7 @@ Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Japan        Kyoto University
 Japan        Nagoya University
+Japan        Nagoya University              University of Nagoya
 Japan        NAOJ                           National Astronomical Observatory
 Japan        Chiba University
 Japan        ISAS                           Institute of Space and Astronautical Science
@@ -165,8 +173,11 @@ Japan        SOKENDAI (Hayama)              SOKENDAI
 Japan        NICT (Tokyo)                   National Institute of Information and Communications Technology
 Japan        NIFS (Toki)                    National Institute for Fusion Science
 Japan        National Central University
+Japan        Gifu University
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
+Spain        ESAC                           ESAC,
+Spain        ESAC                           (ESAC)
 Spain        UIB - Palma de Mallorca        Universitat de les Illes Balears
 Spain        UIB - Palma de Mallorca        Universitat Illes Balears
 Spain        IAA - Granada                  Astrofisica de Andalucia
@@ -251,7 +262,9 @@ Switzerland  University of Bern
 Switzerland  ETH-Zurich
 Switzerland  ETH-Zurich                     ETH Zurich
 Switzerland  PMOD/WRC - Davos               PMOD/WRC
+Switzerland  PMOD/WRC - Davos               PMOD-WRC
 Switzerland  PMOD/WRC - Davos               Physikalisch-Meteorologisches
+Switzerland  PMOD/WRC - Davos               World Radiation Center
 Switzerland  FHNW - Windisch                Windisch
 Switzerland  ISSI - Bern                    International Space Science Institute
 Switzerland  Univ. della Svizzera Italiana  Svizzera italiana
