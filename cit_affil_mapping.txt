@@ -133,6 +133,7 @@ Germany      TU Braunschweig                Technische Universitat Braunschweig
 Germany      TU Dresden                     Technische Universitat Dresden
 Germany      MPI - Garching                 Max-Planck-Institut fur extraterrestrische Physik
 Germany      MPI-M (Hamburg)                Max Planck Institute for Meteorology
+Germany      Christian Albrechts University
 Italy        Università della Calabria      Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
@@ -147,6 +148,7 @@ Italy        INAF - Torino                  Astrophysical Observatory of Turin
 Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
 Italy        INAF - Florence                Astrophysical Observatory of Arcetri
 Italy        University of Palermo
+Italy        University of Palermo          Universita di Palermo
 Italy        University of Florence         Universita degli Studi di Firenze
 Italy        University of Florence         University of Firenze
 Italy        University of Florence
@@ -156,6 +158,8 @@ Italy        University of Rome Tor Vergata Tor Vergata
 Italy        University of Genoa            
 Italy        University of Genoa            Universita di Genova
 Italy        Italian Space Agency
+Italy        University of Torino           Universita di Torino
+Italy        University of Torino
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Japan        Kyoto University
@@ -212,6 +216,7 @@ China        Sichuan Normal University
 China        KL Space Weather               Key Laboratory of Space Weather
 China        KL Dark Matter & Space Astr.   Key Laboratory of Dark Matter and Space Astronomy
 China        KL Earth and Planetary Physics Key Laboratory of Earth and Planetary Physics
+China        National Tsing Hua University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -278,6 +283,11 @@ Greece       University of Athens           National and Kapodistrian University
 Greece       Aristotle University
 Iran         Razi University
 Iran         University of Zanjan
+Iran         University of Tabriz
+Iran         Payame Noor University
+Iran         University of Kurdistan
+Iran         University of Maragheh
+Iran         Isfahan Univ. of Technology    Isfahan University of Technology
 Russia       Space Research Inst. (Moscow)  Space Research Institute
 Russia       Lebedev Physical Institute
 Russia       Inst of Solar-Terrestrial Phys.
@@ -322,15 +332,27 @@ Austria      University of Graz
 Austria      Austrian Academy of Sciences
 Austria      Austrian Space Weather Office
 Austria      ZAMG (Vienna)                  Zentralanstalt fur Meteorologie und Geodynamik
+Austria      University of Vienna
+Austria      University of Vienna           Universitat Wien
 Brazil       Mackenzie Presbyterian Univ.   Universidade Presbiteriana Mackenzie
 Brazil       Mackenzie Presbyterian Univ.   Mackenzie Presbyterian University
 Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espaciais
 Brazil       INPE (Sao Paolo)               National Institute for Space Research
 Croatia      Hvar Observatory               Hvar Observatory
+Croatia      Zagreb Observatory
+Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
 South Africa North-West University
-Saudia ArabiaMajmaah University
-Saudia ArabiaKing Faisal University
+Saudi Arabia Majmaah University
+Saudi Arabia King Faisal University
+Saudi Arabia King Abdulaziz University
+Saudi Arabia Umm Al-Qura University
 Portugal     University of Coimbra          Univ. Coimbra
 Georgia      GENAO                          Abastumani Astrophysical Observatory
 Georgia      GENAO                          National Astrophysical Observatory
 Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
+New Zealand  University of Waikato
+Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute of Slovak Academy of Sciences
+Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute
+Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
+Turkey       Akdeniz University
+Turkey       Canakkale Onsekiz Mart Univ.   Canakkale Onsekiz Mart University
