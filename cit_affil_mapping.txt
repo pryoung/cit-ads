@@ -149,6 +149,7 @@ Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
 Italy        INAF - Florence                Astrophysical Observatory of Arcetri
 Italy        University of Palermo
 Italy        University of Palermo          Universita di Palermo
+Italy        University of Florence         Universita di Firenze
 Italy        University of Florence         Universita degli Studi di Firenze
 Italy        University of Florence         University of Firenze
 Italy        University of Florence
@@ -160,6 +161,10 @@ Italy        University of Genoa            Universita di Genova
 Italy        Italian Space Agency
 Italy        University of Torino           Universita di Torino
 Italy        University of Torino
+Italy        ISTP - Bari                    Area della Ricerca di Bari
+Italy        ISTP - Bari                    70126 Bari
+Italy        INAF - Trieste                 Turin Astrophysical Observatory
+Italy        INFN - Trieste                 Sezione di Trieste
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Japan        Kyoto University
@@ -347,6 +352,7 @@ Saudi Arabia King Faisal University
 Saudi Arabia King Abdulaziz University
 Saudi Arabia Umm Al-Qura University
 Portugal     University of Coimbra          Univ. Coimbra
+Portugal     University of Coimbra          
 Georgia      GENAO                          Abastumani Astrophysical Observatory
 Georgia      GENAO                          National Astrophysical Observatory
 Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
