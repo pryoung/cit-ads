@@ -41,6 +41,9 @@ FUNCTION cit_get_keywords, ads_data, count=count, filter=filter, add_random=add_
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 22-Aug-2023, Peter Young
+;     Ver.2, 23-Sep-2024, Peter Young
+;       I now change all the keywords to lower case with capitalized first
+;       letters.
 ;-
 
 count=0
@@ -90,6 +93,13 @@ keywords=keywords[1:*]
 count=n_elements(keywords)
 
 IF keyword_set(filter) THEN keywords=cit_filter_keywords(keywords,count=count)
+
+;
+; Here I standardize the keywords so they are lower case with capitalized
+; first letters.
+;
+kw=keywords.ToLower()
+keywords=kw.CapWords()
 
 return,keywords
 

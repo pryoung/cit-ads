@@ -323,6 +323,7 @@ India        Chennai
 India        Bombay
 India        *Ooty
 India        Hyderabad
+India        Aryabhatta
 Italy        *Italy*
 Italy        *Italia*
 Italy        (Italy)
@@ -341,6 +342,7 @@ Italy        Palermo
 Italy        Osservatorio Astronomico di Roma
 Italy        Tor Vergata
 Italy        Centro Ricerche Casaccia
+Italy        Geofisica e Vulcanologia
 Rep. Korea   Korea
 Rep. Korea   Kyung Hee
 Sweden       Stockholm
