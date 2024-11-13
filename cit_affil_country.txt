@@ -402,6 +402,7 @@ Mexico       Tecnologico de Monterrey
 Mexico       Mexico City
 Mexico       Coyoacan
 Mexico       Queretaro
+Mexico       Universidad de Guadalajara
 Peru         Jicamarca
 Portugal     Portugal
 UAE          United Arab Emirates
