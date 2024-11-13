@@ -52,14 +52,17 @@ US           Los Alamos National Laboratory
 US           University of Arizona
 US           University of Texas at Austin
 US           University of Texas at Dallas
+US           Univ. of Texas at San Antonio  University of Texas at San Antonio
 US           University of Wisconsin-Madison
 US           University of Wisconsin-MadisonMadison
 US           Univ. of Massachusetts Lowell  University of Massachusetts Lowell
+US           University of Michigan
 US           U. Illinois at Urbana-ChampaignIllinois at Urbana-Champaign
 US           Lockheed Martin
 US           LASP, CU-Boulder               Laboratory for Atmospheric and Space Physics
 US           LASP, CU-Boulder               LASP
 US           NJIT                           New Jersey Institute of Technology
+US           NJIT                           Big Bear Solar Observatory
 US           SSL, Berkeley                  Space Sciences Laboratory
 US           Naval Research Laboratory
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
@@ -70,7 +73,6 @@ US           Predictive Science Inc. (PSI)  Predictive Science
 US           University of Hawaii           University of Hawai
 US           Princeton University           Princeton
 US           Columbia University
-US           University of Michigan
 US           Stanford University
 US           Stanford University            Hansen Experimental Physics
 US           National Solar Observatory
@@ -115,8 +117,10 @@ US           University of Alaska Fairbanks
 US           Univ. California Berkeley      University of California, Berkeley
 US           Space Science Institute
 US           Penn State University          Pennsylvania State University
+US           University of Houston
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
+Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
 Germany      MPS - Gottingen                Sonnensystemforschung
 Germany      MPS - Gottingen                Justus-von-Liebig
 Germany      MPS - Gottingen                Institute for Solar System Research
@@ -129,6 +133,7 @@ Germany      Technical University of Berlin Technische Universitat Berlin
 Germany      Kiel University
 Germany      Kiel University                University of Kiel
 Germany      Kiel University                Christian-Albrechts
+Germany      Kiel University                Universitat Kiel
 Germany      TU Braunschweig                Technische Universitat Braunschweig
 Germany      TU Dresden                     Technische Universitat Dresden
 Germany      MPI - Garching                 Max-Planck-Institut fur extraterrestrische Physik
@@ -138,17 +143,22 @@ Italy        Università della Calabria      Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
 Italy        INAF - Rome (IAPS)             Space Astrophysics and Planet
+Italy        INAF - Rome (IAPS)             INAF-IAPS
 Italy        INAF - Rome (Observatory)      Osservatorio Astronomico di Roma
 Italy        INAF - Palermo                 Astronomico di Palermo
 Italy        INAF - Naples                  Observatory of Capodimonte
 Italy        INAF - Naples                  Osservatorio Astronomico di Capodimonte
 Italy        INAF - Torino                  Osservatorio Astrofisico di Torino
 Italy        INAF - Torino                  Astrophysical Observatory of Torino
+Italy        INAF - Torino                  Turin Astrophysical Observatory
 Italy        INAF - Torino                  Astrophysical Observatory of Turin
+Italy        INAF - Torino                  Osservatorio Astronomico di Torino
 Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
 Italy        INAF - Florence                Astrophysical Observatory of Arcetri
+Italy        INGV - Rome                    Istituto Nazionale di Geofisica e Vulcanologia
 Italy        University of Palermo
 Italy        University of Palermo          Universita di Palermo
+Italy        University of Florence         Universita di Firenze
 Italy        University of Florence         Universita degli Studi di Firenze
 Italy        University of Florence         University of Firenze
 Italy        University of Florence
@@ -160,6 +170,13 @@ Italy        University of Genoa            Universita di Genova
 Italy        Italian Space Agency
 Italy        University of Torino           Universita di Torino
 Italy        University of Torino
+Italy        ISTP - Bari                    Area della Ricerca di Bari
+Italy        ISTP - Bari                    70126 Bari
+Italy        ISTP - Bari                    70126, Bari
+Italy        ISTP - Bari                    Via Amendola
+Italy        INAF - Trieste                 Turin Astrophysical Observatory
+Italy        INFN - Trieste                 Sezione di Trieste
+Italy        Sapienza University of Rome    La Sapienza
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Japan        Kyoto University
@@ -190,6 +207,7 @@ Spain        University of Alcala
 Spain        University of Alcala           Universidad de Alcala
 Spain        University of Barcelona
 Spain        University of Barcelona        Universitat de Barcelona
+Spain        Univ. Politecnica de Madrid    Universidad Politecnica de Madrid
 China        Peking University
 China        Purple Mountain Observatory
 China        Shandong University
@@ -217,6 +235,8 @@ China        KL Space Weather               Key Laboratory of Space Weather
 China        KL Dark Matter & Space Astr.   Key Laboratory of Dark Matter and Space Astronomy
 China        KL Earth and Planetary Physics Key Laboratory of Earth and Planetary Physics
 China        National Tsing Hua University
+China        Hunan Normal University
+China        Hubei Univ. of Arts and ScienceHubei University of Arts and Science
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -253,6 +273,7 @@ Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
 Sweden       Swedish Inst. of Space Physics Swedish Institute of Space Physics
+Sweden       Swedish Inst. of Space Physics Swedish Institute for Space Physics
 Sweden       KTH Royal Inst. of Technology  KTH Royal Institute of Technology
 Finland      University of Helsinki
 Finland      University of Turku
@@ -276,11 +297,14 @@ Switzerland  Univ. della Svizzera Italiana  Svizzera italiana
 Norway       University of Oslo
 Ireland      Trinity College Dublin
 Ireland      DIAS - Dublin                  Dublin Institute for Advanced Studies
+Ireland      University College Dublin
+Ireland      Dunsink Observatory
 Greece       University of Ioannina
 Greece       National Observatory of Athens
 Greece       Academy of Athens
 Greece       University of Athens           National and Kapodistrian University of Athens
 Greece       Aristotle University
+Greece       University of Thessaloniki
 Iran         Razi University
 Iran         University of Zanjan
 Iran         University of Tabriz
@@ -301,6 +325,10 @@ Russia       IZMIRAN (Moscow)               Pushkov Institute
 Russia       St. Petersburg State UniversityPetersburg State University
 Russia       ISTP SB RAS (Irkursk)          Institute of Solar-Terrestrial Physics
 Russia       Moscow State University
+Russia       Pulkovo Observatory
+Russia       Pulkovo Observatory            Kislovodsk
+Russia       Irkutsk State University
+Russia       Samara National Research Univ. Samara National Research University
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Jagiellonian University
 Poland       Siedlce University
@@ -313,6 +341,7 @@ Australia    University of Sydney
 Australia    University of Adelaide
 Australia    Deakin University
 Australia    CSIRO
+Australia    Australian National University
 Argentina    Universidad de Buenos Aires
 Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
 Argentina    Universidad de Mendoza
@@ -347,6 +376,10 @@ Saudi Arabia King Faisal University
 Saudi Arabia King Abdulaziz University
 Saudi Arabia Umm Al-Qura University
 Portugal     University of Coimbra          Univ. Coimbra
+Portugal     University of Coimbra          Univ Coimbra
+Portugal     University of Coimbra
+Portugal     University of Coimbra          Universidade de Coimbra
+Portugal     Inst. Superior Tecnico (Lisbon)Instituto Superior Tecnico
 Georgia      GENAO                          Abastumani Astrophysical Observatory
 Georgia      GENAO                          National Astrophysical Observatory
 Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
@@ -356,3 +389,10 @@ Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute
 Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
 Turkey       Akdeniz University
 Turkey       Canakkale Onsekiz Mart Univ.   Canakkale Onsekiz Mart University
+Colombia     Univ. Nacional de Colombia     Universidad Nacional de Colombia
+Colombia     Universidad de Los Andes
+Hungary      Eotvos Lorand University
+Hungary      Debrecen Heliophysical Obs.    Debrecen Heliophysical Observatory
+Denmark      Niels Bohr Institute
+Ecuador      Escuela Politecnica Nacional
+Ukraine      Crimean Astrophys. Observatory Crimean Astrophysical Observatory
