@@ -118,6 +118,7 @@ US           Univ. California Berkeley      University of California, Berkeley
 US           Space Science Institute
 US           Penn State University          Pennsylvania State University
 US           University of Houston
+US           Georgia Inst. of Technology    Georgia Institute of Technology
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
@@ -170,6 +171,8 @@ Italy        University of Genoa            Universita di Genova
 Italy        Italian Space Agency
 Italy        University of Torino           Universita di Torino
 Italy        University of Torino
+Italy        University of Torino           Universita Torino
+Italy        University of Torino           University of Turin
 Italy        ISTP - Bari                    Area della Ricerca di Bari
 Italy        ISTP - Bari                    70126 Bari
 Italy        ISTP - Bari                    70126, Bari
@@ -179,6 +182,7 @@ Italy        INFN - Trieste                 Sezione di Trieste
 Italy        Sapienza University of Rome    La Sapienza
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
+Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
 Japan        Kyoto University
 Japan        Nagoya University
 Japan        Nagoya University              University of Nagoya
@@ -237,6 +241,8 @@ China        KL Earth and Planetary Physics Key Laboratory of Earth and Planetar
 China        National Tsing Hua University
 China        Hunan Normal University
 China        Hubei Univ. of Arts and ScienceHubei University of Arts and Science
+China        Minzu University of China      Minzu University
+China        Xingjiang Ast. Observatory     Xinjiang Astronomical Observatory
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -249,6 +255,7 @@ France       University of Orleans
 France       Universite Paris-Saclay        Paris-Saclay
 France       Observatoire de Paris
 France       Lyon University                Universite de Lyon
+France       LPC2E - Orleans                LPC2E
 Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
 Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
@@ -269,6 +276,7 @@ India        Kumaun University (Nainital)   Kumaun University
 India        MMM University of Technology
 India        IISER Kolkata                  Indian Institute of Science Education and Research 
 India        IIT - Kanpur                   Kanpur
+India        Bahona College
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -342,6 +350,7 @@ Australia    University of Adelaide
 Australia    Deakin University
 Australia    CSIRO
 Australia    Australian National University
+Australia    Flinders University
 Argentina    Universidad de Buenos Aires
 Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
 Argentina    Universidad de Mendoza
@@ -367,10 +376,13 @@ Brazil       Mackenzie Presbyterian Univ.   Universidade Presbiteriana Mackenzie
 Brazil       Mackenzie Presbyterian Univ.   Mackenzie Presbyterian University
 Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espaciais
 Brazil       INPE (Sao Paolo)               National Institute for Space Research
+Brazil       Universidade Cruzeiro do Sul   Cruzeiro do Sul
 Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
+Croatia      University of Zagreb
 South Africa North-West University
+South Africa SANSA                          South African National Space Agency
 Saudi Arabia Majmaah University
 Saudi Arabia King Faisal University
 Saudi Arabia King Abdulaziz University
@@ -396,3 +408,9 @@ Hungary      Debrecen Heliophysical Obs.    Debrecen Heliophysical Observatory
 Denmark      Niels Bohr Institute
 Ecuador      Escuela Politecnica Nacional
 Ukraine      Crimean Astrophys. Observatory Crimean Astrophysical Observatory
+Ukraine      Institute of Radio Astronomy
+Ukraine      Taras Shevchenko National Univ.Taras Shevchenko National University 
+Ukraine      Uzhhorod National University
+Romania      Institute of Space Science
+Qatar        Qatar University
+Egypt        Mansoura University
