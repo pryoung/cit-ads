@@ -33,6 +33,8 @@ UK           University College London      University College
 UK           Abertay University
 UK           Lancaster University
 UK           University of Hertfordshire
+UK           Natural History Museum
+UK           Cardiff Metropolitan University
 US           NASA Ames
 US           NASA Goddard                   Goddard
 US           NASA Goddard                   GSFC
@@ -119,6 +121,10 @@ US           Space Science Institute
 US           Penn State University          Pennsylvania State University
 US           University of Houston
 US           Georgia Inst. of Technology    Georgia Institute of Technology
+US           ADNET Systems Inc.             ADNET Systems
+US           Goucher College
+US           Advanced Heliophysics
+US           Lamar University
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
@@ -141,7 +147,10 @@ Germany      TU Dresden                     Technische Universitat Dresden
 Germany      MPI - Garching                 Max-Planck-Institut fur extraterrestrische Physik
 Germany      MPI-M (Hamburg)                Max Planck Institute for Meteorology
 Germany      Christian Albrechts University
-Italy        Università della Calabria      Calabria
+Germany      University of Siegen
+Germany      University of Siegen           Universitat Siegen
+Germany      University of Jena             Friedrich-Schiller-Universitat
+Italy        University of Calabria         Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
 Italy        INAF - Rome (IAPS)             Space Astrophysics and Planet
@@ -184,9 +193,11 @@ Italy        INFN - Trieste                 Sezione di Trieste
 Italy        Sapienza University of Rome    La Sapienza
 Italy        CNR IFN - Padua                Via Trasea 7
 Italy        CNR IFN - Padua                Padova
+Italy        University of Ferrara
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
+Belgium      University of Liege            Liege
 Japan        Kyoto University
 Japan        Nagoya University
 Japan        Nagoya University              University of Nagoya
@@ -203,6 +214,8 @@ Japan        NICT (Tokyo)                   National Institute of Information an
 Japan        NIFS (Toki)                    National Institute for Fusion Science
 Japan        National Central University
 Japan        Gifu University
+Japan        Musashino Art University
+Japan        University of Tsukuba
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        ESAC                           ESAC,
@@ -222,6 +235,7 @@ Spain        University of Valencia         Universitat de Valencia
 Spain        Ramon Llull University
 Spain        Ramon Llull University         University Ramon Llull
 Spain        Ramon Llull University         Horta Alta 38
+Spain        University of Murcia
 China        Peking University
 China        Purple Mountain Observatory
 China        Shandong University
@@ -256,6 +270,7 @@ China        Hubei Univ. of Arts and ScienceHubei University of Arts and Science
 China        Minzu University of China      Minzu University
 China        Xingjiang Ast. Observatory     Xinjiang Astronomical Observatory
 China        Hanjiang Normal University
+China        National Central University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -294,6 +309,7 @@ India        Bahona College
 India        Vikram Sarabhai Space Centre
 India        Tata Inst. of Fundamental Res. Tata Institute of Fundamental Research
 India        National Inst. of Technology   National Institute of Technology
+India        Ultra College of Eng. & Tech.  Ultra College
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -304,6 +320,7 @@ Finland      University of Helsinki
 Finland      University of Turku
 Finland      University of Oulu
 Finland      Aalto University
+Finland      ASRO (Turku)                   Aboa Space Research Oy
 Czech Rep.   Astronomical Institute OndrejovAstronomical Institute
 Czech Rep.   Charles University
 Czech Rep.   University of South Bohemia
@@ -381,10 +398,12 @@ Mexico       UNAM (Mexico City)             04510
 Mexico       UNAM (Mexico City)             Ciudad de Mexico
 Mexico       UNAM (Mexico City)             Autonoma de Mexico, Mexico City
 Netherlands  ESTEC (Noordwijk)              ESTEC
+Netherlands  ESTEC (Noordwijk)              European Space Research and Technology Centre
 Netherlands  Leiden University
 Netherlands  ASTRON (Dwingeloo)             Dwingeloo
 Netherlands  CWI (Amsterdam)                Centrum Wiskunde and Informatica
 Netherlands  Radboud University
+Netherlands  University of Amsterdam
 Austria      University of Graz
 Austria      Austrian Academy of Sciences
 Austria      Austrian Space Weather Office
@@ -415,6 +434,8 @@ Georgia      GENAO                          Abastumani Astrophysical Observatory
 Georgia      GENAO                          National Astrophysical Observatory
 Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
 New Zealand  University of Waikato
+New Zealand  University of Otago
+New Zealand  Victora Univ. of Wellington    Victoria University of Wellington
 Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute of Slovak Academy of Sciences
 Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute
 Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
@@ -434,6 +455,9 @@ Romania      Institute of Space Science
 Romania      Ast. Inst. of Romanian Academy Astronomical Institute of the Romanian Academy
 Qatar        Qatar University
 Egypt        Mansoura University
+Egypt        Al-Azhar University
 Kuwait       Kuwait University
 Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology Thanyaburi
+Thailand     Kasetsart University
 UAE          New York University Abu Dhabi
+Nigeria      Ebonyi State University
