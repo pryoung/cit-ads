@@ -25,6 +25,7 @@ UK           University of Manchester
 UK           University of Dundee
 UK           University of Exeter           Exeter
 UK           Queen Mary University
+UK           Queen Mary University          Queen Mary and Westfield College
 UK           Durham University
 UK           University of St Andrews       Andrews
 UK           University of Leicester
@@ -117,6 +118,7 @@ US           George Washington University
 US           MIT                            MIT,
 US           University of Alaska Fairbanks
 US           Univ. California Berkeley      University of California, Berkeley
+US           Univ. California Berkeley      University of California at Berkeley
 US           Space Science Institute
 US           Penn State University          Pennsylvania State University
 US           University of Houston
@@ -161,9 +163,12 @@ Italy        INAF - Naples                  Observatory of Capodimonte
 Italy        INAF - Naples                  Osservatorio Astronomico di Capodimonte
 Italy        INAF - Torino                  Osservatorio Astrofisico di Torino
 Italy        INAF - Torino                  Astrophysical Observatory of Torino
+Italy        INAF - Torino                  Astronomical Observatory of Torino
 Italy        INAF - Torino                  Turin Astrophysical Observatory
+Italy        INAF - Torino                  Turin Astronomical Observatory
 Italy        INAF - Torino                  Astrophysical Observatory of Turin
 Italy        INAF - Torino                  Osservatorio Astronomico di Torino
+Italy        INAF - Torino                  10025 Pino Torinese
 Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
 Italy        INAF - Florence                Astrophysical Observatory of Arcetri
 Italy        INGV - Rome                    Istituto Nazionale di Geofisica e Vulcanologia
@@ -173,6 +178,7 @@ Italy        University of Florence         Universita di Firenze
 Italy        University of Florence         Universita degli Studi di Firenze
 Italy        University of Florence         University of Firenze
 Italy        University of Florence
+Italy        University of Florence         Florence University
 Italy        University of Pisa
 Italy        University of Pisa             Universita di Pisa
 Italy        University of Rome Tor Vergata Tor Vergata
