@@ -421,6 +421,7 @@ Brazil       Mackenzie Presbyterian Univ.   Mackenzie Presbyterian University
 Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espaciais
 Brazil       INPE (Sao Paolo)               National Institute for Space Research
 Brazil       Universidade Cruzeiro do Sul   Cruzeiro do Sul
+Brazil       Univap                         Universidade do Vale do Paraiba
 Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
