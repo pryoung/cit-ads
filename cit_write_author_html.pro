@@ -1,11 +1,62 @@
 
-PRO cit_write_author_html, author_data, ads_data, outfile=outfile, outdir=outdir, $
-                           ads_data_far=ads_data_far
+PRO cit_write_author_html, author_data, ads_data, outdir=outdir, $
+                           ads_data_far=ads_data_far, no_hindex=no_hindex
+
+;+
+; NAME:
+;     CIT_WRITE_AUTHOR_HTML
+;     
+; PURPOSE:
+;     Writes four html pages containing an author's publications. 
+;     These are for all papers and FAR papers only, and sorted by 
+;     year or citation number.
+;
+; CATEGORY:
+;     ADS; html; output.
+;
+; CALLING SEQUENCE:
+;	    CIT_WRITE_AUTHOR_HTML, Author_Data, Ads_Data
+;
+; INPUTS:
+;     AUTHOR_DATA: A structure in the form returned by cit_author_data 
+;                  containing derived data for the author.
+;     ADS_DATA:  A structure in the form returned by cit_get_ads_entry 
+;                containing the author's publications.
+;                
+; OPTIONAL INPUTS:
+;     Outdir:  The directory where the html files will be written. If 
+;              not set, then they are written to the working directory.
+;     Ads_Data_Far: A structure in the form returned by cit_get_ads_entry 
+;                   containing the author's FAR publications. If not 
+;                   specified, then it is created from ads_data using the 
+;                   ORCID ID.
+;	
+; KEYWORD PARAMETERS:
+;     NO_HINDEX:  If set, then the h-index is not printed to the output 
+;                 files.
+;                 
+; OUTPUTS:
+;     Writes four output html files with the names
+;     [ORCID].html
+;     [ORCID]_cit.html
+;     [ORCID]_far.html
+;     [ORCID]_far_cit.html
+;     These contain the author's publications (.html), sorted by 
+;     citations (_cit.html), the author's FAR publications (_far.html), 
+;     sorted by citations (_far_cit.html). [ORCID] is the author's 
+;     ORCID number.
+;
+; EXAMPLE:
+;     IDL> cit_write_author_html, author_data, ads_data
+;
+; MODIFICATION HISTORY:
+;     Ver.1, 12-Dec-2024, Peter Young
+;-
 
 
 IF n_params() LT 2 THEN BEGIN
-  print,'Use:  IDL> cit_write_author_html, author_data, ads_data [, outfile=, outdir='
-  print,'                      ads_data_far= ]'
+  print,'Use:  IDL> cit_write_author_html, author_data, ads_data [, outdir='
+  print,'                      ads_data_far=, /no_hindex ]'
   return
 ENDIF 
 
@@ -68,7 +119,7 @@ ENDIF
 printf,lout,'<p><a href="'+outfile_cit+'">List of publications ordered by citations</a><br>'
 printf,lout,'Number of papers: '+trim(author_data.all.n_papers)+' (refereed: '+trim(author_data.all.n_papers_ref)+')<br>'
 printf,lout,'No. of citations: '+trim(author_data.all.n_cit)+'<br>'
-printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.all.h_index)+'<br>'
+if not keyword_set(no_hindex) then printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.all.h_index)+'<br>'
 printf,lout,'First author papers: '+trim(author_data.far.n_papers)
 IF author_data.far.n_papers_ref NE 0 THEN printf,lout,' (<a href="'+outfile_far+'">refereed</a>: '+ $
    trim(author_data.far.n_papers_ref)+')<br>'
@@ -100,11 +151,11 @@ IF n_elements(orcid) NE 0 THEN BEGIN
 ENDIF 
 printf,lout,'Number of papers: '+trim(author_data.all.n_papers)+'<br>'
 printf,lout,'No. of citations: '+trim(author_data.all.n_cit)+'<br>'
-printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.all.h_index)+'<br>'
+if not keyword_set(no_hindex) then printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.all.h_index)+'<br>'
 ;
 ; Now go through each year and print out the entries for that year.
 ;
-ostr=cit_write_cit_list(ads_data,author_data.all.h_index,count=nstr)
+ostr=cit_write_cit_list(ads_data,count=nstr)
 FOR i=0,nstr-1 DO printf,lout,ostr[i]
 ;
 cit_write_footer_html,lout
@@ -132,7 +183,7 @@ ENDIF
 printf,lout,'<p><a href="'+outfile_far_cit+'">List of publications ordered by citations</a><br>'
 printf,lout,'Number of papers: '+trim(author_data.far.n_papers_ref)+'<br>'
 printf,lout,'No. of citations: '+trim(author_data.far.n_cit)+'<br>'
-printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.far.h_index)
+if not keyword_set(no_hindex) then printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.far.h_index)
 ;
 ; Now go through each year and print out the entries for that year.
 ;
@@ -162,11 +213,11 @@ IF n_elements(orcid) NE 0 THEN BEGIN
 ENDIF 
 printf,lout,'Number of papers: '+trim(author_data.far.n_papers_ref)+'<br>'
 printf,lout,'No. of citations: '+trim(author_data.far.n_cit)+'<br>'
-printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.far.h_index)+'<br>'
+if not keyword_set(no_hindex) then printf,lout,'<a href=http://en.wikipedia.org/wiki/H-index>h-index</a>: '+trim(author_data.far.h_index)+'<br>'
 ;
 ; Now go through each year and print out the entries for that year.
 ;
-ostr=cit_write_cit_list(ads_data_far,author_data.far.h_index,count=nstr)
+ostr=cit_write_cit_list(ads_data_far,count=nstr)
 FOR i=0,nstr-1 DO printf,lout,ostr[i]
 ;
 cit_write_footer_html,lout
