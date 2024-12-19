@@ -127,6 +127,7 @@ US           ADNET Systems Inc.             ADNET Systems
 US           Goucher College
 US           Advanced Heliophysics
 US           Lamar University
+US           Univ. of Wisconsin - Green Bay Green Bay
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
@@ -211,6 +212,7 @@ Japan        NAOJ                           National Astronomical Observatory
 Japan        Chiba University
 Japan        ISAS                           Institute of Space and Astronautical Science
 Japan        ISAS                           Institute of Space and Astro-nautical Science
+Japan        ISAS                           Institute of Space and Astronomical 
 Japan        University of Tokyo
 Japan        Kyoto City University of Arts
 Japan        Shinshu University
@@ -222,6 +224,7 @@ Japan        National Central University
 Japan        Gifu University
 Japan        Musashino Art University
 Japan        University of Tsukuba
+Japan        Nat. Defense Academy of Japan  National Defense Academy of Japan
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        ESAC                           ESAC,
@@ -249,9 +252,9 @@ China        Yunnan University
 China        Yunnan Observatories
 China        Yunnan Observatories           Yunnan Key Laboratory
 China        Yunnan Observatories           Yunnan Observatory
-China        Yunnan Observatories           Yunnan Astronomical Observatory
+China        Yunnan Observatories           Yunnan Astronomical Observat
 China        NAOC                           National Astronomical Observatories
-China        Sun Yat-sen University
+China        Sun Yat-sen University         Sun Yat
 China        Beihang University
 China        Nanjing University
 China        National Space Science Center
@@ -277,6 +280,14 @@ China        Minzu University of China      Minzu University
 China        Xingjiang Ast. Observatory     Xinjiang Astronomical Observatory
 China        Hanjiang Normal University
 China        National Central University
+China        Space Engineering University
+China        National Satellite Met. Center National Satellite Meteorological Center
+China        Qian Xuesen Lab. of Space Tech.Qian Xuesen
+China        Nanchang University            Nanchang University
+China        China University of Geosciences
+China        Ningbo University
+China        Nat. Univ. of Defense Tech.    National University of Defense Technology
+China        Chuxiong Normal University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -295,6 +306,7 @@ Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
 Rep. Korea   Chungbuk National University
 Rep. Korea   Kyungpook National University
+Rep. Korea   Chungnam National University
 India        IIA - Bengaluru                Bengaluru
 India        IIA - Bengaluru                Bangalore
 India        IUCAA - Pune                   Inter-University Centre for Astronomy and Astrophysics
@@ -398,13 +410,14 @@ Argentina    UTN-FRM (Mendoza)              Facultad Regional Mendoza
 Argentina    Ciudad Universitaria
 Argentina    IATE (Cordoba)                 Instituto de Astronomia Teorica y Experimental
 Argentina    National University of Tucuman universidad nacional de tucuman
+Argentina    National Univ. of Mar del PlataMar del Plata
 Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
 Mexico       UNAM (Morelia)                 Estudios Superiores Unidad Morelia
 Mexico       UNAM (Mexico City)             04510
 Mexico       UNAM (Mexico City)             Ciudad de Mexico
 Mexico       UNAM (Mexico City)             Autonoma de Mexico, Mexico City
 Netherlands  ESTEC (Noordwijk)              ESTEC
-Netherlands  ESTEC (Noordwijk)              European Space Research and Technology Centre
+Netherlands  ESTEC (Noordwijk)              European Space Research and Technology
 Netherlands  Leiden University
 Netherlands  ASTRON (Dwingeloo)             Dwingeloo
 Netherlands  CWI (Amsterdam)                Centrum Wiskunde and Informatica
@@ -468,3 +481,5 @@ Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology
 Thailand     Kasetsart University
 UAE          New York University Abu Dhabi
 Nigeria      Ebonyi State University
+Chile        University of Chile            Universidad de Chile
+Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
