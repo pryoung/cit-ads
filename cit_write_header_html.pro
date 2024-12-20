@@ -1,5 +1,5 @@
 
-PRO cit_write_header_html, lun, title=title, width=width
+PRO cit_write_header_html, lun, title=title, width=width, heading=heading
 
 ;+
 ; NAME:
@@ -24,6 +24,9 @@ PRO cit_write_header_html, lun, title=title, width=width
 ;     Title:  String specifying a title for the file.
 ;     Width:  Integer specifying the width of the html file. The default
 ;             is 700 pixels.
+;     Heading:  A string that will be printed as the heading for the html 
+;               file, using the <h1> format. A horizontal line will be 
+;               inserted above and below the heading.
 ;
 ; OUTPUTS:
 ;     Writes a set of strings to the LUN that is assumed to be already
@@ -34,6 +37,8 @@ PRO cit_write_header_html, lun, title=title, width=width
 ;
 ; MODIFICATION HISTORY:
 ;      Ver.1, 11-Mar-2023, Peter Young
+;      Ver.2, 20-Dec-2024, Peter Young
+;        Added heading= optional input.
 ;-
 
 
@@ -57,6 +62,13 @@ printf,lun,'<table border=0 cellpadding=0 cellspacing=0 width='+trim(width)+'>'
 printf,lun,'<tbody>'
 printf,lun,'<tr><td height=30></td></tr>'
 printf,lun,'<tr><td align=left>'
+
+if n_elements(heading) ne 0 then begin
+  printf,lun,'<hr>'
+  printf,lun,'<h1>'+heading+'</h1>'
+  printf,lun,'<hr>'
+endif
+
 
 
 END

@@ -51,6 +51,8 @@ PRO cit_write_author_html, author_data, ads_data, outdir=outdir, $
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 12-Dec-2024, Peter Young
+;     Ver.2, 20-Dec-2024, Peter Young
+;       Modified output file format.
 ;-
 
 
@@ -107,9 +109,10 @@ full_name=author_data.author.name
 ;
 write_file=concat_dir(outdir,outfile)
 openw,lout,write_file,/get_lun
-cit_write_header_html,lout,title='All papers of '+full_name+', sorted by publication year'
+title='All papers of '+full_name+', sorted by publication year'
+heading='Publications of '+full_name
+cit_write_header_html,lout,title=title,heading=heading
 ;
-printf,lout,'<h1>Publications of '+full_name+'</h1>'
 printf,lout,'<p>A list of publications authored or co-authored by '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS). The number in brackets after each title indicates the number of citations that the paper has received.</p>'
 
 IF n_elements(orcid) NE 0 THEN BEGIN
@@ -140,9 +143,10 @@ free_lun,lout
 ;
 write_file=concat_dir(outdir,outfile_cit)
 openw,lout,write_file,/get_lun
-cit_write_header_html,lout,title='All papers of '+full_name+', sorted by citations'
+title='All papers of '+full_name+', sorted by citations'
+heading='Publications of '+full_name+' ordered by citations'
+cit_write_header_html,lout,title=title,heading=heading
 ;
-printf,lout,'<h1>Publications of '+full_name+' ordered by citations</h1>'
 printf,lout,'<p>A list of publications authored or co-authored by '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS) and ordered by the numbers of citations. Publications above the horizontal line count towards the h-index.'
 
 IF n_elements(orcid) NE 0 THEN BEGIN
@@ -171,9 +175,10 @@ IF author_data.far.n_papers_ref EQ 0 THEN return
 ;
 write_file=concat_dir(outdir,outfile_far)
 openw,lout,write_file,/get_lun
-cit_write_header_html,lout,title='First-authored, refereed publications of '+full_name
+title='First-authored, refereed publications of '+full_name
+heading='First-authored, refereed papers of '+full_name
+cit_write_header_html,lout,title=title,heading=heading
 ;
-printf,lout,'<h1>First-authored, refereed papers of '+full_name+'</h1>'
 printf,lout,'<p>A list of first-authored, refereed publications of '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS). The number in brackets after each title indicates the number of citations that the paper has received.</p>'
 
 IF n_elements(orcid) NE 0 THEN BEGIN
@@ -202,9 +207,10 @@ free_lun,lout
 ;
 write_file=concat_dir(outdir,outfile_far_cit)
 openw,lout,write_file,/get_lun
-cit_write_header_html,lout,title='First-authored, refereed papers of '+full_name+', ordered by citations'
+title='First-authored, refereed papers of '+full_name+', ordered by citations'
+heading=title
+cit_write_header_html,lout,title=title,heading=heading
 ;
-printf,lout,'<h1>First-authored, refereed papers of '+full_name+' ordered by citations</h1>'
 printf,lout,'<p>A list of first-authored, refereed publications of  '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS) and ordered by the numbers of citations. Publications above the horizontal line count towards the h-index.'
 
 IF n_elements(orcid) NE 0 THEN BEGIN
