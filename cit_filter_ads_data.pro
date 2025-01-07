@@ -65,6 +65,8 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;       Fixed a bug introduced in v.4.
   ;     Ver.6, 02-May-2024, Peter Young
   ;       Added end_pubdate= optional input.
+  ;     Ver.7, 07-Jan-2025, Peter Young
+  ;       Now removes publisher's notes, thank you, and corrigenda articles.
   ;-
 
   count = 0
@@ -166,6 +168,45 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   k = where(chck ne 0)
   ads_data_out = ads_data_out[k]
 
+  ;
+  ; Remove articles that begin with "thank you". These are usually from
+  ; editors thanking their reviewers.
+  ;
+  n = n_elements(ads_data_out)
+  all_titles = strarr(n)
+  for i = 0, n - 1 do begin
+    if ads_data_out[i].title.count() gt 0 then all_titles[i] = ads_data_out[i].title[0]
+  endfor
+  chck = strpos(strlowcase(all_titles), 'thank you')
+  k = where(chck ne 0)
+  ads_data_out = ads_data_out[k]
+
+  ;
+  ; Remove articles that begin with "publisher's note". These are similar to errata.
+  ;
+  n = n_elements(ads_data_out)
+  all_titles = strarr(n)
+  for i = 0, n - 1 do begin
+    if ads_data_out[i].title.count() gt 0 then all_titles[i] = ads_data_out[i].title[0]
+  endfor
+  chck = strpos(strlowcase(all_titles), "publisher's note")
+  k = where(chck ne 0)
+  ads_data_out = ads_data_out[k]
+
+  ;
+  ; Here I remove corrigenda, but only if they have zero citations. Note that the
+  ; word corrigendum sometimes appears at the end of the title.
+  ;
+  n = n_elements(ads_data_out)
+  all_titles = strarr(n)
+  for i = 0, n - 1 do begin
+    if ads_data_out[i].title.count() gt 0 then all_titles[i] = ads_data_out[i].title[0]
+  endfor
+  chck = strpos(strlowcase(all_titles), 'corrigendum')
+  k = where((chck EQ -1) OR (chck EQ 0 AND ads_data_out.citation_count GT 0))
+  ads_data_out = ads_data_out[k]
+
+  
   ;
   ; The line below defines what types of article end up in the author's publication
   ; list.
