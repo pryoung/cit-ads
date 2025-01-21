@@ -146,6 +146,7 @@ Germany      Kiel University                University of Kiel
 Germany      Kiel University                Christian-Albrechts
 Germany      Kiel University                Universitat Kiel
 Germany      TU Braunschweig                Technische Universitat Braunschweig
+Germany      TU Braunschweig                TU Braunschweig
 Germany      TU Dresden                     Technische Universitat Dresden
 Germany      MPI - Garching                 Max-Planck-Institut fur extraterrestrische Physik
 Germany      MPI-M (Hamburg)                Max Planck Institute for Meteorology
@@ -153,6 +154,8 @@ Germany      Christian Albrechts University
 Germany      University of Siegen
 Germany      University of Siegen           Universitat Siegen
 Germany      University of Jena             Friedrich-Schiller-Universitat
+Germany      MPIA - Konigstuhl              Konigstuhl
+Germany      MPIA - Heidelberg              Heidelberg
 Italy        University of Calabria         Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
@@ -288,6 +291,12 @@ China        China University of Geosciences
 China        Ningbo University
 China        Nat. Univ. of Defense Tech.    National University of Defense Technology
 China        Chuxiong Normal University
+China        Southern Uni. of Sci. & Tech.  Southern University of Science
+China        Southwest Jiaotong University
+China        Anhui University
+China        Shijiazhuang University
+China        Shanghai Astronom. Observatory Shanghai Astronomical Observatory
+China        University of CAS              University of Chinese Academy of Sciences
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -309,7 +318,8 @@ Rep. Korea   Kyungpook National University
 Rep. Korea   Chungnam National University
 India        IIA - Bengaluru                Bengaluru
 India        IIA - Bengaluru                Bangalore
-India        IUCAA - Pune                   Inter-University Centre for Astronomy and Astrophysics
+India        IIA - Gauribidanur             Gauribidanurxs
+India        IUCAA - Pune                   University Centre for Astronomy and Astrophysics
 India        Udaipur Solar Observatory
 India        IIT (BHU) - Varanasi           Banaras Hindu University
 India        IIT (BHU) - Varanasi           (BHU)
@@ -324,10 +334,16 @@ India        MMM University of Technology
 India        IISER Kolkata                  Indian Institute of Science Education and Research 
 India        IIT - Kanpur                   Kanpur
 India        Bahona College
-India        Vikram Sarabhai Space Centre
+India        Vikram Sarabhai Space Centre   Vikram Sarabhai Space
 India        Tata Inst. of Fundamental Res. Tata Institute of Fundamental Research
 India        National Inst. of Technology   National Institute of Technology
 India        Ultra College of Eng. & Tech.  Ultra College
+India        Indian Inst. of Tech. (Indore) 453552
+India        Indian Inst. of Tech. (Indore) Indore
+India        Arul Anandar College
+India        Indian Inst. of Tech. (Roorkee)Roorkee
+India        Patna University
+India        Tezpur University
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
