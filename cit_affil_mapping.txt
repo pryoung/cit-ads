@@ -19,6 +19,7 @@ UK           Univ. of Central Lancashire    University of Central Lancashire
 UK           Univ. of Central Lancashire    Jeremiah Horrocks
 UK           University of Cambridge
 UK           University of Cambridge        CB3 9EW
+UK           University of Cambridge        CB3 0HA
 UK           University of Cambridge        Department of Applied Mathematics and Theoretical Physics
 UK           University of Oxford
 UK           University of Manchester
@@ -29,6 +30,7 @@ UK           Queen Mary University          Queen Mary and Westfield College
 UK           Durham University
 UK           University of St Andrews       Andrews
 UK           University of Leicester
+UK           University of Leicester        Leicester University
 UK           University of Leeds
 UK           University College London      University College
 UK           Abertay University
