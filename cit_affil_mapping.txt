@@ -130,6 +130,7 @@ US           Goucher College
 US           Advanced Heliophysics
 US           Lamar University
 US           Univ. of Wisconsin - Green Bay Green Bay
+US           NCEI (Boulder)                 National Centers for Environmental Information
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
@@ -453,6 +454,7 @@ Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espa
 Brazil       INPE (Sao Paolo)               National Institute for Space Research
 Brazil       Universidade Cruzeiro do Sul   Cruzeiro do Sul
 Brazil       Univap                         Universidade do Vale do Paraiba
+Brazil       Federal Univ. of Minas Gerais  Universidade Federal de Minas Gerais
 Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
@@ -484,6 +486,7 @@ Colombia     Universidad de Los Andes
 Hungary      Eotvos Lorand University
 Hungary      Debrecen Heliophysical Obs.    Debrecen Heliophysical Observatory
 Denmark      Niels Bohr Institute
+Denmar       
 Ecuador      Escuela Politecnica Nacional
 Ukraine      Crimean Astrophys. Observatory Crimean Astrophysical Observatory
 Ukraine      Institute of Radio Astronomy
@@ -497,6 +500,7 @@ Egypt        Al-Azhar University
 Kuwait       Kuwait University
 Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology Thanyaburi
 Thailand     Kasetsart University
+Thialand     Mahidol University
 UAE          New York University Abu Dhabi
 Nigeria      Ebonyi State University
 Chile        University of Chile            Universidad de Chile
