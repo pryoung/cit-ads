@@ -55,14 +55,13 @@ US           Dartmouth College
 US           Western Kentucky University
 US           Los Alamos National Laboratory
 US           University of Arizona
-US           University of Texas at Austin
-US           University of Texas at Dallas
-US           Univ. of Texas at San Antonio  University of Texas at San Antonio
-US           University of Wisconsin-Madison
-US           University of Wisconsin-MadisonMadison
-US           Univ. of Massachusetts Lowell  University of Massachusetts Lowell
+US           Univ. of Texas, Austin         University of Texas at Austin
+US           Univ. of Texas, Dallas         University of Texas at Dallas
+US           Univ. of Texas, San Antonio    University of Texas at San Antonio
+US           Univ. of Wisconsin, Madison    Madison
+US           Univ. of Massachusetts, Lowell University of Massachusetts Lowell
 US           University of Michigan
-US           U. Illinois at Urbana-ChampaignIllinois at Urbana-Champaign
+US           U. Illinois, Urbana-Champaign  Illinois at Urbana-Champaign
 US           Lockheed Martin
 US           LASP, CU-Boulder               Laboratory for Atmospheric and Space Physics
 US           LASP, CU-Boulder               LASP
@@ -72,7 +71,8 @@ US           SSL, Berkeley                  Space Sciences Laboratory
 US           Naval Research Laboratory
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
-US           CU-Boulder                     Department of Astrophysical and Planetary Sciences
+US           University of Colorado Boulder University of Colorado
+US           University of Colorado Boulder Department of Astrophysical and Planetary Sciences
 US           University of Minnesota        Minnesota
 US           Predictive Science Inc. (PSI)  Predictive Science
 US           University of Hawaii           University of Hawai
@@ -87,9 +87,8 @@ US           Applied Physics Laboratory     Johns Hopkins University Laurel
 US           U. Alabama - Huntsville        Huntsville
 US           University of New Hampshire    Hampshire
 US           BAERI                          Bay Area Environmental Research Institute
-US           Air Force Research Laboratory
+US           Air Force Research Laboratory  Air Force Research Lab
 US           Yale University
-US           University of Colorado
 US           University of Maryland
 US           American University
 US           Rice University
@@ -113,14 +112,14 @@ US           MIT                            Massachusetts Institute of Technolog
 US           Caltech (Pasadena)             California Institute of Technology
 US           NCAR (Boulder)                 National Center for Atmospheric Research
 US           BWX Technologies
-US           Univ. California Santa Cruz    California Santa Cruz
-US           Univ. California Santa Cruz    Santa Cruz
+US           Univ. of California Santa Cruz California Santa Cruz
+US           Univ. of California Santa Cruz Santa Cruz
 US           Cal. State Univ. Northridge    Northridge
 US           George Washington University
 US           MIT                            MIT,
 US           University of Alaska Fairbanks
-US           Univ. California Berkeley      University of California, Berkeley
-US           Univ. California Berkeley      University of California at Berkeley
+US           Univ. of California Berkeley   University of California, Berkeley
+US           Univ. of California Berkeley   University of California at Berkeley
 US           Space Science Institute
 US           Penn State University          Pennsylvania State University
 US           University of Houston
@@ -131,6 +130,18 @@ US           Advanced Heliophysics
 US           Lamar University
 US           Univ. of Wisconsin - Green Bay Green Bay
 US           NCEI (Boulder)                 National Centers for Environmental Information
+US           Arecibo Observatory
+US           Atmospheric Environ. Research  Atmospheric Environmental Research
+US           Utah State University
+US           CPAESS (Boulder)               Cooperative Programs for the Advancement of Earth System Science
+US           Air Force Inst. of Technology  Air Force Institute of Technology
+US           Virginia Tech
+US           Virginia Tech                  Virginia Polytechnic Institute and State University
+US           Univ. of California Riverside  University of California, Riverside
+US           Univ. of California Riverside  University of California Riverside
+US           Boston College
+US           Jet Propulsion Laboratory
+US           Planetary Science Institute
 Germany      University of Potsdam          Potsdam
 Germany      Leibniz Institute (Freiburg)   Leibniz
 Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
@@ -473,6 +484,7 @@ Portugal     Inst. Superior Tecnico (Lisbon)Instituto Superior Tecnico
 Georgia      GENAO                          Abastumani Astrophysical Observatory
 Georgia      GENAO                          National Astrophysical Observatory
 Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
+Bulgaria     SRTI-BAS (Sofia)               Space Research and Technology Institute
 New Zealand  University of Waikato
 New Zealand  University of Otago
 New Zealand  Victora Univ. of Wellington    Victoria University of Wellington
@@ -486,7 +498,7 @@ Colombia     Universidad de Los Andes
 Hungary      Eotvos Lorand University
 Hungary      Debrecen Heliophysical Obs.    Debrecen Heliophysical Observatory
 Denmark      Niels Bohr Institute
-Denmar       
+Denmark      DTU Space                      DTU Space
 Ecuador      Escuela Politecnica Nacional
 Ukraine      Crimean Astrophys. Observatory Crimean Astrophysical Observatory
 Ukraine      Institute of Radio Astronomy
