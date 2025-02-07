@@ -343,7 +343,9 @@ Italy        Osservatorio Astronomico di Roma
 Italy        Tor Vergata
 Italy        Centro Ricerche Casaccia
 Italy        Geofisica e Vulcanologia
-Rep. Korea   Korea
+DPR Korea    DPR Korea
+DPR Korea    Democratic People's Republic of Korea
+Rep. Korea   Republic of Korea
 Rep. Korea   Kyung Hee
 Sweden       Stockholm
 Sweden       Sweden

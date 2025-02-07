@@ -242,6 +242,8 @@ Japan        Gifu University
 Japan        Musashino Art University
 Japan        University of Tsukuba
 Japan        Nat. Defense Academy of Japan  National Defense Academy of Japan
+Japan        Niigata University
+Japan        Ritsumeikan University
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        ESAC                           ESAC,
@@ -330,6 +332,9 @@ Rep. Korea   Seoul National University
 Rep. Korea   Chungbuk National University
 Rep. Korea   Kyungpook National University
 Rep. Korea   Chungnam National University
+Rep. Korea   Gangseo University
+Rep. Korea   Chonnam National University
+DPR Korea    Kim Il Sung University
 India        IIA - Bengaluru                Bengaluru
 India        IIA - Bengaluru                Bangalore
 India        IIA - Gauribidanur             Gauribidanurxs
@@ -433,6 +438,7 @@ Australia    Deakin University
 Australia    CSIRO
 Australia    Australian National University
 Australia    Flinders University
+Australia    University of Tasmania
 Argentina    Universidad de Buenos Aires
 Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
 Argentina    Universidad de Mendoza
@@ -466,6 +472,8 @@ Brazil       INPE (Sao Paolo)               National Institute for Space Researc
 Brazil       Universidade Cruzeiro do Sul   Cruzeiro do Sul
 Brazil       Univap                         Universidade do Vale do Paraiba
 Brazil       Federal Univ. of Minas Gerais  Universidade Federal de Minas Gerais
+Brazil       State Univ. of Ponta Grossa    Universidade Estadual de Ponta Grossa
+Brazil       State Univ. of Ponta Grossa    Ponta Grossa State University
 Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
@@ -509,6 +517,7 @@ Romania      Ast. Inst. of Romanian Academy Astronomical Institute of the Romani
 Qatar        Qatar University
 Egypt        Mansoura University
 Egypt        Al-Azhar University
+Egypt        Alexandria University
 Kuwait       Kuwait University
 Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology Thanyaburi
 Thailand     Kasetsart University
