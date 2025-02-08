@@ -356,6 +356,7 @@ Rep. Korea   Kyungpook National University
 Rep. Korea   Chungnam National University
 Rep. Korea   Gangseo University
 Rep. Korea   Chonnam National University
+Rep. Korea   Korea
 Sweden       Stockholm
 Sweden       Sweden
 Sweden       Swedish
