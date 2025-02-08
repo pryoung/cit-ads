@@ -347,6 +347,15 @@ DPR Korea    DPR Korea
 DPR Korea    Democratic People's Republic of Korea
 Rep. Korea   Republic of Korea
 Rep. Korea   Kyung Hee
+Rep. Korea   South Korea
+Rep. Korea   Daejon
+Rep. Korea   Kyung Hee University
+Rep. Korea   Seoul National University
+Rep. Korea   Chungbuk National University
+Rep. Korea   Kyungpook National University
+Rep. Korea   Chungnam National University
+Rep. Korea   Gangseo University
+Rep. Korea   Chonnam National University
 Sweden       Stockholm
 Sweden       Sweden
 Sweden       Swedish
