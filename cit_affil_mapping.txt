@@ -143,13 +143,12 @@ US           Boston College
 US           Jet Propulsion Laboratory
 US           Planetary Science Institute
 Germany      University of Potsdam          Potsdam
-Germany      Leibniz Institute (Freiburg)   Leibniz
-Germany      Leibniz Institute (Freiburg)   Kiepenheuer-Institut
-Germany      Leibniz Institute (Freiburg)   Institut fur Sonnenphysik
+Germany      Inst. for Solar Physics (KIS)  Kiepenheuer-Institut
+Germany      Inst. for Solar Physics (KIS)  Institut fur Sonnenphysik
 Germany      MPS - Gottingen                Sonnensystemforschung
 Germany      MPS - Gottingen                Justus-von-Liebig
 Germany      MPS - Gottingen                Institute for Solar System Research
-Germany      Ruhr-Universitat Bochum        Ruhr-Univer
+Germany      Ruhr University Bochum         Ruhr-Univer
 Germany      University of Gottingen        
 Germany      University of Gottingen        Georg-August-Univ
 Germany      University of Wurzburg
