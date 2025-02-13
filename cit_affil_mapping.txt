@@ -42,6 +42,9 @@ US           NASA Ames
 US           NASA Goddard                   Goddard
 US           NASA Goddard                   GSFC
 US           NASA Marshall                  Marshall
+US           NASA HQ                        NASA Headquarters
+US           NASA HQ                        NASA/HQ
+US           NASA HQ
 US           Catholic University            Catholic
 US           Harvard-Smithsonian CfA        Center for Astrophysics
 US           Harvard-Smithsonian CfA        Smithsonian Astrophysical Observatory
@@ -84,7 +87,7 @@ US           National Solar Observatory
 US           Applied Physics Laboratory
 US           Applied Physics Laboratory     Applied Physics Lab
 US           Applied Physics Laboratory     Johns Hopkins University Laurel
-US           U. Alabama - Huntsville        Huntsville
+US           Univ. of Alabama, Huntsville   Huntsville
 US           University of New Hampshire    Hampshire
 US           BAERI                          Bay Area Environmental Research Institute
 US           Air Force Research Laboratory  Air Force Research Lab
@@ -212,6 +215,7 @@ Italy        ISTP - Bari                    Area della Ricerca di Bari
 Italy        ISTP - Bari                    70126 Bari
 Italy        ISTP - Bari                    70126, Bari
 Italy        ISTP - Bari                    Via Amendola
+Italy        ISTP - Bari                    CNR-ISTP
 Italy        INAF - Trieste                 Turin Astrophysical Observatory
 Italy        INFN - Trieste                 Sezione di Trieste
 Italy        Sapienza University of Rome    La Sapienza
