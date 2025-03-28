@@ -1,6 +1,6 @@
 
 FUNCTION cit_abs_search, name, start_year=start_year, END_year=end_year, $
-                         count=count
+                         count=count, exact=exact
 
 
 
@@ -19,13 +19,22 @@ FUNCTION cit_abs_search, name, start_year=start_year, END_year=end_year, $
 ;     Result = CIT_ABS_SEARCH( Name )
 ;
 ; INPUTS:
-;     Name:  A string to be searched for.
+;     Name:  A string to be searched for. If an array of strings is
+;            passed, then the OR operator is used allowing any of the
+;            inputs to be matched.
 ;
 ; OPTIONAL INPUTS:
 ;     Start_Year:  The start year for the search. If not specified
 ;                  then 1900 is used.
 ;     End_Year:  The end year for the search. If not specified then
 ;                the current year is used.
+;
+; KEYWORD PARAMETERS:
+;     EXACT:  If set, then only the specified string will be searched for,
+;             and synonyms will not be included. For example,
+;             'heliospheric current sheet' will also match the molecule
+;             HCS, since HCS is an acronym of heliospheric current sheet.
+;             Setting /exact prevents this from happening.
 ;	
 ; OUTPUTS:
 ;     A string array containing a list of ADS bibcodes that satisfy
@@ -39,11 +48,14 @@ FUNCTION cit_abs_search, name, start_year=start_year, END_year=end_year, $
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 20-Mar-2021, Peter Young
+;     Ver.2, 28-Mar-2025, Peter Young
+;       Added keyword /exact.
 ;-
 
 
 IF n_params() LT 1 THEN BEGIN
-  print,'Use:  IDL> bcodes=cit_abs_search( Search_String [, start_year=, end_year=, count= ])'
+  print,'Use:  IDL> bcodes=cit_abs_search( Search_String [, start_year=, end_year=, count= '
+  print,'                                  /exact ])'
   return,''
 ENDIF 
 
@@ -57,17 +69,17 @@ IF n_elements(end_year) EQ 0 THEN BEGIN
   END_year=y
 ENDIF
 
+IF keyword_set(exact) THEN extra_str='=' ELSE extra_str=''
 
 url='https://api.adsabs.harvard.edu/v1/search/query'
 
 ;
 ; Create the query string.
 ;
-IF keyword_set(orcid) THEN field='orcid' ELSE field='author'
 field='abs'
 ;
 nauth=n_elements(name)
-query_string='( '+field+':("'+name[0]+'")'
+query_string='( '+field+':('+extra_str+'"'+name[0]+'")'
 IF nauth GT 1 THEN BEGIN 
   FOR i=1,nauth-1 DO BEGIN
     query_string=query_string+' OR '+field+':("'+name[i]+'")'

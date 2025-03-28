@@ -67,6 +67,8 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;       Added end_pubdate= optional input.
   ;     Ver.7, 07-Jan-2025, Peter Young
   ;       Now removes publisher's notes, thank you, and corrigenda articles.
+  ;     Ver.8, 06-Mar-2025, Peter Young
+  ;       Now removes articles with titles that begin with "correction".
   ;-
 
   count = 0
@@ -193,6 +195,19 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   k = where(chck ne 0)
   ads_data_out = ads_data_out[k]
 
+  ;
+  ; Remove articles that begin with "correction". These are similar to errata.
+  ;
+  n = n_elements(ads_data_out)
+  all_titles = strarr(n)
+  for i = 0, n - 1 do begin
+    if ads_data_out[i].title.count() gt 0 then all_titles[i] = ads_data_out[i].title[0]
+  endfor
+  chck = strpos(strlowcase(all_titles), "correction")
+  k = where(chck ne 0)
+  ads_data_out = ads_data_out[k]
+
+  
   ;
   ; Here I remove corrigenda, but only if they have zero citations. Note that the
   ; word corrigendum sometimes appears at the end of the title.
