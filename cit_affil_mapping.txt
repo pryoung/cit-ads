@@ -172,6 +172,7 @@ Germany      University of Siegen           Universitat Siegen
 Germany      University of Jena             Friedrich-Schiller-Universitat
 Germany      MPIA - Konigstuhl              Konigstuhl
 Germany      MPIA - Heidelberg              Heidelberg
+Germany      MPS - Lindau                   Lindau
 Italy        University of Calabria         Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
@@ -203,6 +204,7 @@ Italy        University of Pisa
 Italy        University of Pisa             Universita di Pisa
 Italy        University of Rome Tor Vergata Tor Vergata
 Italy        University of Genoa            
+Italy        University of Genoa            Univ. degli Studi di Genova
 Italy        University of Genoa            Universita degli Studi di Genova
 Italy        University of Genoa            Universita di Genova
 Italy        Italian Space Agency
@@ -221,6 +223,7 @@ Italy        Sapienza University of Rome    La Sapienza
 Italy        CNR IFN - Padua                Via Trasea 7
 Italy        CNR IFN - Padua                Padova
 Italy        University of Ferrara
+Italy        University of Parma            Universita di Parma
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
@@ -329,6 +332,7 @@ France       Universite Paris-Saclay        Paris-Saclay
 France       Observatoire de Paris
 France       Lyon University                Universite de Lyon
 France       LPC2E - Orleans                LPC2E
+France       Cote d'Azur University         Universite de la Cote d'Azur
 Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
 Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
@@ -463,11 +467,13 @@ Netherlands  CWI (Amsterdam)                Centrum Wiskunde and Informatica
 Netherlands  Radboud University
 Netherlands  University of Amsterdam
 Austria      University of Graz
+Austria      University of Graz             Karl-Franzens-Universitat
 Austria      Austrian Academy of Sciences
 Austria      Austrian Space Weather Office
 Austria      ZAMG (Vienna)                  Zentralanstalt fur Meteorologie und Geodynamik
 Austria      University of Vienna
 Austria      University of Vienna           Universitat Wien
+Austria      ISTA (Klosterneuburg)          Institute of Science and Technology Austria
 Brazil       Mackenzie Presbyterian Univ.   Universidade Presbiteriana Mackenzie
 Brazil       Mackenzie Presbyterian Univ.   Mackenzie Presbyterian University
 Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espaciais
@@ -529,3 +535,4 @@ UAE          New York University Abu Dhabi
 Nigeria      Ebonyi State University
 Chile        University of Chile            Universidad de Chile
 Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
+Iraq         University of Basrah
