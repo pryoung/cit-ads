@@ -142,6 +142,8 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;      Ver.22, 13-Nov-2023, Peter Young
 ;          I now allow the routine to perform the ADS query 5 times
 ;          before giving up; adjusted some of the info messages.
+;      Ver.23, 02-Apr-2025, Peter Young
+;          Reduced nn from 31 to 29 to prevent the 1000 character problem.
 ;-
 
 
@@ -208,7 +210,7 @@ bcode=bibcode.replace('&','%26')
 ; a single query to NN, and then require multiple calls to retrieve
 ; more bibcodes than this.
 ;
-nn=31
+nn=29
 
 ;
 ; Set up the initial part of the query URL by sticking the bibcodes
