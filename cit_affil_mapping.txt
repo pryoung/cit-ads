@@ -403,6 +403,7 @@ Ireland      Trinity College Dublin
 Ireland      DIAS - Dublin                  Dublin Institute for Advanced Studies
 Ireland      University College Dublin
 Ireland      Dunsink Observatory
+Ireland      Dublin City University
 Greece       University of Ioannina
 Greece       National Observatory of Athens
 Greece       Academy of Athens
@@ -529,6 +530,9 @@ Qatar        Qatar University
 Egypt        Mansoura University
 Egypt        Al-Azhar University
 Egypt        Alexandria University
+Egypt        Cairo University
+Egypt        Cairo University               University of Cairo
+Egypt        AASTMT (Alexandria)            Arab Academy for Science
 Egypt        NRIAG (Cairo)                  National Research Institute of Astronomy and Geophysics
 Kuwait       Kuwait University
 Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology Thanyaburi
