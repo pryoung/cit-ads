@@ -270,6 +270,8 @@ Spain        Ramon Llull University
 Spain        Ramon Llull University         University Ramon Llull
 Spain        Ramon Llull University         Horta Alta 38
 Spain        University of Murcia
+Spain        Autonomous University of MadridUniversidad Autonoma de Madrid
+Spain        Autonomous University of MadridCantoblanco
 China        Peking University
 China        Purple Mountain Observatory
 China        Shandong University
@@ -527,10 +529,12 @@ Qatar        Qatar University
 Egypt        Mansoura University
 Egypt        Al-Azhar University
 Egypt        Alexandria University
+Egypt        NRIAG (Cairo)                  National Research Institute of Astronomy and Geophysics
 Kuwait       Kuwait University
 Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology Thanyaburi
 Thailand     Kasetsart University
-Thialand     Mahidol University
+Thailand     Mahidol University
+Thailand     Chulalongkorn University
 UAE          New York University Abu Dhabi
 Nigeria      Ebonyi State University
 Chile        University of Chile            Universidad de Chile
