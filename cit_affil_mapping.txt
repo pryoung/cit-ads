@@ -334,7 +334,9 @@ France       Universite Paris-Saclay        Paris-Saclay
 France       Observatoire de Paris
 France       Lyon University                Universite de Lyon
 France       LPC2E - Orleans                LPC2E
-France       Cote d'Azur University         Universite de la Cote d'Azur
+France       Cote d'Azur University         Cote d'Azur
+France       LATMOS - Guyancourt            Guyancourt
+France       Claude Bernard Univ. Lyon 1    Claude Bernard
 Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
 Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
@@ -399,6 +401,7 @@ Switzerland  FHNW - Windisch                Windisch
 Switzerland  ISSI - Bern                    International Space Science Institute
 Switzerland  Univ. della Svizzera Italiana  Svizzera italiana
 Norway       University of Oslo
+Norway       UiT The Arctic Univ. of Norway Arctic University of Norway
 Ireland      Trinity College Dublin
 Ireland      DIAS - Dublin                  Dublin Institute for Advanced Studies
 Ireland      University College Dublin
@@ -544,3 +547,4 @@ Nigeria      Ebonyi State University
 Chile        University of Chile            Universidad de Chile
 Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
 Iraq         University of Basrah
+Serbia       University of Belgrade
