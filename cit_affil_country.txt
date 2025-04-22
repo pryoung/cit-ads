@@ -494,3 +494,4 @@ Jordan       Al-Balqa Applied University
 Nigeria      *Nigeria
 Guatemala    Guatemala
 Iraq         Iraq
+Burkina Faso Burkina Faso
