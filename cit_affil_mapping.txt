@@ -435,8 +435,10 @@ Russia       ISTP SB RAS (Irkursk)          Institute of Solar-Terrestrial Physi
 Russia       Moscow State University
 Russia       Pulkovo Observatory
 Russia       Pulkovo Observatory            Kislovodsk
+Russia       Pulkovo Observatory            Central Astronomical Observatory 
 Russia       Irkutsk State University
 Russia       Samara National Research Univ. Samara National Research University
+Russia       SHICRA SB RAS (Yakutsk)        Shafer Institute of Cosmophysical
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Jagiellonian University
 Poland       Siedlce University
