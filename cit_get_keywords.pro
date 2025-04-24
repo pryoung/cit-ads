@@ -44,6 +44,9 @@ FUNCTION cit_get_keywords, ads_data, count=count, filter=filter, add_random=add_
 ;     Ver.2, 23-Sep-2024, Peter Young
 ;       I now change all the keywords to lower case with capitalized first
 ;       letters.
+;     Ver.3, 24-Apr-2025, Peter Young
+;       Modified how keywords for articles in the journal Solar Physics are
+;       treated
 ;-
 
 count=0
@@ -70,11 +73,20 @@ IF keyword_set(add_random) THEN BEGIN
   r_string=string(byte(r+65))
 ENDIF 
 
+;
+; Below you will see that I add 'sun: ' to all keywords for the journal Solar
+; Physics. This is because all papers in this journal should be considered SHP
+; articles. Plus, the standard list of Solar Physics keywords recommended by
+; the journal seems to make the assumption that 'Sun' is implied for the
+; keywords. For example, keywords such as 'convection zone', 'active region'
+; and 'transition region'.
+;
 keywords=''
 rcount=0
 FOR i=0,n-1 DO BEGIN
   IF ads_data[i].keyword.count() NE 0 THEN BEGIN 
     keyw=ads_data[i].keyword.toarray()
+    IF ads_data[i].pub EQ 'Solar Physics' THEN keyw='sun: '+keyw
     keywords=[keywords,keyw]
   ENDIF ELSE BEGIN
     IF keyword_set(add_random) THEN BEGIN 
