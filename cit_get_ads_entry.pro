@@ -144,6 +144,8 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;          before giving up; adjusted some of the info messages.
 ;      Ver.23, 02-Apr-2025, Peter Young
 ;          Reduced nn from 31 to 29 to prevent the 1000 character problem.
+;      Ver.24, 06-May-2025, Peter Young
+;          Modify the pubdates to get rid of '00' days and months.
 ;-
 
 
@@ -477,6 +479,17 @@ IF keyword_set(remove_abstracts) THEN BEGIN
   k=where(output.doctype NE 'abstract',nk)
   IF nk NE 0 THEN output=output[k] ELSE output=-1
 ENDIF 
+
+;
+; Publication dates that are just a year are changed from YYYY-00-00 to YYYY-07-01,
+; i.e. set to the middle of the year. Regular dates are given as year-month, and
+; these are changed from YYYY-MM-00 to YYYY-MM-01. These changes are so that IDL
+; Julian day routines process the dates OK.
+;
+pubdate=output.pubdate
+pubdate=pubdate.replace('-00-00','-07-01')
+pubdate=pubdate.replace('-00','-01')
+output.pubdate=pubdate
 
 ;
 ; Here I do a reverse sort on the bibcodes to put the most recent papers first.

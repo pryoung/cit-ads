@@ -1,7 +1,7 @@
 function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   year = year, refereed = refereed, $
   min_year = min_year, max_year = max_year, $
-  end_pubdate = end_pubdate
+  start_pubdate=start_pubdate, end_pubdate = end_pubdate
   compile_opt idl2
 
   ;+
@@ -29,6 +29,9 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;                this year onwards will be returned.
   ;     Max_Year:  An integer specifying a year. Only papers published from
   ;                this year and earlier will be returned.
+  ;     Start_Pubdate: A string specifying a date in a standard SSW format
+  ;                  that specifies the earliest publication date (pubdate) an
+  ;                  article can have.
   ;     End_Pubdate: A string specifying a date in a standard SSW format
   ;                  that specifies the latest publication date (pubdate) an
   ;                  article can have.
@@ -69,6 +72,8 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;       Now removes publisher's notes, thank you, and corrigenda articles.
   ;     Ver.8, 06-Mar-2025, Peter Young
   ;       Now removes articles with titles that begin with "correction".
+  ;     Ver.9, 06-May-2025, Peter Young
+  ;       Added start_pubdate= optional input.
   ;-
 
   count = 0
@@ -113,12 +118,27 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
     endelse
   endif
 
+  if n_elements(start_pubdate) ne 0 then begin
+    jd_ref = anytim2jd(start_pubdate)
+    jd_ref = jd_ref.int
+    pubdate_jd = anytim2jd(ads_data_out.pubdate)
+    pubdate_jd = pubdate_jd.int
+    k = where(pubdate_jd ge jd_ref, nk)
+    if nk eq 0 then begin
+      count = 0
+      return, -1
+    endif else begin
+      ads_data_out = ads_data_out[k]
+    endelse
+  endif
+
   if n_elements(end_pubdate) ne 0 then begin
     jd_ref = anytim2jd(end_pubdate)
     jd_ref = jd_ref.int
     pubdate_jd = anytim2jd(ads_data_out.pubdate)
     pubdate_jd = pubdate_jd.int
     k = where(pubdate_jd le jd_ref, nk)
+    print,nk
     if nk eq 0 then begin
       count = 0
       return, -1
