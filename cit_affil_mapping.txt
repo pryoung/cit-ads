@@ -145,6 +145,7 @@ US           Univ. of California Riverside  University of California Riverside
 US           Boston College
 US           Jet Propulsion Laboratory
 US           Planetary Science Institute
+US           Embry–Riddle Aeronautical Univ.Embry–Riddle
 Germany      University of Potsdam          Potsdam
 Germany      Inst. for Solar Physics (KIS)  Kiepenheuer-Institut
 Germany      Inst. for Solar Physics (KIS)  Institut fur Sonnenphysik
@@ -179,6 +180,7 @@ Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
 Italy        INAF - Rome (IAPS)             Space Astrophysics and Planet
 Italy        INAF - Rome (IAPS)             INAF-IAPS
 Italy        INAF - Rome (Observatory)      Osservatorio Astronomico di Roma
+Italy        INAF - Rome (Observatory)      Monte Porzio Catone
 Italy        INAF - Palermo                 Astronomico di Palermo
 Italy        INAF - Naples                  Observatory of Capodimonte
 Italy        INAF - Naples                  Osservatorio Astronomico di Capodimonte
@@ -224,6 +226,7 @@ Italy        CNR IFN - Padua                Via Trasea 7
 Italy        CNR IFN - Padua                Padova
 Italy        University of Ferrara
 Italy        University of Parma            Universita di Parma
+Italy        Univ. of Naples Federico II    Federico II
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
