@@ -74,6 +74,8 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;       Now removes articles with titles that begin with "correction".
   ;     Ver.9, 06-May-2025, Peter Young
   ;       Added start_pubdate= optional input.
+  ;     Ver.10, 29-May-2025, Peter Young
+  ;       Removed a rogue print statement.
   ;-
 
   count = 0
@@ -138,7 +140,6 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
     pubdate_jd = anytim2jd(ads_data_out.pubdate)
     pubdate_jd = pubdate_jd.int
     k = where(pubdate_jd le jd_ref, nk)
-    print,nk
     if nk eq 0 then begin
       count = 0
       return, -1

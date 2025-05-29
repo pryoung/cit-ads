@@ -54,6 +54,7 @@ US           George Mason University
 US           Georgia State University
 US           High Altitude Observatory
 US           High Altitude Observatory      HAO,
+US           High Altitude Observatory      HAO/NCAR
 US           Dartmouth College
 US           Western Kentucky University
 US           Los Alamos National Laboratory
@@ -70,7 +71,9 @@ US           LASP, CU-Boulder               Laboratory for Atmospheric and Space
 US           LASP, CU-Boulder               LASP
 US           NJIT                           New Jersey Institute of Technology
 US           NJIT                           Big Bear Solar Observatory
-US           SSL, Berkeley                  Space Sciences Laboratory
+US           NJIT
+US           SSL, Berkeley                  Space Sciences Lab
+US           SSL, Berkeley                  SSL,
 US           Naval Research Laboratory
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
@@ -111,6 +114,7 @@ US           UCLA                           University of California Los Angeles
 US           UCLA                           University of California-Los Angeles
 US           UCLA
 US           UCLA                           90095
+US           UCLA                           90056
 US           MIT                            Massachusetts Institute of Technology,
 US           Caltech (Pasadena)             California Institute of Technology
 US           NCAR (Boulder)                 National Center for Atmospheric Research
@@ -122,6 +126,7 @@ US           George Washington University
 US           MIT                            MIT,
 US           University of Alaska Fairbanks
 US           Univ. of California Berkeley   University of California, Berkeley
+US           Univ. of California Berkeley   University of California Berkeley
 US           Univ. of California Berkeley   University of California at Berkeley
 US           Space Science Institute
 US           Penn State University          Pennsylvania State University
@@ -131,7 +136,7 @@ US           ADNET Systems Inc.             ADNET Systems
 US           Goucher College
 US           Advanced Heliophysics
 US           Lamar University
-US           Univ. of Wisconsin - Green Bay Green Bay
+US           Univ. of Wisconsin,Green Bay   Green Bay
 US           NCEI (Boulder)                 National Centers for Environmental Information
 US           Arecibo Observatory
 US           Atmospheric Environ. Research  Atmospheric Environmental Research
@@ -146,13 +151,17 @@ US           Boston College
 US           Jet Propulsion Laboratory
 US           Planetary Science Institute
 US           Embry–Riddle Aeronautical Univ.Embry–Riddle
+US           Villanova University
+US           Drexel University
 Germany      University of Potsdam          Potsdam
 Germany      Inst. for Solar Physics (KIS)  Kiepenheuer-Institut
 Germany      Inst. for Solar Physics (KIS)  Institut fur Sonnenphysik
+Germany      Inst. for Solar Physics (KIS)  Solar Physics (KIS)
 Germany      MPS - Gottingen                Sonnensystemforschung
 Germany      MPS - Gottingen                Justus-von-Liebig
 Germany      MPS - Gottingen                Institute for Solar System Research
 Germany      Ruhr University Bochum         Ruhr-Univer
+Germany      Ruhr University Bochum         Bochum
 Germany      University of Gottingen        
 Germany      University of Gottingen        Georg-August-Univ
 Germany      University of Wurzburg
@@ -253,6 +262,11 @@ Japan        University of Tsukuba
 Japan        Nat. Defense Academy of Japan  National Defense Academy of Japan
 Japan        Niigata University
 Japan        Ritsumeikan University
+Japan        Hokkaido University
+Japan        Tohoku University
+Japan        Kansai University
+Japan        University of Toyama
+Japan        ISEE (Nagoya)                  Institute for Space-Earth Environmental Research
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        ESAC                           ESAC,
@@ -260,6 +274,7 @@ Spain        ESAC                           (ESAC)
 Spain        UIB - Palma de Mallorca        Universitat de les Illes Balears
 Spain        UIB - Palma de Mallorca        Universitat Illes Balears
 Spain        IAA - Granada                  Astrofisica de Andalucia
+Spain        IAA - Granada                  (IAA-CSIC)
 Spain        University of Extremadura      Extremadura
 Spain        University of Alcala
 Spain        University of Alcala           Universidad de Alcala
@@ -270,11 +285,13 @@ Spain        INTA - Madrid                  Instituto Nacional de Tecnica Aeroes
 Spain        University of Valencia
 Spain        University of Valencia         Universitat de Valencia
 Spain        Ramon Llull University
-Spain        Ramon Llull University         University Ramon Llull
+Spain        Ramon Llull University         Ramon Llull
 Spain        Ramon Llull University         Horta Alta 38
 Spain        University of Murcia
 Spain        Autonomous University of MadridUniversidad Autonoma de Madrid
 Spain        Autonomous University of MadridCantoblanco
+Spain        University of Malaga           Universidad de Malaga
+Spain        University of Malaga
 China        Peking University
 China        Purple Mountain Observatory
 China        Shandong University
@@ -491,9 +508,14 @@ Brazil       INPE (Sao Paolo)               Instituto Nacional de Pesquisas Espa
 Brazil       INPE (Sao Paolo)               National Institute for Space Research
 Brazil       Universidade Cruzeiro do Sul   Cruzeiro do Sul
 Brazil       Univap                         Universidade do Vale do Paraiba
+Brazil       Univap                         Vale do Paraiba
 Brazil       Federal Univ. of Minas Gerais  Universidade Federal de Minas Gerais
 Brazil       State Univ. of Ponta Grossa    Universidade Estadual de Ponta Grossa
 Brazil       State Univ. of Ponta Grossa    Ponta Grossa State University
+Brazil       Fluminense Federal University
+Brazil       Fluminense Federal University  Universidade Federal Fluminense
+Brazil       Federal University of ABC      Universidade Federal do ABC
+Brazil       Federal University of ABC      UFABC
 Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
@@ -553,3 +575,4 @@ Chile        University of Chile            Universidad de Chile
 Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
 Iraq         University of Basrah
 Serbia       University of Belgrade
+Nepal        Tribhuvan University
