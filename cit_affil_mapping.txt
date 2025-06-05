@@ -153,7 +153,8 @@ US           Planetary Science Institute
 US           Embry–Riddle Aeronautical Univ.Embry–Riddle
 US           Villanova University
 US           Drexel University
-Germany      University of Potsdam          Potsdam
+Germany      University of Potsdam          University of Potsdam
+Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
 Germany      Inst. for Solar Physics (KIS)  Kiepenheuer-Institut
 Germany      Inst. for Solar Physics (KIS)  Institut fur Sonnenphysik
 Germany      Inst. for Solar Physics (KIS)  Solar Physics (KIS)
@@ -183,6 +184,8 @@ Germany      University of Jena             Friedrich-Schiller-Universitat
 Germany      MPIA - Konigstuhl              Konigstuhl
 Germany      MPIA - Heidelberg              Heidelberg
 Germany      MPS - Lindau                   Lindau
+Germany      Inst. for Solar-Terrestr. Phys.Neustrelitz
+Germany      Thuringia State Obs. TautenburgThuringer Landessternwarte
 Italy        University of Calabria         Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
@@ -191,8 +194,7 @@ Italy        INAF - Rome (IAPS)             INAF-IAPS
 Italy        INAF - Rome (Observatory)      Osservatorio Astronomico di Roma
 Italy        INAF - Rome (Observatory)      Monte Porzio Catone
 Italy        INAF - Palermo                 Astronomico di Palermo
-Italy        INAF - Naples                  Observatory of Capodimonte
-Italy        INAF - Naples                  Osservatorio Astronomico di Capodimonte
+Italy        INAF - Naples                  Capodimont
 Italy        INAF - Torino                  Osservatorio Astrofisico di Torino
 Italy        INAF - Torino                  Astrophysical Observatory of Torino
 Italy        INAF - Torino                  Astronomical Observatory of Torino
@@ -236,6 +238,9 @@ Italy        CNR IFN - Padua                Padova
 Italy        University of Ferrara
 Italy        University of Parma            Universita di Parma
 Italy        Univ. of Naples Federico II    Federico II
+Italy        INAF - Cagliari                Cagliari Astronomical Observatory
+Italy        INAF - Cagliari                Osservatorio Astronomico di Cagliari
+Italy        INAF - Cagliari                Selargius
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
@@ -341,6 +346,11 @@ China        Anhui University
 China        Shijiazhuang University
 China        Shanghai Astronom. Observatory Shanghai Astronomical Observatory
 China        University of CAS              University of Chinese Academy of Sciences
+China        Beijing Planetarium
+China        China Three Gorges University
+China        Tianjin University
+China        Anhui Normal University
+China        Inst. of Geology and GeophysicsInstitute of Geology and Geophysics
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -482,6 +492,8 @@ Argentina    Ciudad Universitaria
 Argentina    IATE (Cordoba)                 Instituto de Astronomia Teorica y Experimental
 Argentina    National University of Tucuman universidad nacional de tucuman
 Argentina    National Univ. of Mar del PlataMar del Plata
+Argentina    ICATE-CONICET (San Juan)       ICATE-CONICET
+Argentina    ICATE-CONICET (San Juan)       Instituto de Ciencias Astronomicas
 Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
 Mexico       UNAM (Morelia)                 Estudios Superiores Unidad Morelia
 Mexico       UNAM (Mexico City)             04510
