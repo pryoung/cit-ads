@@ -74,7 +74,8 @@ US           NJIT                           Big Bear Solar Observatory
 US           NJIT
 US           SSL, Berkeley                  Space Sciences Lab
 US           SSL, Berkeley                  SSL,
-US           Naval Research Laboratory
+US           Naval Research Laboratory      Naval Research Lab
+US           Naval Research Laboratory      Hurlburt Center
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
 US           University of Colorado Boulder University of Colorado
@@ -84,7 +85,7 @@ US           Predictive Science Inc. (PSI)  Predictive Science
 US           University of Hawaii           University of Hawai
 US           Princeton University           Princeton
 US           Columbia University
-US           Stanford University
+US           Stanford University            Stanford Univ
 US           Stanford University            Hansen Experimental Physics
 US           National Solar Observatory
 US           Applied Physics Laboratory
@@ -154,7 +155,10 @@ US           Embry–Riddle Aeronautical Univ.Embry–Riddle
 US           Villanova University
 US           Drexel University
 Germany      University of Potsdam          University of Potsdam
+Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
+Germany      Astrophysical Institute Potsdam
+Germany      Astrophysical Institute PotsdamAstrophysikalisches Institut Potsdam
 Germany      Inst. for Solar Physics (KIS)  Kiepenheuer-Institut
 Germany      Inst. for Solar Physics (KIS)  Institut fur Sonnenphysik
 Germany      Inst. for Solar Physics (KIS)  Solar Physics (KIS)
@@ -499,6 +503,7 @@ Mexico       UNAM (Morelia)                 Estudios Superiores Unidad Morelia
 Mexico       UNAM (Mexico City)             04510
 Mexico       UNAM (Mexico City)             Ciudad de Mexico
 Mexico       UNAM (Mexico City)             Autonoma de Mexico, Mexico City
+Mexico       Auton. Univ. of Nuevo Leon     Universidad Autonoma de Nuevo Leon
 Netherlands  ESTEC (Noordwijk)              ESTEC
 Netherlands  ESTEC (Noordwijk)              European Space Research and Technology
 Netherlands  Leiden University
