@@ -206,6 +206,8 @@ PRO cit_author_html, bibcodes, bib_file=bib_file, html_file=html_file, $
 ;         most recent affiliation.
 ;      Ver.32, 19-Dec-2023, Peter Young
 ;         The author_norm method now allows for multiple surnames.
+;      Ver.33, 11-Jun-2025, Peter Young
+;         Code was crashing if surname was not specified so I've fixed this.
 ;-
 
 
@@ -843,31 +845,32 @@ IF n_tags(ads_data) NE 0 THEN BEGIN
     ENDFOR 
   ENDIF ELSE BEGIN
     ns=n_elements(surname)
-    pubdate=strarr(ns)
-    curr_affil=strarr(ns)
-    FOR j=0,ns-1 DO BEGIN 
-      ad=cit_filter_ads_data_surname(ads_data,surname[j],author_norm=auth_norm)
-      IF n_elements(auth_norm) NE 0 THEN BEGIN
-        message,/info,/cont,'The surname '+surname[j]+' has been matched to author_norm '+auth_norm+'.'
-        n=n_elements(ads_data)
-        FOR i=0,n-1 DO BEGIN
-          a_norm=ads_data[i].author_norm.toarray()
-          k=where(trim(auth_norm) EQ trim(a_norm),nk)
-          IF nk NE 0 THEN BEGIN
-            last_affil_country=ads_data[i].country[k[0]]
-            aff_str=ads_data[i].aff.toarray()
-            curr_affil[j]=cit_affil_mapping(aff_str[k[0]],last_affil_country)
-            IF curr_affil[j] NE '-' THEN BEGIN
-              pubdate[j]=ads_data[i].pubdate
-              BREAK
-            ENDIF 
-          ENDIF
-        ENDFOR 
-      ENDIF 
-    ENDFOR
-    is=reverse(sort(pubdate))
-    curr_affil=curr_affil[is[0]]
-
+    IF ns GT 0 THEN BEGIN 
+      pubdate=strarr(ns)
+      curr_affil=strarr(ns)
+      FOR j=0,ns-1 DO BEGIN 
+        ad=cit_filter_ads_data_surname(ads_data,surname[j],author_norm=auth_norm)
+        IF n_elements(auth_norm) NE 0 THEN BEGIN
+          message,/info,/cont,'The surname '+surname[j]+' has been matched to author_norm '+auth_norm+'.'
+          n=n_elements(ads_data)
+          FOR i=0,n-1 DO BEGIN
+            a_norm=ads_data[i].author_norm.toarray()
+            k=where(trim(auth_norm) EQ trim(a_norm),nk)
+            IF nk NE 0 THEN BEGIN
+              last_affil_country=ads_data[i].country[k[0]]
+              aff_str=ads_data[i].aff.toarray()
+              curr_affil[j]=cit_affil_mapping(aff_str[k[0]],last_affil_country)
+              IF curr_affil[j] NE '-' THEN BEGIN
+                pubdate[j]=ads_data[i].pubdate
+                BREAK
+              ENDIF 
+            ENDIF
+          ENDFOR 
+        ENDIF 
+      ENDFOR
+      is=reverse(sort(pubdate))
+      curr_affil=curr_affil[is[0]]
+    ENDIF 
     
     ;; ad=cit_filter_ads_data_surname(ads_data,surname,author_norm=auth_norm)
     ;; IF n_elements(auth_norm) NE 0 THEN BEGIN
