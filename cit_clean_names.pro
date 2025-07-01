@@ -46,6 +46,8 @@ FUNCTION cit_clean_names, input
 ;       Added some new entries.
 ;     Ver.8, 21-Feb-2025, Peter Young
 ;       Added another entry.
+;     Ver.9, 1-Jul-2025, Peter Young
+;       Added another entry.
 ;-
 
 
@@ -122,6 +124,7 @@ a=a.replace('ž','z')
 a=a.replace('ź','z')
 a=a.replace('ż','z')
 a=a.replace('Ž','Z')
+a=a.replace('Ż','Z')
 a=a.replace('æ','ae')
 
 return,a

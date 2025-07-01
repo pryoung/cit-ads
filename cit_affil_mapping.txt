@@ -5,6 +5,7 @@ UK           University of Reading          Department of Meteorology
 UK           Imperial College
 UK           MSSL                           Mullard Space Science
 UK           Aberystwyth University
+UK           Aberystwyth University         Prifysgol Aberystwyth
 UK           Armagh Observatory
 UK           University of Birmingham       Birmingham
 UK           Queen's University Belfast     Astrophysics Research Centre
@@ -17,6 +18,8 @@ UK           University of Warwick
 UK           University of Warwick          Warwick University
 UK           Univ. of Central Lancashire    University of Central Lancashire
 UK           Univ. of Central Lancashire    Jeremiah Horrocks
+UK           University of Cambridge        Cambridge Univ
+UK           University of Cambridge        DAMTP,
 UK           University of Cambridge
 UK           University of Cambridge        CB3 9EW
 UK           University of Cambridge        CB3 0HA
@@ -355,6 +358,11 @@ China        China Three Gorges University
 China        Tianjin University
 China        Anhui Normal University
 China        Inst. of Geology and GeophysicsInstitute of Geology and Geophysics
+China        Shandong Inst. of Adv. Tech.   Shandong Institute of Advanced Technology
+China        Jiangsu Univ. of Sci. and Tech.Jiangsu University of Science and Technology
+China        Hebei Univ. of Sci. and Tech.  Hebei University of Science and Technology
+China        Huizhou University
+China        KL Solar Activ. & Space WeatherState Key Laboratory of Solar Activity and Space Weather
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Ecole Polytechnique
 France       Sorbonne University            
@@ -408,6 +416,8 @@ India        Arul Anandar College
 India        Indian Inst. of Tech. (Roorkee)Roorkee
 India        Patna University
 India        Tezpur University
+India        Bhabha Atomic Research Centre  Bhabha Atomic Research Centre
+India        Gauhati University
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
