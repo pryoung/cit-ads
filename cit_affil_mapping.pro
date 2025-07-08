@@ -31,8 +31,14 @@ FUNCTION cit_affil_mapping, input, country
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 20-Jan-2023, Peter Young
+;     Ver.2, 08-Jul-2025, Peter Young
+;       Added parameter check.
 ;-
 
+IF n_params() LT 2 THEN BEGIN
+  print,'Use:  IDL> aff=cit_affil_mapping( input, country )'
+  return,-1
+ENDIF 
 
 mapfile='~/github/cit-ads/cit_affil_mapping.txt'
 
@@ -46,7 +52,6 @@ ENDIF
 ; Get rid of funny html text in the input.
 ;
 input=str_replace(input,'&amp;','&')
-
 
 openr,lin,mapfile,/get_lun
 
@@ -66,7 +71,6 @@ WHILE ~ eof(lin) DO BEGIN
     free_lun,lin
     return,trim(affil)
   ENDIF
-  
 ENDWHILE 
 
 free_lun,lin

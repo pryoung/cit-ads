@@ -364,6 +364,7 @@ China        Hebei Univ. of Sci. and Tech.  Hebei University of Science and Tech
 China        Huizhou University
 China        KL Solar Activ. & Space WeatherState Key Laboratory of Solar Activity and Space Weather
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
+France       Observatoire de Paris
 France       Ecole Polytechnique
 France       Sorbonne University            
 France       Sorbonne University            Sorbonne Universite
@@ -373,7 +374,6 @@ France       Toulouse University            Universite de Toulouse
 France       Toulouse University            Universite Toulouse
 France       University of Orleans
 France       Universite Paris-Saclay        Paris-Saclay
-France       Observatoire de Paris
 France       Lyon University                Universite de Lyon
 France       LPC2E - Orleans                LPC2E
 France       Cote d'Azur University         Cote d'Azur
@@ -603,3 +603,4 @@ Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
 Iraq         University of Basrah
 Serbia       University of Belgrade
 Nepal        Tribhuvan University
+Uzbekistan   Ulugh Beg Astronomical Inst.   Ulugh Beg Astronomical
