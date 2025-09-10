@@ -53,6 +53,7 @@ US           Harvard-Smithsonian CfA        Center for Astrophysics
 US           Harvard-Smithsonian CfA        Smithsonian Astrophysical Observatory
 US           Boston University
 US           Florida Institute of Technology
+US           University of Central Florida
 US           George Mason University
 US           Georgia State University
 US           High Altitude Observatory
@@ -140,7 +141,7 @@ US           ADNET Systems Inc.             ADNET Systems
 US           Goucher College
 US           Advanced Heliophysics
 US           Lamar University
-US           Univ. of Wisconsin,Green Bay   Green Bay
+US           Univ. of Wisconsin, Green Bay  Green Bay
 US           NCEI (Boulder)                 National Centers for Environmental Information
 US           Arecibo Observatory
 US           Atmospheric Environ. Research  Atmospheric Environmental Research
@@ -157,6 +158,7 @@ US           Planetary Science Institute
 US           Embry–Riddle Aeronautical Univ.Embry–Riddle
 US           Villanova University
 US           Drexel University
+US           SETI Institute
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -228,6 +230,7 @@ Italy        University of Genoa            Univ. degli Studi di Genova
 Italy        University of Genoa            Universita degli Studi di Genova
 Italy        University of Genoa            Universita di Genova
 Italy        Italian Space Agency
+Italy        Italian Space Agency           Agenzia Spaziale Italiana
 Italy        University of Torino           Universita di Torino
 Italy        University of Torino
 Italy        University of Torino           Universita Torino
@@ -237,8 +240,12 @@ Italy        ISTP - Bari                    70126 Bari
 Italy        ISTP - Bari                    70126, Bari
 Italy        ISTP - Bari                    Via Amendola
 Italy        ISTP - Bari                    CNR-ISTP
-Italy        INAF - Trieste                 Turin Astrophysical Observatory
+Italy        INAF - Trieste                 Astronomical Observatory of Trieste
+Italy        INAF - Trieste                 Trieste Astronomical Observatory
+Italy        INAF - Trieste                 Osservatorio Astronomico di Trieste
+Italy        INFN - Trieste                 Sezione INFN di Trieste
 Italy        INFN - Trieste                 Sezione di Trieste
+Italy        INFN - Perugia                 Sezione di Perugia
 Italy        Sapienza University of Rome    La Sapienza
 Italy        CNR IFN - Padua                Via Trasea 7
 Italy        CNR IFN - Padua                Padova
@@ -248,6 +255,10 @@ Italy        Univ. of Naples Federico II    Federico II
 Italy        INAF - Cagliari                Cagliari Astronomical Observatory
 Italy        INAF - Cagliari                Osservatorio Astronomico di Cagliari
 Italy        INAF - Cagliari                Selargius
+Italy        University of Urbino Carlo Bo  Universita di Urbino
+Italy        University of Urbino Carlo Bo  University of Urbino
+Italy        University of Urbino Carlo Bo  degli Studi di Urbino
+Italy        Polytechnic University of TurinPolitecnico di Torino
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
@@ -312,7 +323,7 @@ China        Yunnan Observatories
 China        Yunnan Observatories           Yunnan Key Laboratory
 China        Yunnan Observatories           Yunnan Observatory
 China        Yunnan Observatories           Yunnan Astronomical Observat
-China        NAOC                           National Astronomical Observatories
+China        NAOC                           National Astronomical Observ
 China        Sun Yat-sen University         Sun Yat
 China        Beihang University
 China        Nanjing University
@@ -328,9 +339,6 @@ China        Deep Space Exploration Lab.    Deep Space Exploration Laboratory
 China        Wuhan University
 China        SDIAT (Shandong)               SDIAT
 China        Sichuan Normal University
-China        KL Space Weather               Key Laboratory of Space Weather
-China        KL Dark Matter & Space Astr.   Key Laboratory of Dark Matter and Space Astronomy
-China        KL Earth and Planetary Physics Key Laboratory of Earth and Planetary Physics
 China        National Tsing Hua University
 China        Hunan Normal University
 China        Hunan Univ. of Tech. and Bus.  Hunan University of Technology and Business
@@ -362,7 +370,7 @@ China        Shandong Inst. of Adv. Tech.   Shandong Institute of Advanced Techn
 China        Jiangsu Univ. of Sci. and Tech.Jiangsu University of Science and Technology
 China        Hebei Univ. of Sci. and Tech.  Hebei University of Science and Technology
 China        Huizhou University
-China        KL Solar Activ. & Space WeatherState Key Laboratory of Solar Activity and Space Weather
+China        Xihua University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
@@ -418,6 +426,7 @@ India        Patna University
 India        Tezpur University
 India        Bhabha Atomic Research Centre  Bhabha Atomic Research Centre
 India        Gauhati University
+India        University of Calcutta
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -508,6 +517,7 @@ Argentina    National University of Tucuman universidad nacional de tucuman
 Argentina    National Univ. of Mar del PlataMar del Plata
 Argentina    ICATE-CONICET (San Juan)       ICATE-CONICET
 Argentina    ICATE-CONICET (San Juan)       Instituto de Ciencias Astronomicas
+Argentina    National Technological Univ.   Universidad Tecnologica Nacional
 Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
 Mexico       UNAM (Morelia)                 Estudios Superiores Unidad Morelia
 Mexico       UNAM (Mexico City)             04510

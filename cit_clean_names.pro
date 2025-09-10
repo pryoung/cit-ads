@@ -48,6 +48,8 @@ FUNCTION cit_clean_names, input
 ;       Added another entry.
 ;     Ver.9, 1-Jul-2025, Peter Young
 ;       Added another entry.
+;     Ver.10. 25-Jul-2025, Peter Young
+;       Added another entry.
 ;-
 
 
@@ -65,6 +67,7 @@ a=a.replace('ä','a')
 a=a.replace('ã','a')
 a=a.replace('a̧','a')
 a=a.replace('â','a')
+a=a.replace('å','a')
 a=a.replace('Â','A')
 a=a.replace('Á','A')
 a=a.replace('Å','A')
@@ -88,9 +91,11 @@ a=a.replace('ė','e')
 a=a.replace('ȩ','e')
 a=a.replace('É','E')
 a=a.replace('ǧ','g')
+a=a.replace('ğ','g')
 a=a.replace('í','i')
 a=a.replace('ı','i')
 a=a.replace('ï','i')
+a=a.replace('î','i')
 a=a.replace('İ','I')
 a=a.replace('õ','o')
 a=a.replace('ó','o')
@@ -104,6 +109,7 @@ a=a.replace('Ø','O')
 a=a.replace('ô','o')
 a=a.replace('ō','o')
 a=a.replace('ł','l')
+a=a.replace('Ł','L')
 a=a.replace('ñ','n')
 a=a.replace('ń','n')
 a=a.replace('ň','n')

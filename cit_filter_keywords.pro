@@ -35,6 +35,8 @@ FUNCTION cit_filter_keywords, input, count=count
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 22-Aug-2023, Peter Young
+;     Ver.2, 15-Jul-2025, Peter Young
+;       Fixed bug in the case a keyword was an empty string.
 ;-
 
 count=0
@@ -46,12 +48,11 @@ ENDIF
 
 
 keywords=input
-n_key=n_elements(keywords)
 
 ;
 ; Just in case there are any empty strings.
 ;
-k=where(keywords NE '',nk)
+k=where(keywords NE '',n_key)
 keywords=keywords[k]
 
 ;
