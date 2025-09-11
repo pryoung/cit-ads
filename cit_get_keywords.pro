@@ -61,12 +61,14 @@ FUNCTION cit_get_keywords, ads_data, count=count, filter=filter, add_random=add_
 ;     Ver.4, 09-Sep-2025, Peter Young
 ;       Added limit= optional input; for /add_random, if there is only one
 ;       keyword for an article, then I add an extra, randomly-generated one.
+;     Ver.5, 10-Sep-2025, Peter Young
+;       Now filters out the PACS keyword codes.
 ;-
 
 count=0
 
 IF n_params() LT 1 THEN BEGIN
-  print,'Use:  IDL> keywords=cit_get_keywords( ads_data [, count=, /filter, /add_random, limit= ] )'
+  print,'Use:  IDL> keywords=cit_get_keywords( ads_data [, count=, years=, /filter, /add_random, limit= ] )'
   return,''
 ENDIF 
 
@@ -119,10 +121,31 @@ ENDIF
 ;
 keywords=''
 rcount=0
-FOR i=0,n-1 DO BEGIN 
-  IF ad[i].keyword.count() NE 0 THEN BEGIN 
-    keyw=ad[i].keyword.toarray()
-    IF n_elements(keyw) GT limit THEN keyw=keyw[0:limit-1]
+FOR i=0,n-1 DO BEGIN
+  keyw=ad[i].keyword.toarray()
+  nkeyw=ad[i].keyword.count()
+  ;
+  ; Get rid of PACS keywords (of the format 96.50.Uv) since ADS seems to
+  ; convert these to English text.
+  ;
+  IF nkeyw GT 0 THEN BEGIN 
+    chck=keyw.strlen()
+    k=where(chck EQ 8,nk)
+    IF nk NE 0 THEN BEGIN
+      ind=make_array(nkeyw,/byte,value=1b)
+      FOR j=0,nk-1 DO BEGIN
+        bits=keyw[k[j]].split('\.')
+        IF n_elements(bits) EQ 3 THEN ind[k[j]]=0b
+      ENDFOR
+      k=where(ind EQ 1)
+      keyw=keyw[k]
+      nkeyw=n_elements(keyw)
+    ENDIF
+  ENDIF 
+  ;
+  IF nkeyw NE 0 THEN BEGIN
+    ;
+    IF nkeyw GT limit THEN keyw=keyw[0:limit-1]
     IF ad[i].pub EQ 'Solar Physics' THEN keyw='sun: '+keyw
     ;
     ; If there is only one keyword, then I add an extra, randomly generated
