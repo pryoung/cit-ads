@@ -428,6 +428,8 @@ India        Udaipur Solar Observatory
 India        IIT (BHU) - Varanasi           Banaras Hindu University
 India        IIT (BHU) - Varanasi           (BHU)
 India        IIG - Mumbai                   Indian Institute of Geomagnetism
+India        IIG - Mumbai                   India Institute of Geomagnetism
+India        IIG - Mumbai                   Indian Institute for Geomagnetism
 India        PRL - Ahmedabad                Physical Research Laboratory
 India        ARIES (Nainital)               Aryabhatta Research Institute
 India        ARIES (Nainital)               Arybhatta Research Institute
@@ -443,10 +445,10 @@ India        Vikram Sarabhai Space Centre   Space Physics Laboratory
 India        Tata Inst. of Fundamental Res. Tata Institute of Fundamental Research
 India        National Inst. of Technology   National Institute of Technology
 India        Ultra College of Eng. & Tech.  Ultra College
-India        Indian Inst. of Tech. (Indore) 453552
-India        Indian Inst. of Tech. (Indore) Indore
+India        IIT - Indore                   453552
+India        IIT - Indore                   Indore
 India        Arul Anandar College
-India        Indian Inst. of Tech. (Roorkee)Roorkee
+India        IIT - Roorkee                  Roorkee
 India        Patna University
 India        Tezpur University
 India        Bhabha Atomic Research Centre  Bhabha Atomic Research Centre
