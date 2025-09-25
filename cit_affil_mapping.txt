@@ -31,6 +31,7 @@ UK           University of Exeter           Exeter
 UK           Queen Mary University
 UK           Queen Mary University          Queen Mary and Westfield College
 UK           Durham University
+UK           Durham University              University of Durham
 UK           University of St Andrews       Andrews
 UK           University of Leicester
 UK           University of Leicester        Leicester University
@@ -41,6 +42,8 @@ UK           Lancaster University
 UK           University of Hertfordshire
 UK           Natural History Museum
 UK           Cardiff Metropolitan University
+UK           British Antarctic Survey
+UK           University of Salford
 US           NASA Ames
 US           NASA Goddard                   Goddard
 US           NASA Goddard                   GSFC
@@ -51,6 +54,7 @@ US           NASA HQ
 US           Catholic University            Catholic
 US           Harvard-Smithsonian CfA        Center for Astrophysics
 US           Harvard-Smithsonian CfA        Smithsonian Astrophysical Observatory
+US           Harvard-Smithsonian CfA        60 Garden Street
 US           Boston University
 US           Florida Institute of Technology
 US           University of Central Florida
@@ -71,6 +75,7 @@ US           Univ. of Massachusetts, Lowell University of Massachusetts Lowell
 US           University of Michigan
 US           U. Illinois, Urbana-Champaign  Illinois at Urbana-Champaign
 US           Lockheed Martin
+US           Lockheed Martin                LMSAL,
 US           LASP, CU-Boulder               Laboratory for Atmospheric and Space Physics
 US           LASP, CU-Boulder               LASP
 US           NJIT                           New Jersey Institute of Technology
@@ -126,6 +131,7 @@ US           NCAR (Boulder)                 National Center for Atmospheric Rese
 US           BWX Technologies
 US           Univ. of California Santa Cruz California Santa Cruz
 US           Univ. of California Santa Cruz Santa Cruz
+US           Univ. of California San Diego  92093
 US           Cal. State Univ. Northridge    Northridge
 US           George Washington University
 US           MIT                            MIT,
@@ -159,6 +165,13 @@ US           Embry–Riddle Aeronautical Univ.Embry–Riddle
 US           Villanova University
 US           Drexel University
 US           SETI Institute
+US           SETI Institute                 SETI,
+US           Arizona State University
+US           Computational Physics Inc.
+US           Auburn University
+US           New Mexico Consortium
+US           NextSource Inc.
+US           NASA JSC                       Johnson Space Center
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -259,9 +272,15 @@ Italy        University of Urbino Carlo Bo  Universita di Urbino
 Italy        University of Urbino Carlo Bo  University of Urbino
 Italy        University of Urbino Carlo Bo  degli Studi di Urbino
 Italy        Polytechnic University of TurinPolitecnico di Torino
+Italy        University of L'Aquila
+Italy        University of L'Aquila         Universita di L'Aquila
+Italy        University of L'Aquila         Universita dell'Aquila
+Italy        University of L'Aquila         Universita degli Studi dell'Aquila
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
+Belgium      BIRA-IASB (Brussels)           Aeronomie Spatiale de Belgique
+Belgium      BIRA-IASB (Brussels)           BIRA/IASB
 Belgium      University of Liege            Liege
 Japan        Kyoto University
 Japan        Nagoya University
@@ -307,6 +326,8 @@ Spain        Univ. Politecnica de Madrid    Universidad Politecnica de Madrid
 Spain        INTA - Madrid                  Instituto Nacional de Tecnica Aeroespacial
 Spain        University of Valencia
 Spain        University of Valencia         Universitat de Valencia
+Spain        University of Valencia         Universidad de Valencia
+Spain        University of Valencia         46980
 Spain        Ramon Llull University
 Spain        Ramon Llull University         Ramon Llull
 Spain        Ramon Llull University         Horta Alta 38
@@ -324,6 +345,7 @@ China        Yunnan Observatories           Yunnan Key Laboratory
 China        Yunnan Observatories           Yunnan Observatory
 China        Yunnan Observatories           Yunnan Astronomical Observat
 China        NAOC                           National Astronomical Observ
+China        NAOC                           NAOC,
 China        Sun Yat-sen University         Sun Yat
 China        Beihang University
 China        Nanjing University
@@ -371,6 +393,8 @@ China        Jiangsu Univ. of Sci. and Tech.Jiangsu University of Science and Te
 China        Hebei Univ. of Sci. and Tech.  Hebei University of Science and Technology
 China        Huizhou University
 China        Xihua University
+China        Tongji University
+China        National Space Science Center  State Key Laboratory of Space Weather
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
@@ -415,6 +439,7 @@ India        IISER Kolkata                  Indian Institute of Science Educatio
 India        IIT - Kanpur                   Kanpur
 India        Bahona College
 India        Vikram Sarabhai Space Centre   Vikram Sarabhai Space
+India        Vikram Sarabhai Space Centre   Space Physics Laboratory
 India        Tata Inst. of Fundamental Res. Tata Institute of Fundamental Research
 India        National Inst. of Technology   National Institute of Technology
 India        Ultra College of Eng. & Tech.  Ultra College
@@ -441,6 +466,9 @@ Finland      ASRO (Turku)                   Aboa Space Research Oy
 Czech Rep.   Astronomical Institute OndrejovAstronomical Institute
 Czech Rep.   Charles University
 Czech Rep.   University of South Bohemia
+Czech Rep.   Inst. of Atmospheric Physics   Institute of Atmospheric Physics
+Czech Rep.   Inst. of Atmospheric Physics   IAP CAS
+Czech Rep.   Inst. of Atmospheric Physics   IAP, CAS
 Czech Rep.   Czech Academy of Sciences
 Switzerland  University of Geneva
 Switzerland  University of Bern
@@ -473,9 +501,10 @@ Iran         Payame Noor University
 Iran         University of Kurdistan
 Iran         University of Maragheh
 Iran         Isfahan Univ. of Technology    Isfahan University of Technology
+Iran         Kharazmi University
+Iran         Tafresh University
 Russia       Space Research Inst. (Moscow)  Space Research Institute
 Russia       Lebedev Physical Institute
-Russia       Inst of Solar-Terrestrial Phys.
 Russia       Skolkovo Institute (Moscow)    Skolkovo Institute
 Russia       IEPT (Moscow)                  Institute of Earthquake Prediction Theory
 Russia       Ioffe Institute
@@ -484,7 +513,9 @@ Russia       Crimean Astrophys. Observatory Crimean Astrophysical Observatory
 Russia       IZMIRAN (Moscow)               IZMIRAN
 Russia       IZMIRAN (Moscow)               Pushkov Institute
 Russia       St. Petersburg State UniversityPetersburg State University
-Russia       ISTP SB RAS (Irkursk)          Institute of Solar-Terrestrial Physics
+Russia       ISTP SB RAS (Irkutsk)          Institute of Solar-Terrestrial Physics
+Russia       ISTP SB RAS (Irkutsk)          Institute for Solar-Terrestrial Physics
+Russia       ISTP SB RAS (Irkutsk)          Irkutsk,
 Russia       Moscow State University
 Russia       Pulkovo Observatory
 Russia       Pulkovo Observatory            Kislovodsk
@@ -492,12 +523,16 @@ Russia       Pulkovo Observatory            Central Astronomical Observatory
 Russia       Irkutsk State University
 Russia       Samara National Research Univ. Samara National Research University
 Russia       SHICRA SB RAS (Yakutsk)        Shafer Institute of Cosmophysical
+Russia       Inst. for Problems in MechanicsInstitute for Problems in Mechanics
+Russia       National Research Nuclear Univ.National Research Nuclear University
 Poland       Space Research Centre (Warsaw) Space Research Centre 
+Poland       Space Research Centre (Warsaw) Space Research Center
 Poland       Jagiellonian University
 Poland       Siedlce University
+Poland       Siedlce University             University of Siedlce
 Poland       University of Wroclaw
 Poland       University of Warmia and Mazury
-Poland       Univ. of Maria Curie-Sklodowska
+Poland       Univ. of Maria Curie-SklodowskaCurie-Sklodowska
 Australia    Monash University
 Australia    University of Newcastle
 Australia    University of Sydney
@@ -557,6 +592,7 @@ Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
 Croatia      University of Zagreb
+Croatia      University of Rijeka
 South Africa North-West University
 South Africa SANSA                          South African National Space Agency
 Saudi Arabia Majmaah University
@@ -609,6 +645,7 @@ Thailand     Chulalongkorn University
 UAE          New York University Abu Dhabi
 Nigeria      Ebonyi State University
 Chile        University of Chile            Universidad de Chile
+Chile        University of Concepcion       Universidad de Concepcion
 Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
 Iraq         University of Basrah
 Serbia       University of Belgrade
