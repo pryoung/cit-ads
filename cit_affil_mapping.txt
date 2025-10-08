@@ -481,6 +481,7 @@ Czech Rep.   Inst. of Atmospheric Physics   IAP CAS
 Czech Rep.   Inst. of Atmospheric Physics   IAP, CAS
 Czech Rep.   Czech Academy of Sciences
 Switzerland  University of Geneva
+Switzerland  University of Geneva           Universite de Geneve
 Switzerland  University of Bern
 Switzerland  ETH-Zurich
 Switzerland  ETH-Zurich                     ETH Zurich
@@ -577,6 +578,8 @@ Netherlands  CWI (Amsterdam)                Centrum Wiskunde and Informatica
 Netherlands  Radboud University
 Netherlands  University of Amsterdam
 Austria      University of Graz
+Austria      University of Graz             Universitat Graz
+Austria      University of Graz             Kanzelhohe Observatory
 Austria      University of Graz             Karl-Franzens-Universitat
 Austria      Austrian Academy of Sciences
 Austria      Austrian Space Weather Office
