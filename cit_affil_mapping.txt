@@ -81,6 +81,7 @@ US           LASP, CU-Boulder               LASP
 US           NJIT                           New Jersey Institute of Technology
 US           NJIT                           Big Bear Solar Observatory
 US           NJIT
+US           SSL, Berkeley                  Space Science Lab
 US           SSL, Berkeley                  Space Sciences Lab
 US           SSL, Berkeley                  SSL,
 US           Naval Research Laboratory      Naval Research Lab
@@ -113,6 +114,7 @@ US           University of Iowa
 US           West Virginia University
 US           New Mexico State University
 US           New Mexico State University    New Mexico State Univ
+US           University of New Mexico       University of New Mexico
 US           Montana State University
 US           NorthWest Research Associates
 US           NorthWest Research Associates  North West Research Associates
@@ -161,7 +163,7 @@ US           Univ. of California Riverside  University of California Riverside
 US           Boston College
 US           Jet Propulsion Laboratory
 US           Planetary Science Institute
-US           Embry–Riddle Aeronautical Univ.Embry–Riddle
+US           Embry-Riddle Aeronautical Univ.Embry-Riddle
 US           Villanova University
 US           Drexel University
 US           SETI Institute
@@ -175,6 +177,9 @@ US           NASA JSC                       Johnson Space Center
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
+Germany      Leib. Inst. Astrophys. Potsdam Leibniz Institute for Astrophysics Potsdam
+Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institute for Astrophysics Potsdam
+Germany      Leib. Inst. Astrophys. Potsdam An der Sternwarte 16
 Germany      Astrophysical Institute Potsdam
 Germany      Astrophysical Institute PotsdamAstrophysikalisches Institut Potsdam
 Germany      Inst. for Solar Physics (KIS)  Kiepenheuer-Institut
@@ -186,10 +191,13 @@ Germany      MPS - Gottingen                Institute for Solar System Research
 Germany      Ruhr University Bochum         Ruhr-Univer
 Germany      Ruhr University Bochum         Bochum
 Germany      University of Gottingen        
+Germany      University of Gottingen        Gottingen University
+Germany      University of Gottingen        University of Goettingen  
 Germany      University of Gottingen        Georg-August-Univ
 Germany      University of Wurzburg
 Germany      Technical University of Berlin
 Germany      Technical University of Berlin Technische Universitat Berlin
+Germany      Technical University of Berlin Technische Universitaet Berlin
 Germany      Kiel University
 Germany      Kiel University                University of Kiel
 Germany      Kiel University                Christian-Albrechts
@@ -601,6 +609,7 @@ Saudi Arabia Majmaah University
 Saudi Arabia King Faisal University
 Saudi Arabia King Abdulaziz University
 Saudi Arabia Umm Al-Qura University
+Saudi Arabia King Saud University
 Portugal     University of Coimbra          Univ. Coimbra
 Portugal     University of Coimbra          Univ Coimbra
 Portugal     University of Coimbra
