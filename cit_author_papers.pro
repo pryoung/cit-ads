@@ -79,7 +79,9 @@ FUNCTION cit_author_papers, name, start_year=start_year, END_year=end_year, all=
 ;     Ver.7, 03-Jan-2023, Peter Young
 ;       The output bibcode list is now in reverse-date order.
 ;     Ver.8, 31-Oct-2023, Peter Young
-;       The routine no longer filters the bibcodes
+;       The routine no longer filters the bibcodes.
+;     Ver.9, 09-Oct-2025, Peter Young
+;       Changed limit to 2000 (from 1000) for number of returned bibcodes.
 ;-
 
 
@@ -154,13 +156,13 @@ headers=['Authorization: Bearer '+ads_key, $
 
 
 ;
-; I'm restricting to 1000 results and also just the astronomy
+; I'm restricting to 2000 results and also just the astronomy
 ; database (unless /all given).
 ;
 ; The sort command puts the papers in reverse date order.
 ;
 ;chck_str=query_string+'&rows='+trim(1000)+'&sort=date%20desc%2C%20bibcode%20desc&fl=bibcode,doctype'
-chck_str=query_string+'&rows='+trim(1000)+'&sort=date%20desc&fl=bibcode,doctype'
+chck_str=query_string+'&rows='+trim(2000)+'&sort=date%20desc&fl=bibcode,doctype'
 IF NOT keyword_set(all) THEN chck_str=chck_str+'&fq=database:astronomy'
 input_url=url+'?q='+chck_str
 
