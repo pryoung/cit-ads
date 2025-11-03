@@ -164,6 +164,7 @@ US           Boston College
 US           Jet Propulsion Laboratory
 US           Planetary Science Institute
 US           Embry-Riddle Aeronautical Univ.Embry-Riddle
+US           Embry-Riddle Aeronautical Univ.Riddle Aeronautical
 US           Villanova University
 US           Drexel University
 US           SETI Institute
@@ -216,6 +217,7 @@ Germany      MPIA - Heidelberg              Heidelberg
 Germany      MPS - Lindau                   Lindau
 Germany      Inst. for Solar-Terrestr. Phys.Neustrelitz
 Germany      Thuringia State Obs. TautenburgThuringer Landessternwarte
+Germany       DESY (Zeuthen)                 Zeuthen
 Italy        University of Calabria         Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
@@ -231,6 +233,7 @@ Italy        INAF - Torino                  Astronomical Observatory of Torino
 Italy        INAF - Torino                  Turin Astrophysical Observatory
 Italy        INAF - Torino                  Turin Astronomical Observatory
 Italy        INAF - Torino                  Astrophysical Observatory of Turin
+Italy        INAF - Torino                  Turin Astrophysical Observatory
 Italy        INAF - Torino                  Osservatorio Astronomico di Torino
 Italy        INAF - Torino                  10025 Pino Torinese
 Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
@@ -403,6 +406,8 @@ China        Huizhou University
 China        Xihua University
 China        Tongji University
 China        National Space Science Center  State Key Laboratory of Space Weather
+China        Zhejiang Laboratory (Hangzhou) Zhejiang Laboratory
+China        Tsinghua University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
@@ -656,6 +661,7 @@ Thailand     Raj. Univ. of Tech. Thanyaburi Rajamangala University of Technology
 Thailand     Kasetsart University
 Thailand     Mahidol University
 Thailand     Chulalongkorn University
+Thailand     Thammasat University
 UAE          New York University Abu Dhabi
 Nigeria      Ebonyi State University
 Chile        University of Chile            Universidad de Chile
