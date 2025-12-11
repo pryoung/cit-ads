@@ -33,6 +33,8 @@ FUNCTION cit_affil_mapping, input, country
 ;     Ver.1, 20-Jan-2023, Peter Young
 ;     Ver.2, 08-Jul-2025, Peter Young
 ;       Added parameter check.
+;     Ver.3, 11-Dec-2025, Peter Young
+;       Updated location of the affiliation mapping file.
 ;-
 
 IF n_params() LT 2 THEN BEGIN
@@ -40,7 +42,13 @@ IF n_params() LT 2 THEN BEGIN
   return,-1
 ENDIF 
 
-mapfile='~/github/cit-ads/cit_affil_mapping.txt'
+;
+; The affiliaton mapping file is stored at the same location as the
+; cit_affil_mapping routine. It is expected that this is the
+; location of the user's GitHub repository.
+;
+mapdir=file_dirname(file_which('cit_affil_mapping.pro'))
+mapfile=concat_dir(mapdir,'cit_affil_mapping.txt')
 
 chck=file_info(mapfile)
 IF chck.exists EQ 0 THEN BEGIN

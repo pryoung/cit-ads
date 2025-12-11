@@ -63,6 +63,8 @@ FUNCTION cit_get_keywords, ads_data, count=count, filter=filter, add_random=add_
 ;       keyword for an article, then I add an extra, randomly-generated one.
 ;     Ver.5, 10-Sep-2025, Peter Young
 ;       Now filters out the PACS keyword codes.
+;     Ver.6, 19-Nov-2025, Peter Young
+;       Removed warning when no articles satisfy years criterion.
 ;-
 
 count=0
@@ -86,7 +88,6 @@ IF n_elements(years) NE 0 THEN BEGIN
   check_jd=curr_jd-years*365.25
   k=where(ad_jd GE check_jd,nk)
   IF nk EQ 0 THEN BEGIN
-    message,/info,/cont,'No articles satisfy the YEARS criterion. Returning...'
     return,''
   ENDIF ELSE BEGIN
     ad=ad[k]

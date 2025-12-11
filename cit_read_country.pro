@@ -20,8 +20,8 @@ FUNCTION cit_read_country, affil_file=affil_file, count=count
 ;
 ; OPTIONAL INPUTS:
 ;     Affil_File:  The name of the affiliation-country file to read. Normally
-;                  this does not need to be specified as the file is
-;                  retrieved over the internet.
+;                  this does not need to be specified as the file
+;                  automatically found.
 ;
 ; OUTPUTS:
 ;     An IDL structure array with the following tags:
@@ -38,6 +38,9 @@ FUNCTION cit_read_country, affil_file=affil_file, count=count
 ;
 ; MODIFICATION HISTORY:
 ;     Ver.1, 03-Jan-2023, Peter Young
+;     Ver.2, 11-Dec-2025, Peter Young
+;       The routine now uses the country mapping file in the GitHub
+;       repository rather than fetch it over the internet.
 ;-
 
 
@@ -49,8 +52,8 @@ affilstr=0
 ;
 ;The priorities for the affiliation file are:
 ;  1. read the specified affil_file
-;  2. read the master file over the internet
-;  3. read the master file in SSW
+;  2. read the affiliation file in the same directory as the
+;     cit_read_country routine.
 ;
 IF n_elements(affil_file) NE 0 THEN BEGIN
   chck=file_search(affil_file,count=count)
@@ -58,21 +61,8 @@ IF n_elements(affil_file) NE 0 THEN BEGIN
     print,'% CIT_AFFIL_COUNTRY: the specified AUTHOR_FILE does not exist. Returning...'
   ENDIF
 ENDIF ELSE BEGIN
- ;
- ; This is the master file, which should be the most up-to-date version.
- ;
-  chck=have_network()
-  IF chck EQ 1 THEN BEGIN
-    url='http://files.pyoung.org/idl/ads/cit_affil_country.txt'
-    sock_list,url,page
-  ENDIF
- ;
- ; If there's no internet connection, then pick up the file in SSW.
- ;
-  IF chck EQ 0 OR page[0] EQ '' THEN BEGIN
-    affil_file=concat_dir(getenv('SSW'),'gen/idl/clients/ads')
-    affil_file=concat_dir(affil_file,'cit_affil_country.txt')
-  ENDIF
+  affil_dir=file_dirname(file_which('cit_read_country.pro'))
+  affil_file=concat_dir(affil_dir,'cit_affil_country.txt')
 ENDELSE
 
 ;
