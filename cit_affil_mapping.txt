@@ -175,6 +175,7 @@ US           Auburn University
 US           New Mexico Consortium
 US           NextSource Inc.
 US           NASA JSC                       Johnson Space Center
+US           Hobart & William Smith CollegesHobart and William Smith Colleges
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -218,6 +219,8 @@ Germany      MPS - Lindau                   Lindau
 Germany      Inst. for Solar-Terrestr. Phys.Neustrelitz
 Germany      Thuringia State Obs. TautenburgThuringer Landessternwarte
 Germany      DESY (Zeuthen)                 Zeuthen
+Germany      Institute of Planetary ResearchInstitut fur Planetenforschung
+Germany      Institute of Planetary Research
 Italy        University of Calabria         Calabria
 Italy        INAF - Catania                 Catania
 Italy        INAF - Rome (IAPS)             Astrofisica e Planetologia Spaziali
@@ -249,6 +252,7 @@ Italy        University of Florence         Florence University
 Italy        University of Pisa
 Italy        University of Pisa             Universita di Pisa
 Italy        University of Rome Tor Vergata Tor Vergata
+Italy        University of Rome Tor Vergata Tor-Vergata
 Italy        University of Genoa            
 Italy        University of Genoa            Univ. degli Studi di Genova
 Italy        University of Genoa            Universita degli Studi di Genova
@@ -435,7 +439,7 @@ Rep. Korea   Chonnam National University
 DPR Korea    Kim Il Sung University
 India        IIA - Bengaluru                Bengaluru
 India        IIA - Bengaluru                Bangalore
-India        IIA - Gauribidanur             Gauribidanurxs
+India        IIA - Gauribidanur             Gauribidanur
 India        IUCAA - Pune                   University Centre for Astronomy and Astrophysics
 India        Udaipur Solar Observatory
 India        IIT (BHU) - Varanasi           Banaras Hindu University
@@ -541,6 +545,7 @@ Russia       Samara National Research Univ. Samara National Research University
 Russia       SHICRA SB RAS (Yakutsk)        Shafer Institute of Cosmophysical
 Russia       Inst. for Problems in MechanicsInstitute for Problems in Mechanics
 Russia       National Research Nuclear Univ.National Research Nuclear University
+Russia       Inst. Problems of Chem. PhysicsProblems of Chemical Physics
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Space Research Centre (Warsaw) Space Research Center
 Poland       Jagiellonian University
@@ -569,8 +574,11 @@ Argentina    National Univ. of Mar del PlataMar del Plata
 Argentina    ICATE-CONICET (San Juan)       ICATE-CONICET
 Argentina    ICATE-CONICET (San Juan)       Instituto de Ciencias Astronomicas
 Argentina    National Technological Univ.   Universidad Tecnologica Nacional
+Argentina    Argentine Antarctic Institute  Instituto Antartico Argentino
+Argentina    Argentine Antarctic Institute
 Mexico       UNAM (Morelia)                 Instituto de Geofisica Unidad Michoacan
 Mexico       UNAM (Morelia)                 Estudios Superiores Unidad Morelia
+Mexico       UNAM (Morelia)                 58190 Morelia
 Mexico       UNAM (Mexico City)             04510
 Mexico       UNAM (Mexico City)             Ciudad de Mexico
 Mexico       UNAM (Mexico City)             Autonoma de Mexico, Mexico City
@@ -671,3 +679,4 @@ Iraq         University of Basrah
 Serbia       University of Belgrade
 Nepal        Tribhuvan University
 Uzbekistan   Ulugh Beg Astronomical Inst.   Ulugh Beg Astronomical
+Azerbaijan   Shamakhy Astrophys. ObservatoryShamakhy
