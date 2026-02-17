@@ -1,6 +1,3 @@
-UK           Northumbria University
-UK           Northumbria University         Northumbria
-UK           University of Reading
 UK           University of Reading          Department of Meteorology   
 UK           Imperial College
 UK           MSSL                           Mullard Space Science
@@ -637,14 +634,15 @@ Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
 Bulgaria     SRTI-BAS (Sofia)               Space Research and Technology Institute
 New Zealand  University of Waikato
 New Zealand  University of Otago
-New Zealand  Victoria Univ. of Wellington   Victoria University of Wellington
+New Zealand  Victoria Univ. of Wellington    Victoria University of Wellington
 Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute of Slovak Academy of Sciences
 Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute
 Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
 Turkey       Akdeniz University
 Turkey       Canakkale Onsekiz Mart Univ.   Canakkale Onsekiz Mart University
-Colombia     Univ. Nacional de Colombia     Universidad Nacional de Colombia
+Colombia     National University of ColombiaUniversidad Nacional de Colombia
 Colombia     Universidad de Los Andes
+Colombia     Industrial Univ. of Santander  Universidad Industrial de Santander
 Hungary      Eotvos Lorand University
 Hungary      Debrecen Heliophysical Obs.    Debrecen Heliophysical Observatory
 Denmark      Niels Bohr Institute
@@ -671,12 +669,22 @@ Thailand     Mahidol University
 Thailand     Chulalongkorn University
 Thailand     Thammasat University
 UAE          New York University Abu Dhabi
+UAE          University of Sharjah
 Nigeria      Ebonyi State University
-Chile        University of Chile            Universidad de Chile
+Chile        University of Chile (Santiago) Universidad de Chile
 Chile        University of Concepcion       Universidad de Concepcion
+Chile        University of Santiago, Chile  Universidad de Santiago de Chile
+Chile        P2mc, CCHEN (Santiago)         Intersection of Plasma Physics, Matter
 Algeria      CRAAG - Bouzareah              Centre de Recherche en Astronomie
 Iraq         University of Basrah
 Serbia       University of Belgrade
 Nepal        Tribhuvan University
 Uzbekistan   Ulugh Beg Astronomical Inst.   Ulugh Beg Astronomical
 Azerbaijan   Shamakhy Astrophys. ObservatoryShamakhy
+Canada       College of Bois-de-Boulogne    Bois-de-Boulogne
+Canada       University of Montreal         Universite de Montreal
+Canada       University of Manitoba         University of Manitoba
+Slovenia     University of Ljubljana
+Israel       Tel Aviv University
+Pakistan     Government College University
+Pakistan     Government College University  GC University Lahore
