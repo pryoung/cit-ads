@@ -637,7 +637,7 @@ Bulgaria     Inst. of Astronomy (Sofia)     Institute of Astronomy
 Bulgaria     SRTI-BAS (Sofia)               Space Research and Technology Institute
 New Zealand  University of Waikato
 New Zealand  University of Otago
-New Zealand  Victora Univ. of Wellington    Victoria University of Wellington
+New Zealand  Victoria Univ. of Wellington   Victoria University of Wellington
 Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute of Slovak Academy of Sciences
 Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute
 Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
