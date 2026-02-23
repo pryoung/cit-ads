@@ -36,7 +36,7 @@ FUNCTION cit_write_cit_list, ads_data, h_index=h_index, count=count
 ;     Ver.1, 23-Jan-2022, Peter Young
 ;       Code extracted from cit_author_html.
 ;     Ver.2, 12-Dec-2024, Peter Young
-;       h_index is not an optional input.
+;       h_index is now an optional input.
 ;-
 
 

@@ -68,6 +68,9 @@ PRO cit_instr_master_html, data_str, author=author, affil_file=affil_file, all_p
 ;     Ver.6, 04-Jan-2024, Peter Young
 ;        The surname table now uses the "author_norm" form of the
 ;        author's name.
+;     Ver.7, 19-Feb-2026, Peter Young
+;        If outdir does not exist, then it is created; added strlowcase
+;        for the name of the summary file.
 ;-
 
 IF n_params() LT 1 THEN BEGIN
@@ -82,6 +85,9 @@ instr=data_str.instr_name
 outdir=data_str.html_dir
 bib_save_dir=data_str.bib_save_dir
 
+chck=file_info(outdir)
+IF chck.exists EQ 0 THEN file_mkdir,outdir
+
 ;
 ; Get a list of the bibcode list files (that should have been
 ; previously created with cit_instr_check_year.pro.
@@ -92,7 +98,7 @@ list=file_search(concat_dir(bib_save_dir,'bibcode_list_*.txt'),count=n)
 ; This is the name of the master file that summarizes the publication
 ; information. 
 ;
-outfile=instr+'_publications_summary.html'
+outfile=strlowcase(instr)+'_publications_summary.html'
 IF n_elements(outdir) NE 0 THEN outfile=concat_dir(outdir,outfile)
 openw,lout,outfile,/get_lun
 

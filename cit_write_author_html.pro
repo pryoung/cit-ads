@@ -53,6 +53,10 @@ PRO cit_write_author_html, author_data, ads_data, outdir=outdir, $
 ;     Ver.1, 12-Dec-2024, Peter Young
 ;     Ver.2, 20-Dec-2024, Peter Young
 ;       Modified output file format.
+;     Ver.3, 23-Feb-2026, Peter Young
+;       For pages 2 and 4, removed some text if /no_hindex is set; the
+;       h-index is now passed through to cit_write_cit_list if /no_hindex
+;       is not set; removed some unused code.
 ;-
 
 
@@ -61,10 +65,6 @@ IF n_params() LT 2 THEN BEGIN
   print,'                      ads_data_far=, /no_hindex ]'
   return
 ENDIF 
-
-IF keyword_set(far_only) THEN file_ext='_first_author' ELSE file_ext=''
-IF keyword_set(cit_sort) THEN file_ext=file_ext+'_cit'
-
 
 IF n_elements(outdir) NE 0 THEN BEGIN
   chck=file_info(outdir)
@@ -147,7 +147,9 @@ title='All papers of '+full_name+', sorted by citations'
 heading='Publications of '+full_name+' ordered by citations'
 cit_write_header_html,lout,title=title,heading=heading
 ;
-printf,lout,'<p>A list of publications authored or co-authored by '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS) and ordered by the numbers of citations. Publications above the horizontal line count towards the h-index.'
+printf,lout,'<p>A list of publications authored or co-authored by '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS) and ordered by the numbers of citations.'
+IF NOT keyword_set(no_hindex) THEN printf,lout,'Publications above the horizontal line count towards the h-index.'
+printf,lout,'</p>'
 
 IF n_elements(orcid) NE 0 THEN BEGIN
   orcid_link='https://orcid.org/'+trim(orcid)
@@ -159,7 +161,8 @@ if not keyword_set(no_hindex) then printf,lout,'<a href=http://en.wikipedia.org/
 ;
 ; Now go through each year and print out the entries for that year.
 ;
-ostr=cit_write_cit_list(ads_data,count=nstr)
+IF NOT keyword_set(no_hindex) THEN h_index=author_data.all.h_index ELSE junk=temporary(h_index)
+ostr=cit_write_cit_list(ads_data,count=nstr,h_index=h_index)
 FOR i=0,nstr-1 DO printf,lout,ostr[i]
 ;
 cit_write_footer_html,lout
@@ -211,7 +214,9 @@ title='First-authored, refereed papers of '+full_name+', ordered by citations'
 heading=title
 cit_write_header_html,lout,title=title,heading=heading
 ;
-printf,lout,'<p>A list of first-authored, refereed publications of  '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS) and ordered by the numbers of citations. Publications above the horizontal line count towards the h-index.'
+printf,lout,'<p>A list of first-authored, refereed publications of  '+full_name+', derived from the SAO/NASA Astrophysics Data System (ADS) and ordered by the numbers of citations.'
+IF NOT keyword_set(no_hindex) THEN printf,lout,'Publications above the horizontal line count towards the h-index.'
+printf,lout,'</p>'
 
 IF n_elements(orcid) NE 0 THEN BEGIN
   orcid_link='https://orcid.org/'+trim(orcid)
@@ -223,7 +228,8 @@ if not keyword_set(no_hindex) then printf,lout,'<a href=http://en.wikipedia.org/
 ;
 ; Now go through each year and print out the entries for that year.
 ;
-ostr=cit_write_cit_list(ads_data_far,count=nstr)
+IF NOT keyword_set(no_hindex) THEN h_index=author_data.far.h_index ELSE junk=temporary(h_index)
+ostr=cit_write_cit_list(ads_data_far,count=nstr,h_index=h_index)
 FOR i=0,nstr-1 DO printf,lout,ostr[i]
 ;
 cit_write_footer_html,lout
