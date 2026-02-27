@@ -1,3 +1,6 @@
+UK           Northumbria University
+UK           Northumbria University         Northumbria
+UK           University of Reading
 UK           University of Reading          Department of Meteorology   
 UK           Imperial College
 UK           MSSL                           Mullard Space Science
@@ -409,6 +412,8 @@ China        Tongji University
 China        National Space Science Center  State Key Laboratory of Space Weather
 China        Zhejiang Laboratory (Hangzhou) Zhejiang Laboratory
 China        Tsinghua University
+China        SUIT (Shenzhen)                Shenzhen University of Information Technology
+China        SUIT (Shenzhen)                Shenzhen Institute of Information Technology
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
