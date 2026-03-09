@@ -138,6 +138,7 @@ US           Cal. State Univ. Northridge    Northridge
 US           George Washington University
 US           MIT                            MIT,
 US           University of Alaska Fairbanks
+US           University of Alaska Fairbanks International Arctic Research Center
 US           Univ. of California Berkeley   University of California, Berkeley
 US           Univ. of California Berkeley   University of California Berkeley
 US           Univ. of California Berkeley   University of California at Berkeley
