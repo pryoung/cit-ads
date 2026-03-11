@@ -177,6 +177,9 @@ US           New Mexico Consortium
 US           NextSource Inc.
 US           NASA JSC                       Johnson Space Center
 US           Hobart & William Smith CollegesHobart and William Smith Colleges
+US           UCAR (Boulder)                 University Corporation for Atmospheric Research
+US           Solana Scientific Inc.         Solana Scientific
+US           Independent Researcher         Retired
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -325,6 +328,7 @@ Japan        Tohoku University
 Japan        Kansai University
 Japan        University of Toyama
 Japan        ISEE (Nagoya)                  Institute for Space-Earth Environmental Research
+Japan        Independent Researcher         730-0851
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        ESAC                           ESAC,
