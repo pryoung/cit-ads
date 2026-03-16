@@ -88,6 +88,8 @@ US           Naval Research Laboratory      Naval Research Lab
 US           Naval Research Laboratory      Hurlburt Center
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
+US           Southwest Research Institute   SwRI, Boulder
+US           Southwest Research Institute   SwRI, San Antonio
 US           University of Colorado Boulder University of Colorado
 US           University of Colorado Boulder Department of Astrophysical and Planetary Sciences
 US           University of Minnesota        Minnesota
@@ -419,6 +421,7 @@ China        Zhejiang Laboratory (Hangzhou) Zhejiang Laboratory
 China        Tsinghua University
 China        SUIT (Shenzhen)                Shenzhen University of Information Technology
 China        SUIT (Shenzhen)                Shenzhen Institute of Information Technology
+China        Changsha Univ. of Sci. & Tech. Changsha University of Science and Technology
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
@@ -435,6 +438,7 @@ France       LPC2E - Orleans                LPC2E
 France       Cote d'Azur University         Cote d'Azur
 France       LATMOS - Guyancourt            Guyancourt
 France       Claude Bernard Univ. Lyon 1    Claude Bernard
+France       IPGP (Paris)                   Institut de Physique du Globe
 Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
 Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
@@ -478,6 +482,11 @@ India        Tezpur University
 India        Bhabha Atomic Research Centre  Bhabha Atomic Research Centre
 India        Gauhati University
 India        University of Calcutta
+India        University of Lucknow
+India        Bundelkhand University
+India        University of Allahabad
+India        Mangalayatan University
+India        Aligarh Muslim University
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -534,6 +543,7 @@ Russia       Space Research Inst. (Moscow)  Space Research Institute
 Russia       Lebedev Physical Institute
 Russia       Skolkovo Institute (Moscow)    Skolkovo Institute
 Russia       IEPT (Moscow)                  Institute of Earthquake Prediction Theory
+Russia       IEPT (Moscow)                  IEPT RAS
 Russia       Ioffe Institute
 Russia       Ioffe Institute                Ioffe Physical-Technical Institute
 Russia       Crimean Astrophys. Observatory Crimean Astrophysical Observatory
@@ -553,6 +563,10 @@ Russia       SHICRA SB RAS (Yakutsk)        Shafer Institute of Cosmophysical
 Russia       Inst. for Problems in MechanicsInstitute for Problems in Mechanics
 Russia       National Research Nuclear Univ.National Research Nuclear University
 Russia       Inst. Problems of Chem. PhysicsProblems of Chemical Physics
+Russia       Finance University (Moscow)    Finance University
+Russia       Finance University (Moscow)    Finance Academy
+Russia       HSE University (Moscow)        National Research University Higher School
+Russia       HSE University (Moscow)        HSE University
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Space Research Centre (Warsaw) Space Research Center
 Poland       Jagiellonian University
@@ -561,6 +575,7 @@ Poland       Siedlce University             University of Siedlce
 Poland       University of Wroclaw
 Poland       University of Warmia and Mazury
 Poland       Univ. of Maria Curie-SklodowskaCurie-Sklodowska
+Poland       University of Lodz
 Australia    Monash University
 Australia    University of Newcastle
 Australia    University of Sydney
