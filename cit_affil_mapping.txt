@@ -88,8 +88,12 @@ US           Naval Research Laboratory      Naval Research Lab
 US           Naval Research Laboratory      Hurlburt Center
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
+<<<<<<< HEAD
 US           Southwest Research Institute   SwRI, Boulder
 US           Southwest Research Institute   SwRI, San Antonio
+=======
+US           Southwest Research Institute   SWRI,
+>>>>>>> b8e2eea6c24c3b71687762fd1772f5626661e248
 US           University of Colorado Boulder University of Colorado
 US           University of Colorado Boulder Department of Astrophysical and Planetary Sciences
 US           University of Minnesota        Minnesota
@@ -136,6 +140,7 @@ US           BWX Technologies
 US           Univ. of California Santa Cruz California Santa Cruz
 US           Univ. of California Santa Cruz Santa Cruz
 US           Univ. of California San Diego  92093
+US           Univ. of California San Diego  California, San Diego
 US           Cal. State Univ. Northridge    Northridge
 US           George Washington University
 US           MIT                            MIT,
@@ -181,7 +186,10 @@ US           NASA JSC                       Johnson Space Center
 US           Hobart & William Smith CollegesHobart and William Smith Colleges
 US           UCAR (Boulder)                 University Corporation for Atmospheric Research
 US           Solana Scientific Inc.         Solana Scientific
+US           Lynker Space
 US           Independent Researcher         Retired
+US           Independent Researcher
+US           CERES (Salem, MA)              Center for Environmental Research and Earth Sciences 
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
