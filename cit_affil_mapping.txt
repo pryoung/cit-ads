@@ -247,6 +247,7 @@ Italy        INAF - Naples                  Capodimont
 Italy        INAF - Torino                  Osservatorio Astrofisico di Torino
 Italy        INAF - Torino                  Astrophysical Observatory of Torino
 Italy        INAF - Torino                  Astronomical Observatory of Torino
+Italy        INAF - Torino                  Torino Astrophysical Observatory
 Italy        INAF - Torino                  Turin Astrophysical Observatory
 Italy        INAF - Torino                  Turin Astronomical Observatory
 Italy        INAF - Torino                  Astrophysical Observatory of Turin
@@ -305,6 +306,9 @@ Italy        University of L'Aquila
 Italy        University of L'Aquila         Universita di L'Aquila
 Italy        University of L'Aquila         Universita dell'Aquila
 Italy        University of L'Aquila         Universita degli Studi dell'Aquila
+Italy        INFN - Milano-Bicocca          Milano-Bicocca
+Italy        INFN - Napoli                  Sezione di Napoli
+Italy        INFN - Napoli                  Sezione di Naples
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
