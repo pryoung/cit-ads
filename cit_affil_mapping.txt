@@ -88,12 +88,9 @@ US           Naval Research Laboratory      Naval Research Lab
 US           Naval Research Laboratory      Hurlburt Center
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
 US           Southwest Research Institute
-<<<<<<< HEAD
 US           Southwest Research Institute   SwRI, Boulder
 US           Southwest Research Institute   SwRI, San Antonio
-=======
 US           Southwest Research Institute   SWRI,
->>>>>>> b8e2eea6c24c3b71687762fd1772f5626661e248
 US           University of Colorado Boulder University of Colorado
 US           University of Colorado Boulder Department of Astrophysical and Planetary Sciences
 US           University of Minnesota        Minnesota
@@ -189,6 +186,7 @@ US           Solana Scientific Inc.         Solana Scientific
 US           Lynker Space
 US           Independent Researcher         Retired
 US           Independent Researcher
+US           Independent Researcher         Nahant
 US           CERES (Salem, MA)              Center for Environmental Research and Earth Sciences 
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
@@ -343,6 +341,7 @@ Japan        Kansai University
 Japan        University of Toyama
 Japan        ISEE (Nagoya)                  Institute for Space-Earth Environmental Research
 Japan        Independent Researcher         730-0851
+Japan        Independent Researcher         Hiroshima-shi
 Spain        IAC - Tenerife                 Canarias
 Spain        ESAC                           European Space Astronomy Centre
 Spain        ESAC                           ESAC,
@@ -451,6 +450,7 @@ France       Cote d'Azur University         Cote d'Azur
 France       LATMOS - Guyancourt            Guyancourt
 France       Claude Bernard Univ. Lyon 1    Claude Bernard
 France       IPGP (Paris)                   Institut de Physique du Globe
+France       Independent Researcher         Independent
 Rep. Korea   KASI (Daejon)                  Korea Astronomy and Space Science Institute
 Rep. Korea   Kyung Hee University
 Rep. Korea   Seoul National University
