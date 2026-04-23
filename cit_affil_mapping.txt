@@ -511,6 +511,7 @@ India        Bundelkhand University
 India        University of Allahabad
 India        Mangalayatan University
 India        Aligarh Muslim University
+India        IIST (Thiruvananthapuram)      Indian Institute of Space Science and Technology
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -591,6 +592,7 @@ Russia       Finance University (Moscow)    Finance University
 Russia       Finance University (Moscow)    Finance Academy
 Russia       HSE University (Moscow)        National Research University Higher School
 Russia       HSE University (Moscow)        HSE University
+Russia       Kalmyk State University
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Space Research Centre (Warsaw) Space Research Center
 Poland       Jagiellonian University
