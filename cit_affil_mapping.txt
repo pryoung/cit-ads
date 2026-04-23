@@ -165,6 +165,7 @@ US           Virginia Tech
 US           Virginia Tech                  Virginia Polytechnic Institute and State University
 US           Univ. of California Riverside  University of California, Riverside
 US           Univ. of California Riverside  University of California Riverside
+US           Univ. of Calif. Santa Barbara  93106
 US           Boston College
 US           Jet Propulsion Laboratory
 US           Planetary Science Institute
@@ -188,6 +189,7 @@ US           Independent Researcher         Retired
 US           Independent Researcher
 US           Independent Researcher         Nahant
 US           CERES (Salem, MA)              Center for Environmental Research and Earth Sciences 
+US           Ohio State University
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -218,6 +220,7 @@ Germany      Kiel University                Christian-Albrechts
 Germany      Kiel University                Universitat Kiel
 Germany      TU Braunschweig                Technische Universitat Braunschweig
 Germany      TU Braunschweig                TU Braunschweig
+Germany      TU Braunschweig                Technical University of Braunschweig
 Germany      TU Dresden                     Technische Universitat Dresden
 Germany      MPI - Garching                 Max-Planck-Institut fur extraterrestrische Physik
 Germany      MPI-M (Hamburg)                Max Planck Institute for Meteorology
@@ -369,8 +372,11 @@ Spain        Autonomous University of MadridUniversidad Autonoma de Madrid
 Spain        Autonomous University of MadridCantoblanco
 Spain        University of Malaga           Universidad de Malaga
 Spain        University of Malaga
+Spain        University of La Laguna        de La Laguna
+Spain        University of La Laguna        of La Laguna
 China        Peking University
 China        Purple Mountain Observatory
+China        Purple Mountain Observatory    Dark Matter and Space Astronomy,
 China        Shandong University
 China        Yunnan University
 China        Yunnan Observatories
@@ -415,7 +421,7 @@ China        Southwest Jiaotong University
 China        Anhui University
 China        Shijiazhuang University
 China        Shanghai Astronom. Observatory Shanghai Astronomical Observatory
-China        University of CAS              University of Chinese Academy of Sciences
+China        University of CAS              University of Chinese Academy of Science
 China        Beijing Planetarium
 China        China Three Gorges University
 China        Tianjin University
@@ -433,6 +439,12 @@ China        Tsinghua University
 China        SUIT (Shenzhen)                Shenzhen University of Information Technology
 China        SUIT (Shenzhen)                Shenzhen Institute of Information Technology
 China        Changsha Univ. of Sci. & Tech. Changsha University of Science and Technology
+China        Beijing Union University
+China        Dezhou University
+China        Guangdong Technion
+China        Qingdao Univ. of Sci. & Tech.  Qingdao University of Science and Technology
+China        Shanxi Normal University
+China        Henan Normal University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
@@ -655,6 +667,7 @@ Croatia      University of Zagreb
 Croatia      University of Rijeka
 South Africa North-West University
 South Africa SANSA                          South African National Space Agency
+South Africa University of KwaZulu-Natal
 Saudi Arabia Majmaah University
 Saudi Arabia King Faisal University
 Saudi Arabia King Abdulaziz University
