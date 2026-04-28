@@ -76,6 +76,8 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;       Added start_pubdate= optional input.
   ;     Ver.10, 29-May-2025, Peter Young
   ;       Removed a rogue print statement.
+  ;     Ver.11, 28-Apr-2026, Peter Young
+  ;       Now removes DASH abstracts.
   ;-
 
   count = 0
@@ -167,6 +169,13 @@ function cit_filter_ads_data, ads_data, thesis = thesis, count = count, $
   ;
   chck = strmid(ads_data_out.bibcode, 4, 9)
   k = where(chck ne 'shin.conf', nk)
+  ads_data_out = ads_data_out[k]
+
+  ;
+  ; DASH abstracts also get listed as "inproceedings" in ADS
+  ;
+  chck = strmid(ads_data_out.bibcode, 4, 9)
+  k = where(chck ne 'dash.conf', nk)
   ads_data_out = ads_data_out[k]
 
   ;
