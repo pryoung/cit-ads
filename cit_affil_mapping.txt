@@ -662,6 +662,13 @@ Brazil       Fluminense Federal University
 Brazil       Fluminense Federal University  Universidade Federal Fluminense
 Brazil       Federal University of ABC      Universidade Federal do ABC
 Brazil       Federal University of ABC      UFABC
+Brazil       University of Sao Paulo
+Brazil       University of Sao Paulo        Universitaria Sao Paulo
+Brazil       University of Sao Paulo        Universidade de Sao Paulo
+Brazil       Federal University of Jatai
+Brazil       Aeronautics Inst. of Tech.     Aeronautics Institute of Technology
+Brazil       Aeronautics Inst. of Tech.     Institute of Aeronautical Technology
+Brazil       Aeronautics Inst. of Tech.     Instituto Tecnologico de Aeronautica
 Croatia      Hvar Observatory               Hvar Observatory
 Croatia      Zagreb Observatory
 Croatia      Zagreb Observatory             Astronomical Observatory Zagreb
