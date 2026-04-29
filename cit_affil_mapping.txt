@@ -257,6 +257,9 @@ Italy        INAF - Torino                  Osservatorio Astronomico di Torino
 Italy        INAF - Torino                  10025 Pino Torinese
 Italy        INAF - Florence                Osservatorio Astrofisico di Arcetri
 Italy        INAF - Florence                Astrophysical Observatory of Arcetri
+Italy        INAF - Milan (IASF)            Istituto di Astrofisica Spaziale e Fisica Cosmica 
+Italy        INAF - Milan (IASF)            Institute for Space Astrophysics and Cosmic Physics
+Italy        INAF - Milan (IASF)            20133
 Italy        INGV - Rome                    Istituto Nazionale di Geofisica e Vulcanologia
 Italy        University of Palermo
 Italy        University of Palermo          Universita di Palermo
@@ -267,8 +270,8 @@ Italy        University of Florence
 Italy        University of Florence         Florence University
 Italy        University of Pisa
 Italy        University of Pisa             Universita di Pisa
-Italy        University of Rome Tor Vergata Tor Vergata
-Italy        University of Rome Tor Vergata Tor-Vergata
+Italy        University of Rome Tor Vergata Tor Vergat
+Italy        University of Rome Tor Vergata Tor-Vergat
 Italy        University of Genoa            
 Italy        University of Genoa            Univ. degli Studi di Genova
 Italy        University of Genoa            Universita degli Studi di Genova
@@ -310,6 +313,8 @@ Italy        University of L'Aquila         Universita degli Studi dell'Aquila
 Italy        INFN - Milano-Bicocca          Milano-Bicocca
 Italy        INFN - Napoli                  Sezione di Napoli
 Italy        INFN - Napoli                  Sezione di Naples
+Italy        University of Perugia
+Italy        University of Perugia          Universita degli Studi di Perugia
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
@@ -611,6 +616,7 @@ Australia    CSIRO
 Australia    Australian National University
 Australia    Flinders University
 Australia    University of Tasmania
+Australia    Macquarie University
 Argentina    Universidad de Buenos Aires
 Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
 Argentina    Universidad de Mendoza
