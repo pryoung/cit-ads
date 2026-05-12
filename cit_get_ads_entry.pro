@@ -146,6 +146,8 @@ FUNCTION cit_get_ads_entry, bibcode, big_list=big_list,  $
 ;          Reduced nn from 31 to 29 to prevent the 1000 character problem.
 ;      Ver.24, 06-May-2025, Peter Young
 ;          Modify the pubdates to get rid of '00' days and months.
+;      Ver.25, 12-May-2026, Peter Young
+;          Updated ads_link to point to scixplorer.org.
 ;-
 
 
@@ -359,7 +361,8 @@ FOR i=0,n-1 DO BEGIN
   bib_hash=big_list[i]
  ;
   output[i].bibcode=bib_hash['bibcode']
-  output[i].ads_link='https://ui.adsabs.harvard.edu/abs/'+bib_hash['bibcode']
+  output[i].ads_link='https://scixplorer.org/abs/'+bib_hash['bibcode']
+;  output[i].ads_link='https://ui.adsabs.harvard.edu/abs/'+bib_hash['bibcode']
   IF bib_hash.haskey('pubdate') THEN output[i].pubdate=bib_hash['pubdate']
   IF bib_hash.haskey('abstract') THEN output[i].abstract=bib_hash['abstract']
   IF bib_hash.haskey('year') THEN BEGIN

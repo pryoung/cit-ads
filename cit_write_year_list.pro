@@ -34,6 +34,8 @@ FUNCTION cit_write_year_list, ads_data, count=count
 ;     Ver.2, 14-Nov-2023, Peter Young
 ;       Now catches case when an article has no authors. The
 ;       article is still retained.
+;     Ver.3, 12-May-2026, Peter Young
+;       Updated link to use the ads_link tag in ads_data.
 ;-
 
 
@@ -68,7 +70,7 @@ FOR i=maxyr,minyr,-1 DO BEGIN
     FOR j=0,nk-1 DO BEGIN
       ii=k[isort[j]]
      ;
-      web_link='https://ui.adsabs.harvard.edu/abs/'+ads_data[ii].bibcode
+      web_link=ads_data[ii].ads_link
       IF ads_data[ii].title.count() GT 0 THEN atitle=ads_data[ii].title[0] ELSE atitle='No title'
       citstr=' ['+trim(ads_data[ii].citation_count)+']'
       ostr=[ostr,'<li><a href='+web_link+'>'+atitle+'</a>'+citstr+'<br>', $
