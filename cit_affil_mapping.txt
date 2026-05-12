@@ -315,6 +315,8 @@ Italy        INFN - Napoli                  Sezione di Napoli
 Italy        INFN - Napoli                  Sezione di Naples
 Italy        University of Perugia
 Italy        University of Perugia          Universita degli Studi di Perugia
+Italy        University of Padova
+Italy        University of Padova           Universita di Padova
 Belgium      Royal Observatory of Belgium   Royal Observatory
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
@@ -753,3 +755,4 @@ Slovenia     University of Ljubljana
 Israel       Tel Aviv University
 Pakistan     Government College University
 Pakistan     Government College University  GC University Lahore
+Indonesia    Sumatra Institute of Technology
