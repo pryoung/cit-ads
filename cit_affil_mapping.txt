@@ -707,6 +707,7 @@ Slovak Rep.  Astronomical Institute (SAS)   Astronomical Institute
 Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
 Turkey       Akdeniz University
 Turkey       Canakkale Onsekiz Mart Univ.   Canakkale Onsekiz Mart University
+Turkey       Ondokuz Mayis University
 Colombia     National University of ColombiaUniversidad Nacional de Colombia
 Colombia     Universidad de Los Andes
 Colombia     Industrial Univ. of Santander  Universidad Industrial de Santander

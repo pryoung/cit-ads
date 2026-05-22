@@ -383,6 +383,7 @@ Iran         Kermanshah
 Iran         Sanandaj
 Colombia     Colombia
 Turkey       Turkey
+Turkey       Turkiye
 Slovak Rep.  Bratislava
 Slovak Rep.  *Slovak
 Slovak Rep.  Comenius
