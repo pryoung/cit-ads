@@ -619,6 +619,7 @@ Australia    Australian National University
 Australia    Flinders University
 Australia    University of Tasmania
 Australia    Macquarie University
+Australia    Mt. Stromlo Observatory
 Argentina    Universidad de Buenos Aires
 Argentina    IAFE (Buenos Aires)            Instituto de Astronomia y Fisica del Espacio
 Argentina    Universidad de Mendoza
@@ -713,8 +714,12 @@ Colombia     Universidad de Los Andes
 Colombia     Industrial Univ. of Santander  Universidad Industrial de Santander
 Hungary      Eotvos Lorand University
 Hungary      Debrecen Heliophysical Obs.    Debrecen Heliophysical Observatory
+Hungary      Wigner Research Centre
+Hungary      HUN-REN EPSS (Sopron)          EPSS
+Hungary      HUN-REN EPSS (Sopron)          Institute of Earth Physics and Space Science
 Denmark      Niels Bohr Institute
 Denmark      DTU Space                      DTU Space
+Denmark      Aarhus University
 Ecuador      Escuela Politecnica Nacional
 Ukraine      Crimean Astrophys. Observatory Crimean Astrophysical Observatory
 Ukraine      Institute of Radio Astronomy
@@ -736,9 +741,11 @@ Thailand     Kasetsart University
 Thailand     Mahidol University
 Thailand     Chulalongkorn University
 Thailand     Thammasat University
+Thailand     Chiang Mai University
 UAE          New York University Abu Dhabi
 UAE          University of Sharjah
 Nigeria      Ebonyi State University
+Nigeria      Federal University Lokoja
 Chile        University of Chile (Santiago) Universidad de Chile
 Chile        University of Concepcion       Universidad de Concepcion
 Chile        University of Santiago, Chile  Universidad de Santiago de Chile
@@ -752,8 +759,15 @@ Azerbaijan   Shamakhy Astrophys. ObservatoryShamakhy
 Canada       College of Bois-de-Boulogne    Bois-de-Boulogne
 Canada       University of Montreal         Universite de Montreal
 Canada       University of Manitoba         University of Manitoba
+Canada       Queen's University
 Slovenia     University of Ljubljana
 Israel       Tel Aviv University
 Pakistan     Government College University
 Pakistan     Government College University  GC University Lahore
+Pakistan     National Centre for Physics
 Indonesia    Sumatra Institute of Technology
+Indonesia    Research Center for Space
+Malaysia     National University of MalaysiaUniversiti Kebangsaan Malaysia
+Malaysia     University of Malaya           Universiti Malaya
+Malaysia     University of Malaya           
+Rwanda       University of Rwanda

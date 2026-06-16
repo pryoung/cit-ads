@@ -86,6 +86,8 @@ pro cit_affil_country, input, first_author = first_author, affil_file = affil_fi
   ;       until a match is found.
   ;     Ver.7, 19-Nov-2024, Peter Young
   ;       now passes affil_file= keyword through to cit_read_country.
+  ;     Ver.8, 16-Jun-2026, Peter Young
+  ;       added call to cit_clean_names for the affiliation strings.
   ;-
 
   if n_params() lt 1 then begin
@@ -115,6 +117,7 @@ pro cit_affil_country, input, first_author = first_author, affil_file = affil_fi
       for j = 0, naff - 1 do begin
         aff = input[i].aff[j]
         aff = str_replace(aff, '&amp;', 'and')
+        aff=cit_clean_names(aff)
         if trim(aff) eq '-' then begin
           country[j] = ''
         endif else begin

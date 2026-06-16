@@ -384,6 +384,7 @@ Iran         Sanandaj
 Colombia     Colombia
 Turkey       Turkey
 Turkey       Turkiye
+Turkey       Universitesi
 Slovak Rep.  Bratislava
 Slovak Rep.  *Slovak
 Slovak Rep.  Comenius
@@ -496,3 +497,4 @@ Nigeria      *Nigeria
 Guatemala    Guatemala
 Iraq         Iraq
 Burkina Faso Burkina Faso
+Rwanda       Rwanda
