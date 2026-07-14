@@ -44,6 +44,7 @@ UK           Natural History Museum
 UK           Cardiff Metropolitan University
 UK           British Antarctic Survey
 UK           University of Salford
+US           BAERI                          Bay Area Environmental Research Institute
 US           NASA Ames
 US           NASA Goddard                   Goddard
 US           NASA Goddard                   GSFC
@@ -106,7 +107,6 @@ US           Applied Physics Laboratory     Applied Physics Lab
 US           Applied Physics Laboratory     Johns Hopkins University Laurel
 US           Univ. of Alabama, Huntsville   Huntsville
 US           University of New Hampshire    Hampshire
-US           BAERI                          Bay Area Environmental Research Institute
 US           Air Force Research Laboratory  Air Force Research Lab
 US           Yale University
 US           University of Maryland
@@ -574,6 +574,7 @@ Iran         Tafresh University
 Russia       Space Research Inst. (Moscow)  Space Research Institute
 Russia       Lebedev Physical Institute
 Russia       Skolkovo Institute (Moscow)    Skolkovo Institute
+Russia       Skolkovo Institute (Moscow)    Center for Digital Engineering
 Russia       IEPT (Moscow)                  Institute of Earthquake Prediction Theory
 Russia       IEPT (Moscow)                  IEPT RAS
 Russia       Ioffe Institute
@@ -600,6 +601,15 @@ Russia       Finance University (Moscow)    Finance Academy
 Russia       HSE University (Moscow)        National Research University Higher School
 Russia       HSE University (Moscow)        HSE University
 Russia       Kalmyk State University
+Russia       IAP RAS (Nizhny Novgorod)      Institute of Applied Physics
+Russia       AARI (St. Petersburg)          Arctic and Antarctic Research Institute
+Russia       Institute of Astronomy, RAS    Institute of Astronomy, Russian Academy of Sciences
+Russia       Institute of Astronomy, RAS    Institute of Astronomy of the Russian Academy of Sciences
+Russia       Institute of Astronomy, RAS    119017
+Russia       IAA RAS (St. Petersburg)       Institute of Applied Astronomy of the Russian Academy of Sciences
+Russia       IAA RAS (St. Petersburg)       191187
+Russia       Ussuriisk Astrophysical Obs.   Ussuriisk Astrophysical Observatory
+Russia       Sternberg Astronomical Inst.   Sternberg Astronomical Institute
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Space Research Centre (Warsaw) Space Research Center
 Poland       Jagiellonian University
