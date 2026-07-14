@@ -132,6 +132,7 @@ US           UCLA                           90095
 US           UCLA                           90056
 US           MIT                            Massachusetts Institute of Technology,
 US           Caltech (Pasadena)             California Institute of Technology
+US           Caltech (Pasadena)             Caltech
 US           NCAR (Boulder)                 National Center for Atmospheric Research
 US           BWX Technologies
 US           Univ. of California Santa Cruz California Santa Cruz
@@ -190,6 +191,9 @@ US           Independent Researcher
 US           Independent Researcher         Nahant
 US           CERES (Salem, MA)              Center for Environmental Research and Earth Sciences 
 US           Ohio State University
+US           NOAA NESDIS SWO (Lanham)       Space Weather Observations Office
+US           NOAA SWPC (Boulder)            Space Weather Prediction Center
+US           Oak Ridge National Laboratory
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -770,6 +774,7 @@ Canada       College of Bois-de-Boulogne    Bois-de-Boulogne
 Canada       University of Montreal         Universite de Montreal
 Canada       University of Manitoba         University of Manitoba
 Canada       Queen's University
+Canada       University of British Columbia
 Slovenia     University of Ljubljana
 Israel       Tel Aviv University
 Pakistan     Government College University
