@@ -523,6 +523,11 @@ India        University of Allahabad
 India        Mangalayatan University
 India        Aligarh Muslim University
 India        IIST (Thiruvananthapuram)      Indian Institute of Space Science and Technology
+India        MAHE (Karnataka)               Manipal Academy of Higher Education 
+India        Haldia Institute of Technology
+India        Osmania University
+India        RKMV (Howrah)                  Ramakrishna Mission Vidyamandira
+India        University of Kalyani
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
