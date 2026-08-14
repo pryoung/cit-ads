@@ -421,6 +421,7 @@ China        Hanjiang Normal University
 China        National Central University
 China        Space Engineering University
 China        National Satellite Met. Center National Satellite Meteorological Center
+China        National Satellite Met. Center National Center for Space Weather
 China        Qian Xuesen Lab. of Space Tech.Qian Xuesen
 China        Nanchang University            Nanchang University
 China        China University of Geosciences
@@ -456,6 +457,7 @@ China        Guangdong Technion
 China        Qingdao Univ. of Sci. & Tech.  Qingdao University of Science and Technology
 China        Shanxi Normal University
 China        Henan Normal University
+China        Jiangxi Normal University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
