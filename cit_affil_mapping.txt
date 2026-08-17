@@ -12,6 +12,8 @@ UK           Queen's University Belfast     Astrophysics Research Centre
 UK           Queen's University Belfast
 UK           Queen's University Belfast     BT7 1NN
 UK           Rutherford Appleton Laboratory
+UK           Rutherford Appleton Laboratory RAL Space
+UK           Rutherford Appleton Laboratory Rutherford Appleton
 UK           University of Glasgow          Glasgow
 UK           University of Sheffield        Sheffield
 UK           University of Warwick
@@ -44,6 +46,8 @@ UK           Natural History Museum
 UK           Cardiff Metropolitan University
 UK           British Antarctic Survey
 UK           University of Salford
+UK           Newcastle University
+US           Independent Researcher         Pavitt Meadow
 US           BAERI                          Bay Area Environmental Research Institute
 US           NASA Ames
 US           NASA Goddard                   Goddard
@@ -88,6 +92,7 @@ US           SSL, Berkeley                  SSL,
 US           Naval Research Laboratory      Naval Research Lab
 US           Naval Research Laboratory      Hurlburt Center
 US           CIRES (Boulder)                Cooperative Institute for Research in Environmental Sciences
+US           CIRES (Boulder)                CIRES
 US           Southwest Research Institute
 US           Southwest Research Institute   SwRI, Boulder
 US           Southwest Research Institute   SwRI, San Antonio
@@ -106,6 +111,7 @@ US           Applied Physics Laboratory
 US           Applied Physics Laboratory     Applied Physics Lab
 US           Applied Physics Laboratory     Johns Hopkins University Laurel
 US           Univ. of Alabama, Huntsville   Huntsville
+US           Univ. of Alabama, Huntsville   Space Plasma and Aeronomic Research
 US           University of New Hampshire    Hampshire
 US           Air Force Research Laboratory  Air Force Research Lab
 US           Yale University
