@@ -219,7 +219,7 @@ Germany      Ruhr University Bochum         Bochum
 Germany      University of Gottingen        
 Germany      University of Gottingen        Gottingen University
 Germany      University of Gottingen        University of Goettingen  
-Germany      University of Gottingen        Georg-August-Univ
+Germany      University of Gottingen        Georg-August
 Germany      University of Wurzburg
 Germany      Technical University of Berlin
 Germany      Technical University of Berlin Technische Universitat Berlin
@@ -328,6 +328,7 @@ Italy        University of Perugia          Universita degli Studi di Perugia
 Italy        University of Padova
 Italy        University of Padova           Universita di Padova
 Belgium      Royal Observatory of Belgium   Royal Observatory
+Belgium      Royal Observatory of Belgium   Observatoire Royal
 Belgium      KU Leuven                      Leuven
 Belgium      BIRA-IASB (Brussels)           Belgian Institute for Space Aeronomy
 Belgium      BIRA-IASB (Brussels)           Aeronomie Spatiale de Belgique
@@ -754,6 +755,9 @@ Ukraine      Taras Shevchenko National Univ.Taras Shevchenko National University
 Ukraine      Uzhhorod National University
 Romania      Institute of Space Science
 Romania      Ast. Inst. of Romanian Academy Astronomical Institute of the Romanian Academy
+Romania      Ast. Inst. of Romanian Academy Astronomical Institute of Romanian Academy
+Romania      Inst. Geod. of Romanian AcademyInstitute of Geodynamics of the Romanian Academy
+Romania      Alexandru Ioan Cuza University Alexandru Ioan Cuza
 Qatar        Qatar University
 Egypt        Mansoura University
 Egypt        Al-Azhar University
