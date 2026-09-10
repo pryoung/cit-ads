@@ -498,3 +498,4 @@ Guatemala    Guatemala
 Iraq         Iraq
 Burkina Faso Burkina Faso
 Rwanda       Rwanda
+Trin. Tobago Trinidad and Tobago
