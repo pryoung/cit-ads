@@ -200,6 +200,7 @@ US           Ohio State University
 US           NOAA NESDIS SWO (Lanham)       Space Weather Observations Office
 US           NOAA SWPC (Boulder)            Space Weather Prediction Center
 US           Oak Ridge National Laboratory
+US           Lowell Observatory
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -220,6 +221,7 @@ Germany      University of Gottingen
 Germany      University of Gottingen        Gottingen University
 Germany      University of Gottingen        University of Goettingen  
 Germany      University of Gottingen        Georg-August
+Germany      University of Gottingen        Institut fur Astrophysik und Geophysik
 Germany      University of Wurzburg
 Germany      Technical University of Berlin
 Germany      Technical University of Berlin Technische Universitat Berlin
@@ -441,6 +443,7 @@ China        Anhui University
 China        Shijiazhuang University
 China        Shanghai Astronom. Observatory Shanghai Astronomical Observatory
 China        University of CAS              University of Chinese Academy of Science
+China        University of CAS              College of Earth and Planetary Sciences
 China        Beijing Planetarium
 China        China Three Gorges University
 China        Tianjin University
@@ -569,6 +572,7 @@ Switzerland  ISSI - Bern                    International Space Science Institut
 Switzerland  Univ. della Svizzera Italiana  Svizzera italiana
 Norway       University of Oslo
 Norway       UiT The Arctic Univ. of Norway Arctic University of Norway
+Norway       University of Bergen
 Ireland      Trinity College Dublin
 Ireland      DIAS - Dublin                  Dublin Institute for Advanced Studies
 Ireland      University College Dublin
@@ -737,6 +741,8 @@ Slovak Rep.  Inst. of Experimental Physics  Institute of Experimental Physics
 Turkey       Akdeniz University
 Turkey       Canakkale Onsekiz Mart Univ.   Canakkale Onsekiz Mart University
 Turkey       Ondokuz Mayis University
+Turkey       Izmir University of Economics
+Turkey       Izmir University of Economics  izmir ekonomi universitesi
 Colombia     National University of ColombiaUniversidad Nacional de Colombia
 Colombia     Universidad de Los Andes
 Colombia     Industrial Univ. of Santander  Universidad Industrial de Santander
