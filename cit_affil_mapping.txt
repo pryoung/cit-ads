@@ -201,6 +201,8 @@ US           NOAA NESDIS SWO (Lanham)       Space Weather Observations Office
 US           NOAA SWPC (Boulder)            Space Weather Prediction Center
 US           Oak Ridge National Laboratory
 US           Lowell Observatory
+US           Harvard University
+US           University of Virginia
 Germany      University of Potsdam          University of Potsdam
 Germany      University of Potsdam          Universitat Potsdam
 Germany      Leib. Inst. Astrophys. Potsdam Leibniz-Institut fur Astrophysik Potsdam
@@ -468,6 +470,10 @@ China        Qingdao Univ. of Sci. & Tech.  Qingdao University of Science and Te
 China        Shanxi Normal University
 China        Henan Normal University
 China        Jiangxi Normal University
+China        Inst. of High Energy Physics   Institute of High Energy Physics
+China        Yuxi Normal University
+China        Nanjing Normal University
+China        Yantai University
 France       IAS - Orsay                    Institut d'Astrophysique Spatiale
 France       Observatoire de Paris
 France       Ecole Polytechnique
@@ -540,6 +546,11 @@ India        Haldia Institute of Technology
 India        Osmania University
 India        RKMV (Howrah)                  Ramakrishna Mission Vidyamandira
 India        University of Kalyani
+India        Independent researcher         Retired
+India        Independent researcher         Neel Sidhi
+India        University of Delhi
+India        Manipal University Jaipur
+India        Sikkim Manipal University
 Sweden       Stockholm University
 Sweden       Uppsala University
 Sweden       Lund University
@@ -628,9 +639,10 @@ Russia       AARI (St. Petersburg)          Arctic and Antarctic Research Instit
 Russia       Institute of Astronomy, RAS    Institute of Astronomy, Russian Academy of Sciences
 Russia       Institute of Astronomy, RAS    Institute of Astronomy of the Russian Academy of Sciences
 Russia       Institute of Astronomy, RAS    119017
-Russia       IAA RAS (St. Petersburg)       Institute of Applied Astronomy of the Russian Academy of Sciences
+Russia       IAA RAS (St. Petersburg)       Institute of Applied Astronomy
 Russia       IAA RAS (St. Petersburg)       191187
 Russia       Ussuriisk Astrophysical Obs.   Ussuriisk Astrophysical Observatory
+Russia       Ussuriisk Astrophysical Obs.   Ussuriysk Astrophysical Observatory
 Russia       Sternberg Astronomical Inst.   Sternberg Astronomical Institute
 Poland       Space Research Centre (Warsaw) Space Research Centre 
 Poland       Space Research Centre (Warsaw) Space Research Center
